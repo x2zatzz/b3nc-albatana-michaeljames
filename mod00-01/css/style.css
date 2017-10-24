@@ -1,0 +1,48 @@
+body {
+	background-color: #808080;
+	background-image: url("../img/mgsvtpp.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	color: 	#C0C0C0;
+	font-family: 'Dosis', sans-serif;
+}
+
+p {
+	font-family: 'Slabo 27px', serif;
+	color: white;
+}	
+
+h1 {
+	font-size: 50px;
+	color: dimgray;
+	text-transform: lowercase;
+}
+
+
+h2 {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+#photo {
+	height: 150px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: gold;
+	margin-top: 10px;
+	margin-left: 10px;
+
+}
+
+.about{
+	width: 100%;
+
+}
+
+.container{
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+
+}
