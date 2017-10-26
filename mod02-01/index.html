@@ -5,6 +5,10 @@
 	<title>My Second Webpage - Contains my second webpage</title>
 
 	<style type="text/css">
+		table, tr, th, td {
+			border-collapse: collapse;
+			border: 1px solid black;
+		}
 		.red{
 			color: red;
 		}
@@ -187,6 +191,163 @@
 		<dt>Impanel</dt>
 		<dd>to choose people to serve on a jury</dd>
 	</dl>
+
+	<hr>
+
+	<img src="img/saltbae.gif" alt="Salt Bae meme">
+
+	<hr>
+
+	<table>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>Saturday</th>
+			<th>Sunday</th>
+
+		</tr>
+		<tr>
+			<th>Tickets sold</th>
+			<td>120</td>
+			<td>135</td>
+
+		</tr>
+		<tr>
+			<th>Total Sales</th>
+			<td>$600</td>
+			<td>675</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>9 AM</th>
+			<th>10 AM</th>
+			<th>11 AM</th>
+		</tr>
+		<tr>
+			<th>Monday</th>
+			<td colspan="2">Geography</td>
+			<td>Math</td>
+
+		</tr>
+		<tr>
+			<th>Tuesday</th>
+			<td>Gym</td>
+			<td colspan="2 ">Home</td>
+
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<tr>
+			<th></th>
+			<th>TV5</th>
+			<th>GMA</th>
+			<th>ABS-CBN</th>
+		</tr>
+		<tr>
+			<th>6PM to 7PM</th>
+			<td rowspan="2">Cartoons</td>
+			<td>Comedy</td>
+			<td>News</td>
+		</tr>
+		<tr>
+			<th>7PM to 8PM</th>
+			<td>Sports</td>
+			<td>Current Affairs</td>
+
+		</tr>
+	</table>
+
+	<hr>
+
+	<form action="" method="">
+		<input type="text" name="username">
+		<input type="password" name="passWord">
+		
+		<hr>
+
+		<input type="radio" name="genre" value="rock">Rock
+		<input type="radio" name="genre" value="pop">Pop
+		<input type="radio" name="genre" value="jazz">Jazz
+
+		<hr>
+
+		<input type="checkbox" name="fruit" value="peach">peach
+		<input type="checkbox" name="fruit" value="orange">orange
+		<input type="checkbox" name="fruit" value="strawberry">strawberry
+
+		<hr>
+
+		<input type="email" name="email">
+
+		<hr>
+
+		<input type="number" name="contact">
+
+	</form>
+
+	<hr>
+
+	<form action="" method="">
+		<label for="username">Username</label>
+		<input type="text" name="username">
+
+		<label for="password">Username</label>		
+		<input type="password" name="password">
+		
+		<input type="submit" name="signin" value="signin">
+		<input type="submit" name="signup" value="signup">
+
+	</form>
+
+	<hr>
+
+	<form action="" method="">
+		<select name="brand">
+			<option value="Uniqlo">Uniqlo</option>
+			<option value="Bench" selected>Bench</option>
+			<option value="Penshoppe">Penshoppe</option>
+		</select>
+	</form>
+
+	<hr>
+
+	<form action="" method="">
+		<textarea></textarea>
+		<input type="file" name="song">
+		<input type="submit" name="submit">
+	</form>
+
+	<hr>
+
+	<form action=""	method="">
+		<button>
+			<img src="img/spongebob.png" align="SpongeBob">
+			Spongbob squarepants
+		</button>
+		
+	</form>
 	
 </body>
 </html>
