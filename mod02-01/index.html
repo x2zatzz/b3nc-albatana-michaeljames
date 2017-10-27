@@ -14,7 +14,7 @@
 		}
 	</style>
 </head>
-<body>
+<body style="margin-right: 950px">
 	<h1>This is the main heading</h1>
 	<h2>This is the subheading of h1</h2>
 	<h3>This is the subheading of h2</h3>
@@ -349,5 +349,86 @@
 		
 	</form>
 	
+	<hr>
+
+	<fieldset>
+		<legend>contact details</legend>
+		<label for="email">email</label>
+		<input type="email" name="email">
+
+		<label for="mobile">mobile</label>
+		<input type="number" name="mobile">
+
+	</fieldset>
+
+
+	<hr>
+	<hr>
+
+	<fieldset>
+		<legend>Your Details</legend>
+		<form>
+			<label for="name">Name</label>
+			<input type="text" name="name">
+		</form>
+
+		<form>
+		<label for="email">Email</label>
+		<input type="email" name="email">
+		</form>
+	</fieldset>
+
+	<br>
+	<fieldset>
+		<legend>Your Review</legend>
+		<form action="" method="">
+		<label>How did you hear about us?</label>
+				<select name="howdidyouhearaboutus">
+				<option value="Google" selected>Google</option>
+				<option value="Facebook">Facebook</option>
+				<option value="Instagram">Instagram</option>
+				<option value="Blog">Blog</option>
+				<option value="Website">Website</option>
+				<option value="Referral">Referral</option>
+			</select>
+			
+		</form>
+
+		<br>
+
+		<label>Would you visit again?</label>
+		<form action="" method="">
+			<label for="yes">Yes</label>
+			<input type="radio" name="wouldyouvisitagain">
+			<label for="No">No</label>
+			<input type="radio" name="wouldyouvisitagain">
+			<label for="Maybe">Maybe</label>
+			<input type="radio" name="wouldyouvisitagain">
+		</form>
+
+		<br>
+
+
+		<form>
+			<label for="comments">Comments:</label>
+
+
+		</form>
+		<form>
+			<textarea ></textarea>
+		</form>
+
+		<br>
+			
+		<form>
+			<input type="checkbox" name="signmeup" checked>
+			<label for="signmeup">Sign me up for email updates</label>
+		</form>
+		
+		<form>
+			<input type="button" name="submitreview" value="Submit Review">
+		</form>
+
+	</fieldset>
 </body>
 </html>
