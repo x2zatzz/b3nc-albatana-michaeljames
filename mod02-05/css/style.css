@@ -1,0 +1,72 @@
+*{
+	font-size: 24px;
+}
+
+body{
+	background-color: gray;
+}
+
+.wrapper{
+	width: 80%;					/* defines the width of the container, in percentage or px-values */
+	margin: 0 auto;				/* centers on the wrapper container */
+	border: 2px solid black;	/* creates border within the container */
+	padding: 20px;				/* creates a top,bottom,right,left margins */
+}
+
+
+a:link{
+	color: #008000;
+}
+
+a:visited{
+	color: #016666;
+}
+
+a:focus{
+	color: #992600;
+}
+
+a:hover{
+	color: yellow;
+}
+
+a:active{
+	color: orange;
+}
+
+main.wrapper:hover{
+	background-color: lightblue;
+}
+
+p,							/* multiple selectors */
+#test,
+.spans,
+.box p{
+	color: orange;
+}
+
+a[target="_blank"]{
+	background-color: yellow;
+}
+
+p span#dark_bg{
+	color: white;
+	background-color: black;
+}
+
+div - p{
+	background-color: red;
+}
+
+div + p{
+	background-color: lightgreen;
+
+}
+
+div > p{
+	background-color: green;
+}
+
+div	div p{
+	background-color: skyblue;
+}
