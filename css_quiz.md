@@ -23,10 +23,10 @@
 - Before the <html> element
 
 ### Which HTML tag is used to define an internal style sheet?
-- <css>
-- <script>
-- <style>
-- <styles>
+- ```<css>```
+- ```<script>```
+- ```<style>```
+- ```<styles>```
 
 ### Which HTML attribute is used to define inline styles?
 - Style
