@@ -11,10 +11,10 @@
 - Creative Style Sheets
 
 ### What is the correct HTML for referring to an external style sheet?
-- '''<link rel="stylesheets" type="text/css" href="mystyle.css">''' 
-- '''<link rel="stylesheet" type="text/css" href="style.css">''' 
-- '''<link href="stylesheet" type="text/css" src="mystyle.css">''' 
-- '''<link src="stylesheet" type="text/css" href="mystyle.css">''' 
+- ```<link rel="stylesheets" type="text/css" href="mystyle.css">``` 
+- ```<link rel="stylesheet" type="text/css" href="style.css">``` 
+- ```<link href="stylesheet" type="text/css" src="mystyle.css">``` 
+- ```<link src="stylesheet" type="text/css" href="mystyle.css">``` 
 
 ### Where in an HTML document is the correct place to refer to an external style sheet?
 - In the <head> section
