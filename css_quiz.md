@@ -1,8 +1,6 @@
 # Tuitt Philippines Incorporated | CSS QUIZ
 
-
-## Multiple Choice. Choose the letter of the best answer.
-
+## Multiple Choice. Choose your best answer by putting emphasis (*your answer*) or strong (**your answer**) to the line of your choice.
 
 ### What does CSS stand for?
 - Cascading Style Sheets
@@ -99,13 +97,13 @@
 	    color: grey
 	}
 
-#### Selector: 
+#### Selector:
 
-#### Declaration: 
+#### Declaration:
 	
-#### Property Name: 
+#### Property Name:
 
-#### Property Value: 
+#### Property Value:
 
 #### Declaration block:
 
@@ -120,4 +118,3 @@
     main #comment #reply : 
     
     nav > ul > li > a:hover : 
-
