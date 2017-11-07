@@ -1,0 +1,58 @@
+*{
+	margin: 0px;
+	/*padding: 0px;*/
+}
+
+
+.wrapper{
+	border: 1px solid black;
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+div.wrapper > div,
+div.wrapper > div > div{
+	border: 2px solid gold;
+	background-color: skyblue;
+	padding: 20px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+h1,
+p{
+	background-color: #dde0e3;
+
+}
+
+em,
+strong{
+	background-color: orange;
+	/*display: block;	*/			/* sets a selected element into a block type, also pushes other elements below */
+	display: inline;			/* resets to the default inline block */
+}
+
+h1{
+/*	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;*/
+	/*padding: 10px 20px 30px 40px;*/ 	/* same effect as previous */
+	
+	padding: 50px;
+	border: 1px solid blue;
+/*	margin-top: 25px;*/
+}
+
+strong{
+	/*padding: 50px;*/						/* causes overflow */
+	margin: 50px;
+}
+
+p{
+	padding: 20px 0px 20px 10px;
+	margin-bottom: 50px;
+	margin-top: 25px;
+}
