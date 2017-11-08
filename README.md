@@ -10,4 +10,11 @@ This is my first feedback.
 
 ## 2017-10-26
 ### I would like that lectures flow to be more fluid and snappy. and if possible to have more frequent exams (kahoot) because it drives my adrenaline.
-This is my first feedback.
+This is my second feedback.
+
+## 2017-11-03
+### I really liked the DOM activity, it really challenged me to think critically.
+This is my third feedback.
+
+## 2017-11-10
+### I think that I am more comfortable using Visual Studio Code instead of Sublime Text.
