@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* built-in elements */
+h1{
+}
+body{
+}
+p{
+    position: static;
+    /* margin-left: 50px; */
+    /* margin-top: -20px; */
+}
+
+
+/* div modifier */
+.grandparent{
+    background-color: skyblue;
+}
+
+.parent{
+    background-color: pink;
+}
+
+div{
+    padding: 20px;
+}
+
+input[name="firstname"]{
+    margin-right: 20px;
+}
+
+strong{
+    background-color: yellow;
+    position: relative;
+    left: 10px;
+    top: 100px;
+    
+}
