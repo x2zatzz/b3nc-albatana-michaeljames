@@ -44,3 +44,11 @@ echo('Hello World!');
 :zap:
 
 :v:
+
+## Tables
+
+| firstname     | lastname |
+|:--------------|:---------|
+| michael james | albatana |
+
+
