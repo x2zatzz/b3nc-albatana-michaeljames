@@ -5,23 +5,35 @@
 
 /* built-in elements */
 h1{
+    /* position: relative; */
 }
 body{
+    
+
 }
 p{
-    position: static;
+    height: 200px;
+    /* position: static; */
     /* margin-left: 50px; */
     /* margin-top: -20px; */
+    /* position: relative; */
 }
 
 
 /* div modifier */
 .grandparent{
     background-color: skyblue;
+    /* position: relative; */
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 30%;
 }
 
 .parent{
     background-color: pink;
+    /* position: relative; */
+
 }
 
 div{
@@ -34,8 +46,12 @@ input[name="firstname"]{
 
 strong{
     background-color: yellow;
-    position: relative;
+    position: absolute;
+    top: 10px;
     left: 10px;
-    top: 100px;
     
+}
+
+othergrandparent{
+    /* position: relative; */
 }

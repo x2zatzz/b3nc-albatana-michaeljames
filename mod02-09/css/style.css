@@ -1,0 +1,65 @@
+*{
+
+}
+
+h1{
+    background-color: orange;
+    margin: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    z-index: 1; 
+
+}
+
+p{
+    background-color: lightgray;
+    height: 500px;
+    position: relative;
+    top: 70px;
+    left: 70px;
+    z-index: 0; 
+    width: 70%
+}
+
+.mainbox{
+    position: relative;
+    top: 100px;
+}
+
+.blue{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 1px solid black;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    z-index: 3;
+
+}
+
+.yellow{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    position: absolute;
+    left: 120px;
+    top: 120px;
+    z-index: 1;
+    /* opacity: 0.5; */
+}
+
+.orange{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border: 1px solid black;
+    position: absolute;
+    left: 140px;
+    top: 140px;
+    z-index: 2;
+}

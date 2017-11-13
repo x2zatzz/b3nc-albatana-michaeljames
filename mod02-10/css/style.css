@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* prevents overflow of horizontal scrollbar */
+}
+
+/* body{
+
+} */
+
+.p{
+    
+}
+
+.container{
+    background-color: #eaedf0;
+}
+
+.page{
+    width: 900px;
+    margin: 0 auto;
+    /* border: 1px solid purple; */
+    background-color: #eaedf0;
+}
+
+.menu{
+    height: 100px;
+    background-color: #b2d6ff;
+    
+}
+
+.sidebar{
+    height: 300px;
+    width: 100px;
+    background-color: #f09a9d;
+    float: left;
+
+    
+}
+
+.content{
+    height: 600px;
+    width: 650px;
+    font-size: 12px;
+    background-color: #f5cf8e;
+    float: left;
+    padding: 20px;
+    
+}
+
+.footer{
+    clear: both;
+    /* height: 200px; */
+    background-color: #d6e9fe;
+    border: 1px solid purple;
+    /* will remove floating side-effects */
+}
+
+
+ul{
+    list-style: none;
+}
+
+
+/* best practice to clear floats */
+
+.clear:after{
+    content: ""; /* empty string or invisible element */
+    clear: both;
+    display: block;
+}
+
+.column{
+    height: 160px;
+    width: 31%;
+    background-color: #b2d6ff;
+    float: left;
+    margin:  20px 1.16%;
+    overflow: scroll;
+    font-size: 12px;
+}
+
+.avatar{
+    width: 60px;
+    height: 60px;
+    background-color: #d6e9fe;
+    border-radius: 50%; 
+    margin: 15px;
+    float: left;
+}
+
+.username{
+    margin-top: 10px;
+}
+
+.comment{
+    margin-left: 5px;
+    text-align: justify;
+}
+
+.article-img{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
