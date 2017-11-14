@@ -1,0 +1,210 @@
+*{
+    color: white;
+}
+hr{
+    clear: both;
+}
+/* +++++++++++++++++++++++++++ */
+.main-01{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    text-align: center;
+    display: inline-block;
+}
+.main-01 .box01{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: gray;
+    /*---------------*/
+    display: inline-block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-02{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    display: inline-block;
+}
+.main-02 .box01{
+    width: 150px;
+    height: 150px;
+    padding: 10px 10px 50px 10px;
+    border: 1px solid white;
+    /*---------------*/
+    display: inline-block;
+    margin: 10px;
+}
+.main-02 .box02{
+    width: inherit;
+    height: inherit;
+    background-color: gray;
+    /*---------------*/
+    display: block;
+}
+.main-02 .box03{
+    /*---------------*/
+    display: inline-block;
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+/* +++++++++++++++++++++++++++ */
+.main-03{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    display: inline-block;
+}
+.main-03 h1{
+    clear: both;
+}
+.main-03 .box01{
+    /*---------------*/
+    display: block;
+}
+.main-03 .box02{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    background-color: gray;
+    /*---------------*/
+    float: left;
+    display: block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-04{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    display: inline-block
+}
+.main-04 .box01{
+    width: 20%;
+    /*---------------*/    
+    height: auto;
+    display: block;
+}
+.main-04 .box02{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    background-color: gray;
+    /*---------------*/
+    display: block;
+    float: left;
+}
+.main-04 .box03{
+    width: 77%;
+    /*---------------*/
+    display: block;
+    float: left;
+}
+.main-04 p{
+    margin-top: 0;
+    font-style: italic;
+}
+/* +++++++++++++++++++++++++++ */
+.main-05{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    display: inline-block;
+}
+.main-05 .box01{
+    width: 7%;
+    height: auto;
+    /*---------------*/
+    display: block;
+}
+.main-05 .box02{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    /*---------------*/
+    float: left;
+}
+.main-05 .box03{
+    width: 92%;
+    /*---------------*/
+    display: inline-block;
+}
+.main-05 textarea{
+    width: 98.5%;
+    /*---------------*/
+    display: inline-block;
+    margin-left: 5px;
+}
+.main-05 .box04{
+    /*---------------*/
+    width: 100%;
+    display: inline-block;
+}
+.main-05 input{
+    float: right;   
+    color: black;
+    margin: 5px 0 0 5px;
+}
+/* +++++++++++++++++++++++++++ */
+.main-06{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+    display: inline-block;
+}
+/* main-thread container */
+.main-06 .box01{
+    display: block;
+
+}
+/* sub-thread container */
+.main-06 .box02{
+    margin-left: 7%;
+    border-left: 1px solid white;
+    /*---------------*/
+    display: block;
+}
+/* whole comment container */
+.main-06 .box03{
+    display: inline-block;
+    /* float: left; */
+}
+.main-06 h2{
+    display: block;
+    /* float: left; */
+}
+/* left-side container */
+.main-06 .box04{
+    width: 7%;
+    margin-left: 10px;
+    display: block;
+    float: left;
+}
+/* right-side container */
+.main-06 .box05{
+    display: block; 
+    float: left;
+    width: 91%;
+}
+
+.main-06 .box06{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    /*---------------*/
+    display: inline-block;
+}
