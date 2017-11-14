@@ -1,0 +1,179 @@
+
+
+.separator{
+    clear: both;
+}
+
+.black-container-01{
+    width: 700px;
+    height: 350px;
+    padding: 10px;
+    background-color: black;
+}
+
+.gray-box-01{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: gray;
+    float: left;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.black-container-02{
+    width: 700px;
+    height: 700px;
+    padding: 10px;
+    background-color: black;
+
+}
+
+.white-border-02{
+    width: 150px;
+    height: 150px;
+    padding: 10px 10px 50px 10px;
+    background-color: black;
+
+    text-align: center;
+    
+    border: 1px solid white;
+    float: left;
+    margin: 10px;
+    z-index: 1
+}
+
+.gray-box-02{
+    width: 150px;           /* modified */
+    height: 150px;          /* modified */
+    float: left;
+    
+    background-color: gray;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.p-02{
+    color: white;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.black-container-03{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+
+}
+
+.gray-box-03{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    float: left;
+    background-color: gray;
+}
+
+.h1-03{
+    color: white;
+}
+
+.p-03{
+    color: white;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.black-container-04{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+
+    background-color: black;
+}
+
+.gray-box-04{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+
+    background-color: gray;
+    float: left;
+}
+
+.h1-04{
+    color: white;
+}
+
+.p-04{
+    color: white;
+    font-style: italic;
+    margin-left: 160px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.black-container-05{
+    width: 700px;
+    height: 120px;
+    padding: 10px;
+    background-color: black;
+}
+
+.gray-box-05{
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: gray;
+    margin-right: 5px;
+}
+
+.txtarea-05{
+    float: left;
+    width: 91%;
+    height: 80px;
+    margin-bottom: 5px;
+}
+
+.button-05{
+    float: right;
+    margin: 2px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.black-container-06{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+}
+
+.gray-box-06{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    float: left;
+    margin-right: 5px;
+}
+
+.threadlvl-02{
+    border-left: 1px solid white;
+    margin-left: 7%;
+    padding-left: 5px;
+}
+
+.p-06{
+    color: white;
+    margin-left: 10px;
+}
+
+.h4-06{
+    color: white;
+    /* float: left; */
+}
+
+.text-placeholder{
+    margin-left: 50px;
+}

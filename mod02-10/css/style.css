@@ -9,8 +9,8 @@
 
 } */
 
-.p{
-    
+h2{
+    font-size: 1.5em;
 }
 
 .container{
@@ -31,7 +31,7 @@
 }
 
 .sidebar{
-    height: 300px;
+    height: 600px;
     width: 100px;
     background-color: #f09a9d;
     float: left;
@@ -77,8 +77,8 @@ ul{
     background-color: #b2d6ff;
     float: left;
     margin:  20px 1.16%;
-    overflow: scroll;
     font-size: 12px;
+    position: relative;
 }
 
 .avatar{
@@ -88,6 +88,7 @@ ul{
     border-radius: 50%; 
     margin: 15px;
     float: left;
+    
 }
 
 .username{
@@ -95,7 +96,7 @@ ul{
 }
 
 .comment{
-    margin-left: 5px;
+    margin-left: 90px;
     text-align: justify;
 }
 
@@ -107,3 +108,44 @@ ul{
     margin-bottom: 20px;
 }
 
+/* multiline ellipsis*/
+.block-with-text{
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 30px;
+}
+
+.block-with-text:before{
+    content: "...";
+    position: absolute;
+    right: 17px;
+    bottom: 0;
+}
+
+.block-with-text:after{
+    content: "";
+    position: absolute;
+    right: 17px;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+}
+
+.readmore{
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+}
+
+.avatar > img{
+    border: 1px solid gold;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+}
