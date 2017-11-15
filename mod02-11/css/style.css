@@ -1,179 +1,437 @@
+*{
+    color: #0175B3;
+    /* background-color: #00263B; */
+    text-align: left;
+}
+body{
+    background-color: #00263B;
+}
+h1,
+h2,
+h3,
+h4{
+    color: #B0DA00;
+}
+a{
+    color: #0175B3;
+    background-color: #004C75;
+    border: 1px outset #005E90;
+}
 
-
-.separator{
+hr{
     clear: both;
+    color: #003B5A;
 }
-
-.black-container-01{
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.wrapper{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+/* +++++++++++++++++++++++++++ */
+.main-01{
     width: 700px;
-    height: 350px;
+    height: auto;
     padding: 10px;
-    background-color: black;
+    background-color: #003B5A;
+    /*---------------*/
+    text-align: center;
+    display: inline-block;
 }
-
-.gray-box-01{
+.main-01 img{
     width: 150px;
     height: 150px;
     margin: 10px;
     background-color: gray;
-    float: left;
+    /*---------------*/
+    display: inline-block;
 }
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.black-container-02{
+/* +++++++++++++++++++++++++++ */
+.main-02{
     width: 700px;
-    height: 700px;
+    height: auto;
     padding: 10px;
-    background-color: black;
-
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
 }
-
-.white-border-02{
+.main-02 .box01{
     width: 150px;
     height: 150px;
     padding: 10px 10px 50px 10px;
-    background-color: black;
-
-    text-align: center;
-    
-    border: 1px solid white;
-    float: left;
+    border: 1px solid #00263B;
+    /*---------------*/
+    display: inline-block;
     margin: 10px;
-    z-index: 1
 }
-
-.gray-box-02{
-    width: 150px;           /* modified */
-    height: 150px;          /* modified */
-    float: left;
-    
+.main-02 img{
+    width: inherit;
+    height: inherit;
     background-color: gray;
-    overflow: hidden;
-    z-index: -1;
+    /*---------------*/
+    display: block;
 }
-
-.p-02{
-    color: white;
+.main-02 .box03{
+    /*---------------*/
+    display: inline-block;
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.black-container-03{
+/* +++++++++++++++++++++++++++ */
+.main-03{
     width: 700px;
     height: auto;
     padding: 10px;
-    background-color: black;
-
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
 }
-
-.gray-box-03{
+.main-03 h1{
+    clear: both;
+}
+.main-03 .box01{
+    /*---------------*/
+    display: block;
+}
+.main-03 img{
+    /* width: 150px; */
+    /* height: 150px; */
+    margin-right: 10px;
+    /* background-color: gray; */
+    /*---------------*/
+    float: left;
+    margin-bottom: 10px;
+    display: block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-04{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
+}
+.main-04 .box01{
+    width: 20%;
+    margin-right: 10px;
+    /*---------------*/    
+    display: block;
+    float: left;
+}
+.main-04 img{
     width: 150px;
     height: 150px;
-    margin-right: 10px;
-    float: left;
     background-color: gray;
+    /*---------------*/
+    display: block;
 }
-
-.h1-03{
-    color: white;
-}
-
-.p-03{
-    color: white;
-}
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.black-container-04{
-    width: 700px;
-    height: auto;
-    padding: 10px;
-
-    background-color: black;
-}
-
-.gray-box-04{
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-
-    background-color: gray;
+.main-04 .box03{
+    width: 77%;
+    /*---------------*/
+    display: block;
     float: left;
-}
-
-.h1-04{
-    color: white;
-}
-
-.p-04{
-    color: white;
-    font-style: italic;
-    margin-left: 160px;
-}
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.black-container-05{
-    width: 700px;
-    height: 120px;
-    padding: 10px;
-    background-color: black;
-}
-
-.gray-box-05{
-    width: 50px;
-    height: 50px;
-    float: left;
-    background-color: gray;
-    margin-right: 5px;
-}
-
-.txtarea-05{
-    float: left;
-    width: 91%;
-    height: 80px;
-    margin-bottom: 5px;
-}
-
-.button-05{
-    float: right;
-    margin: 2px;
-}
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.black-container-06{
-    width: 700px;
-    height: auto;
-    padding: 10px;
-    background-color: black;
-}
-
-.gray-box-06{
-    width: 50px;
-    height: 50px;
-    background-color: gray;
-    float: left;
-    margin-right: 5px;
-}
-
-.threadlvl-02{
-    border-left: 1px solid white;
-    margin-left: 7%;
-    padding-left: 5px;
-}
-
-.p-06{
-    color: white;
     margin-left: 10px;
 }
-
-.h4-06{
-    color: white;
-    /* float: left; */
+.main-04 p{
+    margin: 0 0 1em 0;
+    font-style: italic;
+}
+/* +++++++++++++++++++++++++++ */
+.main-05{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
+}
+.main-05 .box01{
+    width: 7%;
+    height: auto;
+    /*---------------*/
+    display: block;
+}
+.main-05 img{
+    display: block;
+    float: left;
+}
+.main-05 .box03{
+    width: 92%;
+    /*---------------*/
+    display: inline-block;
+}
+.main-05 textarea{
+    width: 98.5%;
+    /*---------------*/
+    display: inline-block;
+    margin-left: 5px;
+    overflow: hidden;
+}
+.main-05 .box04{
+    /*---------------*/
+    width: 100%;
+    display: inline-block;
+}
+.main-05 input{
+    float: right;   
+    color: #0175B3;
+    margin: 5px 0 0 5px;
+    background-color: #004C75;
+    border: 3px outset #005E90;
+}
+/* +++++++++++++++++++++++++++ */
+.main-06{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
+}
+.main-06 h3{
+    margin-top: 0;
+}
+.main-06 p{
+    font-style: italic;
+}
+.main-06 img{
+    display: block;
+}
+/* main-thread container */
+.main-06 .box01,
+.main-06 .box06{
+    display: block;
+    /*---------------*/
+    width: 100%;
+    height: auto;    
+}
+.main-06 .box03,
+.main-06 .box07{
+    width: 7%;
+    display: block;
+    float: left;
+}
+.main-06 .box04,
+.main-06 .box08{
+    width: 91%;
+    margin-left: 10px;
+    display: block;
+    float: left;
+}
+/* sub-thread container */
+.main-06 .box02{
+    margin: 2em 0 0 8%;
+    border-left: 1px solid #0175B3;
+    padding-left: 5px;
+    /*---------------*/
+    display: block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-07{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
+}
+.main-07 .box01{
+    width: 40%;
+    /*---------------*/
+    display: block;
+    float: left;
+}
+.main-07 .box02{
+    width: 100%;
+    height: 100px;  
+    background-color: gray;
+    /*---------------*/
+    float: left;
+}
+.main-07 .box03{
+    width: 59%;
+    /*---------------*/
+    margin-left: 5px;   
+    float: left; 
+}
+.main-07 h3,
+.main-07 p{
+    margin: 0 0 0 0;
 }
 
-.text-placeholder{
-    margin-left: 50px;
+/* +++++++++++++++++++++++++++ */
+.main-08{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/
+    display: inline-block;
+}
+    /* left side */
+.main-08 .box01{
+    width: 59%;
+    /*---------------*/
+    display: block;
+    float: left;
+}
+.main-08 h3,
+.main-08 p{
+    margin: 0 0 0 0;
+}
+.main-08 .box02{
+    width: 40%;
+    /*---------------*/    
+    display: block;
+    float: left;
+}
+.main-08 .box03{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    /*---------------*/        
+    display: block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-09{
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/        
+    display: inline-block;
+    
+}
+.main-09 .box01{
+    width: 30%;
+    /*---------------*/        
+    display: block;
+    float: left;
+}
+.main-09 h1{
+    margin-top: 0;
+}
+.main-09 input{
+    color: #0175B3;
+    background-color: #004C75;
+    border: 1px outset #005E90;
+}
+
+.main-09 .box02{
+    width: 69%;
+    /*---------------*/        
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.main-09 .img{
+    width: 150px;
+    height: 150px;
+    margin: 0 5px 5px 0;
+    background-color: gray;
+    /*---------------*/        
+    display: inline-block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-10{
+    width: 1000px;
+    height: auto;
+    padding: 10px;
+    background-color: #003B5A;
+    /*---------------*/        
+    display: inline-block;
+}
+    /* the left side */
+.main-10 .box01{
+    width: 60%;
+    height: auto;
+    /*---------------*/
+    display: block;        
+    float: left;
+}
+.main-10 .box03{
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid white;
+    /*---------------*/        
+    display: inline-block;
+}
+.main-10 .box01 p{
+    /*---------------*/            
+    line-height: auto;
+    text-align: center;
+}
+.main-10 img{
+    /* width: inherit; */
+    /* height: 100px; */
+    background-color: gray;
+    /*---------------*/        
+    width: 150px;
+    display: block;
+    height: 100px;
+    
+}
+
+
+    /* the right side */
+.main-10 .box02{
+    width: 40%;
+    height: auto;
+    /*---------------*/        
+    display: block;
+    float: left;
+}
+    /* the top-right */
+.main-10 .box08{
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+    /*---------------*/        
+    
+}
+
+
+/* the middle-right */
+.main-10 .box06{
+    display: block;
+    height: auto;
+    margin: 1em 0 1em 0;
+}
+.main-10 span{
+    margin: 5px;
+    /*---------------*/        
+    background-color: #004C75;    
+    color: #0175B3;
+    border: 1px outset #005E90;
+}
+
+
+/* the bottom-right */
+.main-10 .box07{
+    display: block;
+    height: auto;
+}
+.main-10 .box07 img{
+    display: block;
+    float: left;
+    margin-right: 5px;
+
+}
+.main-10 .box07 h1,
+.main-10 .box07 p{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.main-10 .box07 p{
+    font-style: italic;
 }
