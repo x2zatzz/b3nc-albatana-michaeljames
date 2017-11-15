@@ -4,6 +4,11 @@
 hr{
     clear: both;
 }
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
 /* +++++++++++++++++++++++++++ */
 .main-01{
     width: 700px;
@@ -87,31 +92,30 @@ hr{
     padding: 10px;
     background-color: black;
     /*---------------*/
-    display: inline-block
 }
 .main-04 .box01{
     width: 20%;
+    margin-right: 10px;
     /*---------------*/    
-    height: auto;
     display: block;
+    float: left;
 }
 .main-04 .box02{
     width: 150px;
     height: 150px;
-    margin-right: 10px;
     background-color: gray;
     /*---------------*/
     display: block;
-    float: left;
 }
 .main-04 .box03{
     width: 77%;
     /*---------------*/
     display: block;
     float: left;
+    margin-left: 10px;
 }
 .main-04 p{
-    margin-top: 0;
+    margin: 0 0 1em 0;
     font-style: italic;
 }
 /* +++++++++++++++++++++++++++ */
@@ -164,47 +168,80 @@ hr{
     padding: 10px;
     background-color: black;
     /*---------------*/
-    display: inline-block;
 }
-/* main-thread container */
-.main-06 .box01{
-    display: block;
-
+.main-06 h3{
+    margin-top: 0;
 }
-/* sub-thread container */
-.main-06 .box02{
-    margin-left: 7%;
-    border-left: 1px solid white;
-    /*---------------*/
-    display: block;
+.main-06 p{
+    font-style: italic;
 }
-/* whole comment container */
-.main-06 .box03{
-    display: inline-block;
-    /* float: left; */
+.main-06 a{
+    color: blue;
 }
-.main-06 h2{
-    display: block;
-    /* float: left; */
-}
-/* left-side container */
-.main-06 .box04{
-    width: 7%;
-    margin-left: 10px;
-    display: block;
-    float: left;
-}
-/* right-side container */
 .main-06 .box05{
-    display: block; 
-    float: left;
-    width: 91%;
-}
-
-.main-06 .box06{
     width: 50px;
     height: 50px;
     background-color: gray;
     /*---------------*/
     display: inline-block;
+}
+/* main-thread container */
+.main-06 .box01,
+.main-06 .box06{
+    display: block;
+    /*---------------*/
+    width: 100%;
+    height: auto;    
+}
+.main-06 .box03,
+.main-06 .box07{
+    width: 7%;
+    display: block;
+    float: left;
+}
+.main-06 .box04,
+.main-06 .box08{
+    width: 91%;
+    margin-left: 10px;
+    display: block;
+    float: left;
+}
+/* sub-thread container */
+.main-06 .box02{
+    margin: 2em 0 0 7%;
+    border-left: 1px solid white;
+    padding-left: 5px;
+    /*---------------*/
+    display: block;
+}
+/* +++++++++++++++++++++++++++ */
+.main-07{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    /*---------------*/
+}
+.main-07 .box01{
+    width: 40%;
+    /*---------------*/
+    display: block;
+    float: left;
+}
+.main-07 .box02{
+    width: 100%;
+    height: 100px;  
+    background-color: gray;
+    /*---------------*/
+    float: left;
+}
+.main-07 .box03{
+    width: 59%;
+    /*---------------*/
+    margin-left: 5px;   
+    float: left; 
+}
+.main-07 h2,
+.main-07 span{
+    margin: 0 0 0 0;
 }

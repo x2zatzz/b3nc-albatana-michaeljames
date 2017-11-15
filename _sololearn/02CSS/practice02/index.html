@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>practice02</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            div.container{
+                width: 30em;
+                border: 1em solid gold;
+                display: block;
+            }
+            div.box{
+                width: 50%;
+                border: 1em solid red;
+                float: left;
+                box-sizing: border-box;
+            }
+            .clear:after{
+                content: "";
+                clear: both;
+                display: block;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container clear">
+            <div class="box">left</div>
+            <div class="box">right</div>
+        </div>
+    </body>
+
+</html>
