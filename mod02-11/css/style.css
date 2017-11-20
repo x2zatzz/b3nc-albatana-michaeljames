@@ -249,7 +249,7 @@ hr{
     display: block;
     float: left;
 }
-.main-07 .box02{
+.main-07 img{
     width: 100%;
     height: 100px;  
     background-color: gray;
@@ -293,7 +293,7 @@ hr{
     display: block;
     float: left;
 }
-.main-08 .box03{
+.main-08 img{
     width: 100%;
     height: 100px;
     background-color: gray;
@@ -362,7 +362,7 @@ hr{
     width: 150px;
     padding: 5px;
     margin: 10px;
-    border: 1px solid white;
+    border: 1px solid #00263B;
     /*---------------*/        
     display: inline-block;
 }
@@ -392,7 +392,7 @@ hr{
     float: left;
 }
     /* the top-right */
-.main-10 .box08{
+.main-10 .box05 img{
     width: 100%;
     height: 200px;
     background-color: gray;
