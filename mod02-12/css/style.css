@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+.nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+.footer{
+  padding: 30px;
+}
+.logo{
+  width: 140px;
+  height: 140px;
+  background-color: darkgray;
+}
+/* NAV section ---------- */
+.nav{
+  background-color: lightyellow;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  
+}
+ul > li{
+  list-style: none;
+  background-color: lightblue;
+  margin-bottom: 3px;
+  text-align: center;
+  line-height: 40px;
+  /* padding: 20px; */
+}
+ul > li > a{
+  text-decoration: none;
+}
+ul{
+  padding-left: 0;
+}
+/* MAIN section ---------- */
+.main{
+  background-color: gray;
+  margin-left: 200px;
+}
+.banner{
+  background-color: skyblue;
+}
+.box{
+  border: 5px solid white;
+}
+.about{
+  background-color: indianred;
+  height: 700px;
+}
+.services{
+  background-color: midnightblue;
+  height: 300px;
+}
+.projects{
+  background-color: crimson;
+  height: 300px;
+}
+.gallery{
+  background-color: orange;
+  height: 400px;
+}
+.footer{
+  background-color: green;
+  height: 70px;
+}
