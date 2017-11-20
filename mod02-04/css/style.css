@@ -1,24 +1,68 @@
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v9/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Kranky';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kranky Regular'), local('Kranky-Regular'), url(https://fonts.gstatic.com/s/kranky/v8/9tWRGlxaK7Ti3v3jGnQTyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+*{
+	font-family: "Indie Flower", Arial, sans-serif;
+}
 .wrapper{
 	width: 700px;
 	margin: 0 auto;
-	background-color: #f2f2f2;
+	background: linear-gradient(to bottom, #002C14 20%, #004B23 55%, hsl(148, 89%, 22%) 60%);
+	background-color: hsl(148, 100%, 15%);
 	color: #404040;
 
 }
+h1{
+	font-family: "Kranky";
+	background-color: hsla(250, 70%, 24%, 0.7);
+	height: 30px;
+	width: 100%;
+	display: inline-block;
 
+}
+h3{
+	color: hsl(148, 99%, 33%);
+}
+p{
+	color: hsl(148, 99%, 33%);
+}
+#postCircle i{
+	color: hsl(147, 100%, 9%);
+	font-weight: bold;
+}
+#imageCircle i{
+	color: hsl(336, 99%, 40%);
+	font-weight: bold;
+}
 header{
-	background-color: #09c;
+	background: linear-gradient(to right, #2D15A2 30%, #291781 30%, #140949 60%, #0B052B 60%);
+	/* background-color: hsl(250, 70%, 24%); */
 	height: 70px;
-	color: white;
+	color: hsl(335, 100%, 10%);
+	font-weight: 900;
 	text-align: center; 
-	line-height: 70px;
-	font-size: 10px;
+	line-height: 35px;
+	font-size: 14px;
+	letter-spacing: 0.3em;
 }
 
 footer{
-	background-color: #a6a6a6; 
+	background: linear-gradient(to right, #2D15A2 30%, #291781 30%, #140949 60%, #0B052B 60%);
+	
+	/* background-color: #a6a6a6;  */
 	height: 70px;
-	color: #ffffff;
+	color: gray;
 	line-height: 70px;
 	text-align: center;
 }
@@ -26,37 +70,44 @@ footer{
 body{
 	padding: 0;
 	margin: 0;
-	font-family: "Roboto", Arial, sans-serif;
+	background-color: hsl(0,0%,10%);
 }
-
+.main-dashboard{
+	height: 70px;
+}
 .dashboard-thumbnail{
 	display: inline-block;
 	width: 40%;
 	height: 100px;
 	text-align: center;
+	vertical-align: middle;
+	align-content: center;
 }
 
 .dashboard-circles{
 	text-align: center;
 	height: 70px;
 	width: 70px;
-	background-color: green;
+	background-color: hsl(148, 99%, 33%);
 	border-radius: 50%;
 	text-shadow: center;
 	line-height: 70px;
-	color: #fff;
+	color: hsl(148, 99%, 33%);
 	float: left;
 	margin-right: 10px;
+	
 }
 
 #postCircle{
-	background-color: #4CAF50;
+	background-color: hsl(148, 99%, 33%);
 	margin-left: 60px;
+	border: 4px groove hsl(147, 100%, 9%);
 }
 
 #imageCircle{
-	background-color: #09c;
+	background-color: hsl(336, 100%, 18%);
 	margin-left: 60px;
+	border: 4px groove hsl(336, 100%, 18%);
 }
 
 #postTitle{
@@ -65,7 +116,9 @@ body{
 	border-radius: 3px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
-
+	background-color: hsl(148, 99%, 33%);
+	color: hsl(336, 100%, 18%);
+	border: 3px groove hsl(336, 100%, 18%);	
 }
 
 #postContent{
@@ -75,23 +128,35 @@ body{
 	border-radius: 3px;
 	margin-bottom: 10px;
 	box-sizing: border-box;
-
+	background-color: hsl(148, 99%, 33%);
+	border: 3px groove hsl(336, 100%, 18%);		
+	color: hsl(336, 100%, 18%);	
 }
-
+input::-webkit-input-placeholder{
+	color: hsl(336, 88%, 33%);	
+}
+textarea::-webkit-input-placeholder{
+	color: hsl(336, 88%, 33%);
+}
 .btn{
-	border: none;
-	padding: 15px 30px;
+	padding: 0px 30px;
 	font-size: 14px;
 	border-radius: 5px;
-	color: #fff;
+	height: 30px;
+	line-height: 20px;
 }
 
 .btn-blue{
-	background-color: #09c;
+	background-color: hsl(249, 79%, 9%);
+	color: hsl(250, 77%, 36%);
+	border: 2px outset hsl(250, 77%, 36%);
+	
 }
 
 .btn-green{
-	background-color: #4CAF50;
+	background-color: hsl(148, 99%, 33%);
+	color: hsl(147, 100%, 9%);
+	border: 2px outset hsl(147, 100%, 9%);	
 }
 
 #btnBrowse{
@@ -116,7 +181,7 @@ main{
 .img-set{
 	height: 70px;
 	width: 100px;
-	background-color: white;
+	background-color: hsl(336, 100%, 18%);
 	padding: 5px;
 	border-radius: 3px;
 	margin: 0 5px;
@@ -124,12 +189,12 @@ main{
 
 .inline-blocked{
 	display: inline-block;
-
+	line-height: 35px;
 }
 
 .dashboard-text{
 	margin: 0;
-	font-size: 20px;
+	font-size: 1.5em;
 	width: 100%;
 	
 }
