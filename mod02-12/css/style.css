@@ -17,6 +17,7 @@ body{
   width: 140px;
   height: 140px;
   background-color: darkgray;
+  background-image: url("../img/venom-snake-140.jpg")
 }
 /* NAV section ---------- */
 .nav{
@@ -47,27 +48,83 @@ ul{
 }
 .banner{
   background-color: skyblue;
+  min-height: 700px;
 }
 .box{
   border: 5px solid white;
+  text-align: center;
+  width: 40%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: 0 auto; */
 }
 .about{
   background-color: indianred;
-  height: 700px;
+  min-height: 700px;
 }
 .services{
   background-color: midnightblue;
-  height: 300px;
+  min-height: 300px;
+}
+.services h3{
+  margin-left: 5%;
+}
+.services p{
+  margin: auto 5% 5%;
+  text-align: justify;
+}
+.column{
+  border: 1px solid black;
+  width: 300px;
+  margin-left: 1%;
+  margin-right: 1%;
+  float: left;
+  /* margin: 5px; */
+}
+.clear:after{
+  content: "";
+  clear: both;
+  display: block;
 }
 .projects{
   background-color: crimson;
-  height: 300px;
+  min-height: 300px;
 }
 .gallery{
   background-color: orange;
-  height: 400px;
+  min-height: 400px;
+}
+.gallery > .column{
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.gallery h3{
+  margin-left: 5%;
+}
+.gallery p{
+  margin: auto 5% 5%;
+  text-align: justify;
 }
 .footer{
   background-color: green;
-  height: 70px;
+  min-height: 70px;
+}
+.contact{
+  float: right;
+}
+img[alt*="Social"]{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+
+.services img,
+.gallery img{
+  width: 100%;
 }
