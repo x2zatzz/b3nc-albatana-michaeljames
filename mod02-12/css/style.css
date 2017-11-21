@@ -1,8 +1,25 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Zilla Slab Highlight';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Zilla Slab Highlight Bold'), local('ZillaSlabHighlight-Bold'), url(https://fonts.gstatic.com/s/zillaslabhighlight/v3/4GC1z5cbR6tbZfervoVHHGiOYC683oHv9smPBVAVffg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 *{
   box-sizing: border-box;
+  color: #cccccc;
+  font-family: "Roboto";
 }
 body{
   margin: 0;
+  background-color: #3b3b3b;
 }
 .nav,
 .banner,
@@ -13,6 +30,35 @@ body{
 .footer{
   padding: 30px;
 }
+/* color schemes ------------------------ */
+h1{
+  color: #ffb899;
+  font-family: "Zilla Slab Highlight";
+  font-size: 3em;
+  font-variant: small-caps;
+}
+h2,
+h3,
+h4,
+footer{
+  font-family: "Zilla Slab Highlight";
+  color: #ff4d00;
+}
+.about,
+.services,
+.projects,
+.gallery{
+  background: linear-gradient(to bottom, #121212 30%, #1f1f1f 60%)
+}
+.footer{
+  background-color: #752300;
+}
+.column{
+  border: 1px solid #ff4d00	;
+}
+.banner .box{
+  border: 5px solid #ff4d00;
+}
 .logo{
   width: 140px;
   height: 140px;
@@ -21,7 +67,8 @@ body{
 }
 /* NAV section ---------- */
 .nav{
-  background-color: lightyellow;
+  background: linear-gradient(to bottom, #1f0900 49%, #3d1200 51%);
+  /* background-color: #3d1200; */
   height: 100%;
   width: 200px;
   position: fixed;
@@ -29,11 +76,14 @@ body{
 }
 ul > li{
   list-style: none;
-  background-color: lightblue;
+  background-color: #752300;
   margin-bottom: 3px;
   text-align: center;
   line-height: 40px;
   /* padding: 20px; */
+}
+ul > li:hover{
+  background-color: #a33100;
 }
 ul > li > a{
   text-decoration: none;
@@ -43,30 +93,31 @@ ul{
 }
 /* MAIN section ---------- */
 .main{
-  background-color: gray;
+  /* background-color: gray; */
   margin-left: 200px;
+  width: 1fr;
 }
 .banner{
-  background-color: skyblue;
+  background-color: #a33100;
   min-height: 700px;
 }
 .box{
-  border: 5px solid white;
+  /* border: 5px solid white; */
   text-align: center;
-  width: 40%;
+  width: 70%;
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* margin: 0 auto; */
+  /* position: absolute;
+  top: 40%;
+  left: 40%; */
+  transform: translate(0, 50%);
+  margin: 0 auto;
+
+
 }
 .about{
-  background-color: indianred;
-  min-height: 700px;
+  min-height: 500px;
 }
 .services{
-  background-color: midnightblue;
   min-height: 300px;
 }
 .services h3{
@@ -77,10 +128,9 @@ ul{
   text-align: justify;
 }
 .column{
-  border: 1px solid black;
   width: 300px;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
   float: left;
   /* margin: 5px; */
 }
@@ -90,11 +140,9 @@ ul{
   display: block;
 }
 .projects{
-  background-color: crimson;
   min-height: 300px;
 }
 .gallery{
-  background-color: orange;
   min-height: 400px;
 }
 .gallery > .column{
@@ -111,7 +159,6 @@ ul{
 }
 /* footer section ----------- */
 .footer{
-  background-color: green;
   min-height: 70px;
   /* line-height: 35px; */
   padding: 10px 40px 10px 40px;
@@ -139,4 +186,13 @@ img[alt*="Social"]{
 .services img,
 .gallery img{
   width: 100%;
+}
+.separator{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 2em;
+  display: block;
+  clear: both;
+  background: linear-gradient(to right, #3d1200, #752300 29%, #a33100 30%, #d13f00 59%, #ff4d00 60%);
 }
