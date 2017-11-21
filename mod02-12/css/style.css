@@ -109,16 +109,26 @@ ul{
   margin: auto 5% 5%;
   text-align: justify;
 }
+/* footer section ----------- */
 .footer{
   background-color: green;
   min-height: 70px;
-  line-height: 70px;
-  padding: 0 auto 0 auto
+  /* line-height: 35px; */
+  padding: 10px 40px 10px 40px;
+  clear: both;
+  display: block;
 }
 .contact{
   float: right;
-  vertical-align: middle;
-  
+  /* vertical-align: middle; */
+  height: 100%;
+  display: block;
+}
+small{
+  float: left;
+  display: block;
+  height: 50px;
+  line-height: 50px;
 }
 img[alt*="Social"]{
   width: 50px;
@@ -126,8 +136,6 @@ img[alt*="Social"]{
   /* border: 1px solid black; */
   /* border-radius: 50%; */
 }
-
-
 .services img,
 .gallery img{
   width: 100%;
