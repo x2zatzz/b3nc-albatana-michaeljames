@@ -1,19 +1,19 @@
 palette: monochromatic
-dark	3E1300		hsl(18, 100%, 12%)	
-	772300		hsl(18, 100%, 23%)	> back - footer
-base	A43100		hsl(18, 100%, 32%)	> banner back
-	CF3E00		hsl(18, 100%, 41%)	
-light	FF4C00		hsl(18, 100%, 50%)	> border lines
-						> font - nav, footers 
-						> font - subheaders
-**	darkmatter	hsl(18, 0, 23%)		> font - body
-	lightmatter	hsl(0, 0, 80%)		> text
-	lightorange	hsl(18, 100%, 80%)	> font - h1
+dark	3E1300		hsl(18, 100%, 12%)	#3d1200	> nav
+	772300		hsl(18, 100%, 23%)	#752300	> back - footer
+base	A43100		hsl(18, 100%, 32%)	#a33100	> banner back
+	CF3E00		hsl(18, 100%, 41%)	#d13f00
+light	FF4C00		hsl(18, 100%, 50%)	#ff4d00	> border lines
+							> font - nav, footers 
+							> font - subheaders
+**	darkmatter	hsl(18, 0, 23%)		#3b3b3b	> back - body
+	lightmatter	hsl(0, 0, 80%)		#cccccc	> text
+	lightorange	hsl(18, 100%, 80%)	#ffb899	> font - h1
 
 
 sections
-banner
-about
+banner		base
+about		
 services
 projects
 gallery

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="1">
+	<title>CSS Presentation</title>
+
+	<style>
+		/*DEFAULT*/
+		div {
+			width: 150px;
+			height: 150px;
+			border: 1px solid black;
+			margin: 20px;
+			float: left;
+			text-align: center;
+			padding-top: 65px;
+			box-sizing: border-box;
+		}
+		.clear:after {
+			content: " ";
+			display: block;
+			clear: both;
+		}
+		[class*="align"], 
+		.indent,
+		.ulisttype,
+		.olisttype {
+			padding-top: 0;
+		}
+		.aligncenter {
+			text-align: left;
+		}
+
+		/*COLORS*/
+
+		.colorfg {
+			background-color: darkviolet;
+			color: yellow;
+		}
+		.colorbg {
+			color: white;
+			background-color: #ee3e80;
+		}
+		.rgba {
+			background-color: black;
+			color: rgb(255,255,255);
+		}
+		.hsl {
+			background-color: #C8C8C8;
+		}
+		.contrastlow {
+			background-color: darkgrey;
+			color: grey;
+		}
+		.contrastmedium {
+			background-color: white;
+			color: #707C80;
+		}
+		.contrasthigh {
+			background-color: #3e000b;
+			color: white;
+		}
+
+		/*TEXT*/
+		.none {
+			text-decoration: underline;
+		}
+		.lineheight span {
+			background-color: pink;
+		}
+		.lineheight {
+			padding-top: 0;
+		}
+		.wordspacing {
+			font-weight: bold;
+		}
+		.indent {
+			text-align: left;
+		}
+		.hover a {
+			text-decoration: none;
+		}
+		.localfont {
+		font-family: "Arial";
+	}
+	</style>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+</head>
+<body>
+	<h1>CSS Presentation</h1>
+	<hr>
+
+	<section class="clear">
+		<h2>Colors</h2>
+		<div class="colorfg">FG</div>
+		<div class="colorbg">BG</div>
+		<div class="name">COLOR NAME</div>
+		<div class="rgb">RGB</div>
+		<div class="rgba">RGBA</div>
+		<div class="hex">HEX</div>
+		<div class="hsl">HSL</div>
+		<div class="hsla">HSLA</div>
+		<div class="contrastlow">LOW CONTRAST</div>
+		<div class="contrastmedium">MEDIUM CONTRAST</div>
+		<div class="contrasthigh">HIGH CONTRAST</div>
+		<div class="opacity">OPACITY</div>
+	</section>
+
+	<section class="clear">
+		<h2>Text</h2>
+		<div class="bold">BOLD</div>
+		<div class="italic">ITALIC</div>
+		<div class="uppercase">uppercase</div>
+		<div class="lowercase">LOWERCASE</div>
+		<div class="capitalize">CAPITALIZE</div>
+		<div class="underline">UNDERLINE</div>
+		<div class="linethrough">LINETHROUGH</div>
+		<div class="none">NONE</div>
+		<div class="lineheight">Line height Line height Line height Line height Line height</div>
+		<div class="letterspacing">LETTERSPACING</div>
+		<div class="wordspacing">THIS IS WORD SPACING</div>
+		<div class="alignleft">Align left lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="alignright">Align right lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="aligncenter">Align center lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="alignjustify">Align justify lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="indent">Text indent lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</div>
+		<div class="textshadow">Tex Shadow</div>
+		<div class="link"><a href="">LINK</a></div>
+		<div class="visited"><a href="">VISITED</a></div>
+		<div class="hover"><a href="">HOVER</a></div>
+		<div class="active"><a href="">ACTIVE</a></div>
+		<div class="focus"><a href="">FOCUS</a></div>
+	</section>
+
+	<section class="clear">
+		<h2>Font</h2>
+		<div class="localfont">USING LOCAL FONT</div>
+		<div class="downloadedfont">USING DOWNLOADED FONT</div>
+		<div class="opensourcefont">USING OPEN SOURCE FONT</div>
+		<div class="serif">SERIF</div>
+		<div class="sansserif">SANS SERIF</div>
+		<div class="monosspace">MONOSPACE</div>
+		<div class="cursive">CURSIVE</div>
+		<div class="fantasy">FANTASY</div>
+		<div class="pixels">FONT SIZE PIXELS</div>
+		<div class="percent">FONT SIZE PERCENTAGE</div>
+		<div class="ems">FONT SIZE EMS</div>
+	</section>
+
+	<section class="clear">
+		<h2>Box</h2>
+		<div class="width">WIDTH</div>
+		<div class="height">HEIGHT</div>
+		<div class="minwidth">MIN WIDTH</div>
+		<div class="maxwidth">MAX WIDTH</div>
+		<div class="minheight">MIN HEIGHT</div>
+		<div class="maxheight">MAX HEIGHT</div>
+		<div class="hidden">OVERFLOW HIDDEN</div>
+		<div class="scroll">OVERRFLOW SCROLL</div>
+		<div class="borderwidth">BORDER WIDTH</div>
+		<div class="borderstyle">BORDER STYLE</div>
+		<div class="bordercolor">BORDER COLOR</div>
+		<div class="inline">INLINE</div>
+		<div class="block">BLOCK</div>
+		<div class="block">INLINE-BLOCK</div>
+		<div class="none">DISPLAY NONE</div>
+		<div class="hidden">HIDDEN</div>
+		<div class="visible">VISIBLE</div>
+		<div class="boxshadow">BOX SHADOW</div>
+		<div class="roundedcorner">ROUNDED CORNERS</div>
+	</section>
+
+	<section class="clear">
+		<h2>List</h2>
+		<div class="ulisttype">
+			<ul>
+				<li>DISC</li>
+				<li>CIRCLE</li>
+				<li>SQUARE</li>
+				<li>NONE</li>
+			</ul>
+		</div>
+		<div class="olisttype">
+			<ol>
+				<li>DECIMAL</li>
+				<li>DECIMAL LEADING ZERO</li>
+				<li>LOWER ALPHA</li>
+				<li>UPPER ALPHA</li>
+				<li>LOWER ROMAN</li>
+				<li>UPPER ROMAN</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="clear">
+		<h2>Background</h2>
+		<div class="backgroundimg">ADDING BACKGOUND IMAGE</div>
+		<div class="repeatz">BACKGROUND REPEAT X</div>
+		<div class="repeaty">BACKGROUND REPEAT Y</div>
+		<div class="repeat">BACKGROUND REPEAT</div>
+		<div class="norepeat">BACKGROUND NO REPEAT</div>
+		<div class="fixed">BACKGROUND FIXED</div>
+		<div class="background">BACKGROUND</div>
+		<div class="bghighcontrast">HIGH CONTRAST BG</div>
+		<div class="bglowcontrast">LOW CONTRAST BG</div>
+		<div class="bgscreencontrasr">SCREEN CONTRAST BG</div>
+	</section>
+</body>
+</html>

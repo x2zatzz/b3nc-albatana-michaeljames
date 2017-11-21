@@ -1,0 +1,147 @@
+@font-face{
+  font-family: "Zilla Slab Highlight";
+  src: url("../assets/Zilla_Slab_Highlight/ZillaSlabHighlight-Regular.ttf");
+}
+
+.colorfg{
+  color: blue;
+}
+.colorbg{
+  background-color: darkblue;
+}
+.name{
+  background-color: aquamarine;
+}
+.rgb{
+  background-color: rgb(125,125,125);
+}
+.rgba{
+  background-color: rgba(125,125,125,0.5);
+}
+.hex{
+  background-color: #999999;
+}
+.hsl{
+  background-color: hsl(50, 50%, 50%);
+}
+.hsla{
+  background-color: hsla(50, 50%, 50%, 0.5);
+}
+.contrastlow{
+  background-color: blue;
+  filter: contrast(20%);
+}
+.contrastmedium{
+  background-color: blue;
+  filter: contrast(50%);
+}
+.contrasthigh{
+  background-color: blue;
+  filter: contrast(100%);
+}
+.opacity{
+  background-color: blue;
+  opacity: 0.5;
+}
+/* ----------------------------------------------- */
+.bold{
+  font-weight: bolder;
+}
+.italic{
+  font-style: oblique;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.underline{
+  text-decoration: underline;
+}
+.linethrough{
+  text-decoration: line-through;
+}
+.none{
+  text-decoration: none;
+}
+.lineheight{
+  line-height: 2em;
+}
+.letterspacing{
+  letter-spacing: 0.1em;
+}
+.wordspacing{
+  word-spacing: 1em;
+}
+.alignleft{
+  text-align: left;
+}
+.alignright{
+  text-align: right;
+}
+.aligncenter{
+  text-align: center;
+}
+.alignjustify{
+  text-align: justify;
+}
+.indent{
+  text-indent: 2em;
+}
+.textshadow{
+  text-shadow: rgba(0,0,255,0.5) -0.5em -0.5em;
+}
+.link a:link{
+  color: orange;
+}
+.visited a:visited{
+  color: orange
+}
+.hover a:visited{
+  color: orange;
+}
+.active a:active{
+  color: orange;
+}
+.focus a:focus{
+  color: orange;
+}
+/* ----------------------------------------------- */
+.localfont{
+  font-family: "Comic Sans MS";
+}
+.downloadedfont{
+  font-family: "Zilla Slab Highlight";
+}
+.opensourcefont{
+  font-family: "Zilla Slab Highlight";
+}
+.serif{
+  font-family: "serif";
+}
+.sansserif{
+  font-family: sans-serif;
+}
+.monosspace{
+  font-family: monospace;  
+}
+.cursive{
+  font-family: cursive;
+}
+.fantasy{
+  font-family: fantasy;
+}
+.pixels{
+  font-size: 16px;
+}
+.percent{
+  font-size: 150%;
+}
+.ems{
+  font-size: 2em;
+}
+/* ----------------------------------------------- */
