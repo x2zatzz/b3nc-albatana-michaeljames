@@ -145,3 +145,18 @@
   font-size: 2em;
 }
 /* ----------------------------------------------- */
+.clear .width{
+  width: 10%;
+}
+.clear .height{
+  height: 10%;
+}
+.clear .minwidth{
+  min-width: 5%
+}
+.clear .minheight{
+  min-height: 5%;
+}
+.clear .maxwidth{
+  max-width: 5%;
+}
