@@ -154,21 +154,110 @@
 .minwidth{
   min-width: 5%
 }
-.minheight{
-  min-height: 5%;
-}
 .maxwidth{
   max-width: 5%;
 }
+.minheight{
+  min-height: 2%;
+}
+.maxheight{
+  max-height: 10%;
+}
 .hidden{
-
+  overflow: hidden;
+}
+.scroll{
+  overflow: scroll;
+}
+.borderwidth{
+  border-width: 5px;
+}
+.borderstyle{
+  border-style: dotted;
+}
+.bordercolor{
+  border-color: blue;
+}
+.inline{
+  display: inline;
+}
+.block{
+  display: block;
+}
+.inlineblock{
+  display: inline-block;
+}
+.none{
+  display: none;
+}
+.hidden{
+  visibility: hidden;
 }
 .visible{
-
+  visibility: visible;
 }
 .boxshadow{
-
+  box-shadow: 2px 2px 2px 2px green; 
 }
 .roundedcorner{
-  
+  border-radius: 10px;
 }
+/* ----------------------------------------------- */
+.ulisttype li{
+  list-style-type: circle;
+}
+.olisttype li{
+  list-style: upper-roman;
+}
+/* ----------------------------------------------- */
+.backgroundimg{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100% 100%;
+}
+.repeatx{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  background-repeat: repeat-x;
+}
+.repeaty{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  background-repeat: repeat-y
+}
+.repeatz{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  background-repeat: repeat;
+}
+.norepeat{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+.fixed{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100% 100%;
+}
+.background{
+  background: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+}
+.bghighcontrast{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  filter: contrast(100%);
+}
+.bglowcontrast{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  filter: contrast(10%);
+}
+.bgscreencontrast{
+  background-image: url("../img/photo-1479418153066-6cea8f795aa8.jpg");
+  background-size: 100px 100px;
+  filter: contrast(50%);
+}
+
+
+
+
