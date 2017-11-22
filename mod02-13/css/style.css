@@ -121,7 +121,7 @@
   font-family: "Zilla Slab Highlight";
 }
 .serif{
-  font-family: "serif";
+  font-family: serif;
 }
 .sansserif{
   font-family: sans-serif;
@@ -145,18 +145,30 @@
   font-size: 2em;
 }
 /* ----------------------------------------------- */
-.clear .width{
+.width{
   width: 10%;
 }
-.clear .height{
+.height{
   height: 10%;
 }
-.clear .minwidth{
+.minwidth{
   min-width: 5%
 }
-.clear .minheight{
+.minheight{
   min-height: 5%;
 }
-.clear .maxwidth{
+.maxwidth{
   max-width: 5%;
+}
+.hidden{
+
+}
+.visible{
+
+}
+.boxshadow{
+
+}
+.roundedcorner{
+  
 }
