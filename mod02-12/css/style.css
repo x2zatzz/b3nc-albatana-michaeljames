@@ -76,6 +76,7 @@ footer{
 }
 ul > li{
   list-style: none;
+  background: linear-gradient(to top, #1f0900, #3d1200);
   background-color: #752300;
   margin-bottom: 3px;
   text-align: center;
@@ -83,7 +84,7 @@ ul > li{
   /* padding: 20px; */
 }
 ul > li:hover{
-  background-color: #a33100;
+  background: #a33100;
 }
 ul > li > a{
   text-decoration: none;
