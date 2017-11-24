@@ -13,6 +13,7 @@
 img{
   width: 100%;
   border: none;
+
 }
 h2{
   font-size: 1em;
@@ -30,9 +31,7 @@ p{
   font-size: 0.75em;
   background-color: transparent;
   text-indent: 10px;
-
 }
-
 
 /* major containers dim. & pos. ----- */
 .sub-body{
@@ -153,7 +152,7 @@ main[class="right-content"] > p{
   background: rgba(255,255,255,0.1);
   margin-top: 0;
   padding-top: 0.5em;
-  padding-bottom: 0.5em;  
+  padding-bottom: 0.5em;
 }
 /* RIGHT SECTION -------------------- */
 main[class="right"] img{
@@ -165,7 +164,7 @@ main[class="right"] img{
 
 /* COLOR of the sections ---------------------- */
 main[class="left-content"]{
-  
+
 }
 main[class="mid-content"]{
 

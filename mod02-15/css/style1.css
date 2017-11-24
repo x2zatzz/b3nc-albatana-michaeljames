@@ -1,0 +1,200 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */
+
+*{
+  border: 0.5px solid hsla(0, 1%, 100%, 0.20);
+  background-color: hsla(1, 1%, 20%, 0.10)
+}
+
+
+/* FONT-FACE */
+@font-face{}
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+p{}
+div{}
+li{}
+img{}
+a{}
+
+/* CONTAINERS */
+/* these contains rules related to dimensions & positioning only
+    note that elements must have Layer class designation and must be explicitly defined in HTML
+    L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+/* LAYER-1 > MAJOR CONTAINERS (metric properties) */
+  /* these containers are direct parents of minor containers
+      should not contain inline elements used as text-holder as much as possible
+      these elements must have additional class assign
+      MAJOR CONTAINERS MUST BE BLOCK-TYPE */
+/* body{} -> should have no rules, to be more formal */
+.body{
+  display: block;
+  clear: both;
+  width: 90%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0 auto;
+}
+header{
+  display: inline-block;
+  clear: both;
+  width: 1fr;
+  height: 100%;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+header[class="L1"]{
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+main{
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+footer{
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+
+/* LAYER-2 > MINOR CONTAINERS (metric properties) */
+/* these can contain elements for the purpose of containing END-containers,
+each container must be attached according to their parent containers
+it is possible to contain another create branched containers for layer-3 containers
+rules can contain Dimensions & Positioning only */
+
+header ul[class*="header-nav"]{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+header ul[class*="header-social"]{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+header[class*="header-bannerimg"]{
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+  text-align: center;
+}
+.header-banner-textholder{
+  display: inline;
+  width: auto;
+  height: 100%;
+  padding: 0;
+  border-width: 0;
+  margin: 0 auto;
+
+}
+
+/* LAYER-3 > EDGE-elements (ANY rules except color) */
+/* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+usually it contains elements holding data or information to be displayed and rendered for viewers
+any rules can be applied on these containers,
+also items must be constructed according to the flow of HTML */
+
+header ul[class*="header-nav"] li{
+  display: inline;
+  padding: 0.5em;
+  border-width: 1px;
+  margin: 0;
+}
+header ul[class*="header-social"] li{
+  display: inline;
+  padding: 0.5em;
+  border-width: 1px;
+  margin: 0;
+}
+header h1,
+header p{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0.5em;
+  border-width: 0;
+  margin: 0 auto;
+
+}
+
+
+
+
+/* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
+  /* To make coloring less hassle, determine the elements with same color values,
+      assign those elements to a particular color-group,
+      must be coded from parent to the child elements/containers */
+body{
+  background: hsla(0, 1%, 0%, 1.0);
+}
+.body{
+  background: hsla(0, 1%, 50%, 1.0);
+}
+header h1,
+header p{
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+main{
+  background: hsla(0, 1%, 0%, 1.0);
+}
+header[class*="header-bannerimg"]{
+  background: url("../res/k-on-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+}
+
+
+
+/* HOVER-effects */
+
+
+
+
+/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
