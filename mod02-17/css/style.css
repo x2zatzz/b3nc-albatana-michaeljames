@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Zilla Slab Highlight';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Zilla Slab Highlight Bold'), local('ZillaSlabHighlight-Bold'), url(https://fonts.gstatic.com/s/zillaslabhighlight/v3/4GC1z5cbR6tbZfervoVHHGiOYC683oHv9smPBVAVffg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 0.5px solid hsla(0, 100%, 50%, 0.7); */
+  font-family: "Roboto";
+  text-align: center;
+}
+/*
+.about,
+.services,
+.projects,
+.gallery {
+  background: linear-gradient(to bottom, #121212 30%, #1f1f1f 60%)
+}
+
+.footer {
+  background-color: #752300;
+}
+
+.column {
+  border: 1px solid #ff4d00;
+}
+
+.banner .box {
+  border: 5px solid #ff4d00;
+} */
+
+/* LOGO & NAV portion */
+
+body{
+  position: relative;
+}
+.logo {
+  margin: 10px;
+  width: 140px;
+  height: 140px;
+  background-color: darkgray;
+  background-image: url("../img/venom-snake-140.jpg");
+  display: inline-block;
+}
+
+.nav{
+  width: 100%;
+  background: linear-gradient(to bottom, #1f0900 49%, #3d1200 51%);
+  /* background-color: #3d1200; */
+  height: 100%;
+}
+
+ul>li {
+  list-style: none;
+  background: linear-gradient(to top, #1f0900, #3d1200);
+  background-color: #752300;
+  margin-bottom: 3px;
+  text-align: center;
+  line-height: 40px;
+  /* padding: 20px; */
+}
+
+ul>li:hover {
+  background: #a33100;
+}
+
+ul>li>a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+.main{
+  width: 100%;
+}
+.banner{
+  width: 100%;
+  height: 200px;
+  background: violet;
+}
+.box{
+  display: inline-block;
+  width: 70%;
+  height: 50%;
+  transform: translateY(50%);
+}
+.about{
+  width: 100%;
+  height: auto;
+  background: greenyellow;
+}
+.services{
+  width: 100%;
+  height: auto;
+  background: rosybrown;
+}
+.projects{
+  width: 100%;
+  height: auto;
+  background: peru;
+}
+
+.gallery{
+  width: 100%;
+  height: auto;
+  background: gray;
+}
+.footer{
+  width: 100%;
+  height: auto;
+  background: goldenrod;
+}
+.footer img{
+  width: 50px;
+}
+.separator {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 2em;
+  display: block;
+  clear: both;
+  background: linear-gradient(to right, #3d1200, #752300 29%, #a33100 30%, #d13f00 59%, #ff4d00 60%);
+}
+
+/* MOBILE DEVICES +++++++++++++++++++++ */
+
+@media only screen and (max-width: 400px) {
+  body {
+  }
+}
+
+
+/* TABLET DEVICES  ++++++++++++++++++++++ */
+@media only screen and (min-width: 401px) {
+  *{
+    background: #752300;
+    border: 0.1px solid hsl(0, 100%, 50%)
+  }
+  .nav {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    background: linear-gradient(to bottom, #1f0900 49%, #3d1200 51%);
+    /* z-index: 10; */
+  }
+  .main{
+    width: 75%;
+    position: absolute;
+    right: 0;
+  }
+  .gallery{
+    width: 100%;
+  }
+  .gallery .column{
+    width: 40%;
+    float: left;
+    margin: 10px;
+  }
+}
+
+/* DESKTOP DEVICES ++++++++++++++++++++++ */
+@media only screen and (min-width: 961px) {
+  * {
+    background: blue;
+  }
+}
