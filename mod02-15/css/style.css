@@ -1,174 +1,200 @@
-/* universal defaults ----------------- */
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */
+
 *{
+  border: 0.5px solid hsla(0, 1%, 100%, 0.20);
+  background-color: hsla(1, 1%, 20%, 0.10)
+}
+
+
+/* FONT-FACE */
+@font-face{}
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #202642;
-  color: #fff;
-  /* border: 0.5px solid #fff; */
-  box-sizing: border-box;
-  text-align: center;
-  vertical-align: top;
 }
-img{
-  width: 100%;
-  border: none;
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+p{}
+div{}
+li{}
+img{}
+a{}
 
-}
-h2{
-  font-size: 1em;
-  text-shadow: 0.1em 0.1em 0.1em black;
-  background-color: transparent;
-  margin-top: 0.5em;
-  text-transform: uppercase;
-  border-bottom: 1px dashed #fff;
-  text-indent: 10px;
-  box-sizing: content-box;
-  padding-bottom: 0.5em;
-}
-p{
-  margin-top: 0.5em;
-  font-size: 0.75em;
-  background-color: transparent;
-  text-indent: 10px;
-}
-
-/* major containers dim. & pos. ----- */
-.sub-body{
-  width: 1100px;
-  height: auto;
-  margin: 0 auto;
-}
-header[class="parent"],
-main[class="parent"],
-footer[class="parent"]{
-  width: 100%;
-  height: auto;
-}
-
-/* HEADER section -------------- */
-header[class="nav"],
-header[class="social"],
-header[class="banner"],
-header p,
-header h1{
-  background: transparent;
-}
-
-header[class="nav"],
-header[class="banner"]{
-  width: 100%;
+/* CONTAINERS */
+/* these contains rules related to dimensions & positioning only
+    note that elements must have Layer class designation and must be explicitly defined in HTML
+    L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+/* LAYER-1 > MAJOR CONTAINERS (metric properties) */
+  /* these containers are direct parents of minor containers
+      should not contain inline elements used as text-holder as much as possible
+      these elements must have additional class assign
+      MAJOR CONTAINERS MUST BE BLOCK-TYPE */
+/* body{} -> should have no rules, to be more formal */
+.body{
   display: block;
-}
-header[class="nav"]{
-  height: 100px;
-}
-header[class="nav"] li,
-header[class="social"] li{
-  display: inline;
-}
-header[class="subparent"]{
-  height: 365px;
-  background: url(http://3.bp.blogspot.com/-kU5YWzUy65k/VliA9nlfyEI/AAAAAAAACgE/lsGhdyx0v_0/s000/k-on-header.jpg);
-  background-repeat: no-repeat;
-}
-header[class="banner"] h1,
-header[class="banner"] p{
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-}
-
-/* MAIN SECTION --------------------- */
-/* LEFT + MID + RIGHT --------------------- */
-main[class="subparent"]{
-  width: auto;
-  display: inline-block;
-}
-main[class="left"],
-main[class="mid"],
-main[class="right"]{
+  clear: both;
+  width: 90%;
   height: auto;
-  display: inline-block;
+  padding: 0;
+  border-width: 0;
   margin: 0 auto;
 }
-main[class="left"]{
-  width: 20%;
-}
-main[class="mid"]{
-  width: 50%;
-}
-main[class="right"]{
-  width: 20%;
-}
-h2,
-h3,
-p{
-  text-align: left;
-}
-p{
-  font-style: italic;
-}
-.left-content,
-.mid-content{
-  position: relative;
-}
-main .pins{
-  border: none;
+header{
   display: inline-block;
-  background-color: rgba(255, 0, 0, 0.5);
-  font-weight: bolder;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  z-index: 10;
+  clear: both;
+  width: 1fr;
+  height: 100%;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
 }
-main .pins p{
-  display: inline;
-}
-main[class="left"] img,
-main[class="mid"] img,
-main[class="right"] img{
+header[class="L1"]{
+  display: inline-block;
+  clear: both;
   width: 100%;
-  border: 5px solid rgba(255,255,255,0.1);
-  border-radius: 5px 5px 0 0;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
 }
-main[class="left-content"],
-main[class="mid-content"],
-main[class="right-content"]{
-  background-color: #565F7C;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
+main{
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
 }
-main[class="left-content"] > p,
-main[class="mid-content"] > p,
-main[class="right-content"] > p{
-  background: rgba(255,255,255,0.1);
-  margin-top: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-/* RIGHT SECTION -------------------- */
-main[class="right"] img{
-  width: 70px;
-  float: left;
-  border-radius: 50%;
-  border: none;
+footer{
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
 }
 
-/* COLOR of the sections ---------------------- */
-main[class="left-content"]{
+/* LAYER-2 > MINOR CONTAINERS (metric properties) */
+/* these can contain elements for the purpose of containing END-containers,
+each container must be attached according to their parent containers
+it is possible to contain another create branched containers for layer-3 containers
+rules can contain Dimensions & Positioning only */
+
+header ul[class*="header-nav"]{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+header ul[class*="header-social"]{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+header[class*="header-bannerimg"]{
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+  text-align: center;
+}
+.header-banner-textholder{
+  display: inline;
+  width: auto;
+  height: 100%;
+  padding: 0;
+  border-width: 0;
+  margin: 0 auto;
 
 }
-main[class="mid-content"]{
+
+/* LAYER-3 > EDGE-elements (ANY rules except color) */
+/* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+usually it contains elements holding data or information to be displayed and rendered for viewers
+any rules can be applied on these containers,
+also items must be constructed according to the flow of HTML */
+
+header ul[class*="header-nav"] li{
+  display: inline;
+  padding: 0.5em;
+  border-width: 1px;
+  margin: 0;
+}
+header ul[class*="header-social"] li{
+  display: inline;
+  padding: 0.5em;
+  border-width: 1px;
+  margin: 0;
+}
+header h1,
+header p{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0.5em;
+  border-width: 0;
+  margin: 0 auto;
 
 }
-main[class="right-content"]{
+
+
+
+
+/* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
+  /* To make coloring less hassle, determine the elements with same color values,
+      assign those elements to a particular color-group,
+      must be coded from parent to the child elements/containers */
+body{
+  background: hsla(0, 1%, 0%, 1.0);
+}
+.body{
+  background: hsla(0, 1%, 50%, 1.0);
+}
+header h1,
+header p{
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+main{
+  background: hsla(0, 1%, 0%, 1.0);
+}
+header[class*="header-bannerimg"]{
+  background: url("../res/k-on-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 
 }
+
+
+
+/* HOVER-effects */
+
+
+
+
+/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
