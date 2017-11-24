@@ -1,0 +1,242 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */ /*
+*{
+
+}
+*/
+
+/* FONT-FACE */
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* CONTAINERS */
+/* these contains rules related to dimensions & positioning only
+note that elements must have Layer class designation and must be explicitly defined in HTML
+L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+/* LAYER-1 > MAJOR CONTAINERS (metric properties) */
+/* these containers are direct parents of minor containers
+should not contain inline elements used as text-holder as much as possible
+these elements must have additional class assign
+MAJOR CONTAINERS MUST BE BLOCK-TYPE */
+
+
+.{
+  width: 80%;
+  margin: 0 auto;
+}
+.header{
+  min-height: 150px;
+  background: violet;
+}
+.main{
+  min-height: 700px;
+  background: gray;
+}
+.footer{
+  height: 100px;
+  background: skyblue;
+}
+.clear::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.grid > .column{
+  height: 1060px;
+  width: 7.33%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  background: #efefef;
+  opacity: 0.4;
+  padding-top: 530px;
+  float: left;
+  position: relative;
+  top: -960px;
+}
+.col-lg-1{
+  width: 8.33%
+}
+.col-lg-2{
+  width: 16.66%;
+}
+.col-lg-3{
+  width: 25%;
+}
+.col-lg-4{
+  width: 33.33%;
+}
+.col-lg-5{
+  width: 41.66%;
+}
+.col-lg-6{
+  width: 50%;
+}
+.col-lg-7{
+  width: 58.33%;
+}
+.col-lg-8{
+  width: 66.66%;
+}
+.col-lg-9{
+  width: 75%;
+}
+.col-lg-10{
+  width: 83.33%;
+}
+.col-lg-11{
+  width: 91.66%;
+}
+.col-lg-12{
+  width: 100%;
+}
+.left{
+  height: 700px;
+}
+.right{
+  height: 350px;
+}
+div[class*="col-lg"]{
+  border: 5px solid black;
+  float: left;
+}
+
+/* TABLET DEVICES +++++++++++++++++++++++++ */
+@media only screen and (min-width: 401px) and (max-width: 960px){
+.col-md-1 {
+  width: 8.33%
+}
+
+.col-md-2 {
+  width: 16.66%;
+}
+
+.col-md-3 {
+  width: 25%;
+}
+
+.col-md-4 {
+  width: 33.33%;
+}
+
+.col-md-5 {
+  width: 41.66%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-7 {
+  width: 58.33%;
+}
+
+.col-md-8 {
+  width: 66.66%;
+}
+
+.col-md-9 {
+  width: 75%;
+}
+
+.col-md-10 {
+  width: 83.33%;
+}
+
+.col-md-11 {
+  width: 91.66%;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+}
+
+/* desktop */
+/* TABLET DEVICES+++++++++++++++++++++++++*/ @media only screen and (min-width: 961px) and (max-width: 1200px) {
+  .col-md-1 {
+    width: 8.33%
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+
+.pic{
+  background-color: green;
+  border: 2px solid black;
+  height: 300px;
+}
+
+
+/* LAYER-2 > MINOR CONTAINERS (metric properties) */
+  /* these can contain elements for the purpose of containing END-containers,
+      each container must be attached according to their parent containers
+      it is possible to contain another create branched containers for layer-3 containers
+      rules can contain Dimensions & Positioning only */
+
+/* LAYER-3 > EDGE-elements (ANY rules except color) */
+  /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+      usually it contains elements holding data or information to be displayed and rendered for viewers
+      any rules can be applied on these containers, also items must be constructed according to the flow of HTML
+      since L3 elements are the farthest elements, they could be selected uniquely without a class-name
+      class-naming is only applied when necessary, specially for div elements with special purpose other
+      than containing child elements*/
+
+
+
+
+
+/* COLOR & BACK-IMAGE */
+  /* To make coloring less hassle, determine the elements with same color values,
+      assign those elements to a particular color-group,
+      must be coded from parent to the child elements/containers */
+
+/* HOVER-effects */
+
+
+
+
+/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
