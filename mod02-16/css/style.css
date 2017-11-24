@@ -1,0 +1,107 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page{
+  width: 100%;
+}
+.section{
+    width: 100%;
+    height: 300px;
+}
+.menu{
+  background: hsl(212, 64%, 60%);
+  height: 80px;
+}
+
+.header{
+  background: #b2d6ff;
+}
+
+.content{
+  background: #eaedf0;
+  height: 600px;
+}
+
+.signup{
+  background: #d6e9fe;
+}
+
+.feature-1{
+  background: #f5c95c;
+}
+.feature-2{
+  background: #f09a9d;
+}
+.feature-3{
+  background: #c8c6fa;
+}
+
+
+
+/* MOBILE DEVICES */
+@media only screen and (max-width: 400px){
+  body{
+    /*  */
+  }
+}
+/* TABLET DEVICES */
+@media only screen and (min-width: 401px){
+  body{
+    /*  */
+   }
+
+   .sign-up,
+   .feature-1,
+   .feature-2,
+   .feature-3{
+     width: 50%;
+     float: left;
+   }
+
+
+
+}
+
+
+
+/* DESKTOP DEVICES */
+@media only screen and (min-width: 961px){
+  body{
+    /*  */
+  }
+  .page{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .feature-1,
+  .feature-2,
+  .feature-3{
+    width: 33.33%;
+    float: left;
+  }
+  .header{
+    height: 400px;
+  }
+  .signup{
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
