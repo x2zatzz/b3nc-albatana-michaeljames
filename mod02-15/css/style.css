@@ -1,14 +1,18 @@
 /* UNIVERSAL DEBUG ------------------ */
 /* This portion is used for experimental purposes and this portion must be empty when deployed */
 
+
+
 *{
-  border: 0.5px solid hsla(0, 1%, 100%, 0.20);
-  background-color: hsla(1, 1%, 20%, 0.10)
+  /* border: 0.5px solid hsla(0, 100%, 50%, 0.5); */
+
 }
 
 
+
+
 /* FONT-FACE */
-@font-face{}
+
 
 /* UNIVERSAL DEFAULTS */
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
@@ -16,8 +20,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
-h1{}
+/* h1{}
 h2{}
 h3{}
 h4{}
@@ -27,12 +32,16 @@ p{}
 div{}
 li{}
 img{}
-a{}
+a{} */
+ul{
+  list-style: none;
+}
 
 /* CONTAINERS */
 /* these contains rules related to dimensions & positioning only
     note that elements must have Layer class designation and must be explicitly defined in HTML
     L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+
 /* LAYER-1 > MAJOR CONTAINERS (metric properties) */
   /* these containers are direct parents of minor containers
       should not contain inline elements used as text-holder as much as possible
@@ -40,50 +49,54 @@ a{}
       MAJOR CONTAINERS MUST BE BLOCK-TYPE */
 /* body{} -> should have no rules, to be more formal */
 .body{
-  display: block;
-  clear: both;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
   width: 90%;
   height: auto;
   padding: 0;
   border-width: 0;
   margin: 0 auto;
 }
-header{
-  display: inline-block;
-  clear: both;
-  width: 1fr;
+
+header.L1,
+main.L1{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
   height: 100%;
   padding: 0;
   border-width: 0;
-  margin: 0;
+  margin: 0 auto;
 }
-header[class="L1"]{
-  display: inline-block;
-  clear: both;
+footer.L1{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  flex: 0 1 auto;
+  align-self: flex-start;
+
   width: 100%;
-  height: auto;
-  padding: 0;
+  min-height: 600px;
+  padding: 20px;
   border-width: 0;
-  margin: 0;
+  margin: 0 auto;
+
 }
-main{
-  display: inline-block;
-  clear: both;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border-width: 0;
-  margin: 0;
-}
-footer{
-  display: inline-block;
-  clear: both;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border-width: 0;
-  margin: 0;
-}
+
 
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
 /* these can contain elements for the purpose of containing END-containers,
@@ -91,41 +104,118 @@ each container must be attached according to their parent containers
 it is possible to contain another create branched containers for layer-3 containers
 rules can contain Dimensions & Positioning only */
 
-header ul[class*="header-nav"]{
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border-width: 0;
-  margin: 0;
+/* HEADER */
+
+.header-nav{
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+
+  padding: 10px;
 }
-header ul[class*="header-social"]{
-  display: block;
+.header-bannerimg{
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
   width: 100%;
-  height: auto;
-  padding: 0;
-  border-width: 0;
-  margin: 0;
+  height: 380px;
+  position: relative;
 }
-header[class*="header-bannerimg"]{
-  display: block;
-  clear: both;
-  width: 100%;
-  height: 400px;
-  padding: 0;
-  border-width: 0;
-  margin: 0;
-  text-align: center;
-}
-.header-banner-textholder{
-  display: inline;
+.header-social{
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-end;
+  margin: 10px;
+
   width: auto;
-  height: 100%;
-  padding: 0;
-  border-width: 0;
+  height: 50px;
+  text-align: right;
+}
+
+.header-textholder{
+  display: inline-block;
+  position: absolute;
+  bottom: 50%;
+
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+}
+
+/* MAIN ----------------------------- */
+main.main{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+main.main-lft,
+main.main-mid,
+main.main-rgt{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  height: auto;
+}
+main.main-lft{
+  width: 340px;
+}
+main.main-mid{
+  width: 540px;
+}
+main.main-rgt{
+  width: 300px;
+}
+main.main-lft-content,
+main.main-mid-content,
+main.main-rgt-content{
+  display: block;
+  margin: 5px;
+  position: relative;
+  border: 5px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 5px;
+}
+main.main-rgt-content,
+footer.footer-post-content{
+  padding: 10px;
+}
+
+/* FOOTER ------------------------ */
+footer.footer-post,
+footer.footer-blog,
+footer.footer-about{
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+  margin: 10px;
+  width: 33.33%;
+
 
 }
+
 
 /* LAYER-3 > EDGE-elements (ANY rules except color) */
 /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
@@ -133,30 +223,66 @@ usually it contains elements holding data or information to be displayed and ren
 any rules can be applied on these containers,
 also items must be constructed according to the flow of HTML */
 
-header ul[class*="header-nav"] li{
-  display: inline;
-  padding: 0.5em;
-  border-width: 1px;
-  margin: 0;
+/* HEADER */
+.header-nav > li{
+  display: inline-flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  margin: 10px;
+  padding: 1.5em;
 }
-header ul[class*="header-social"] li{
-  display: inline;
-  padding: 0.5em;
-  border-width: 1px;
-  margin: 0;
+
+.header-social > li{
+  display: inline-flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-end;
+
+  width: 32px;
+  height: 32px;
 }
-header h1,
-header p{
+
+.header-textholder > h1,
+.header-textholder > p{
   display: block;
-  width: 100%;
-  height: auto;
-  padding: 0.5em;
-  border-width: 0;
-  margin: 0 auto;
 
+  width: auto;
+  height: auto;
 }
 
-
+/* MAIN */
+.pins{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  line-height: 30px;
+}
+.main-mid-content > .comment{
+  display: block;
+  position: absolute;
+  bottom: 70px;
+  padding: 10px;
+  margin: 0;
+}
+.main-rgt-content > img,
+.footer-post-content > img{
+  float: left;
+  border-radius: 50%;
+  margin: 5px;
+}
+.main-rgt-content > h3,
+.main-rgt-content > p,
+.footer-post-content > h3,
+.footer-post-content > p{
+  margin: 5px;
+  line-height: 1.5em;
+}
 
 
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
@@ -164,31 +290,123 @@ header p{
       assign those elements to a particular color-group,
       must be coded from parent to the child elements/containers */
 body{
-  background: hsla(0, 1%, 0%, 1.0);
+  background: hsl(229, 35%, 19%);
 }
-.body{
-  background: hsla(0, 1%, 50%, 1.0);
-}
+
 header h1,
 header p{
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 1%, 100%);
   text-align: center;
+  font-style: normal;
 }
+header h1{
+  font-size: 4em;
+  font-weight: bold;
+}
+.body,
+header,
 main{
-  background: hsla(0, 1%, 0%, 1.0);
+  background: hsl(229, 36%, 18%);
+  color: hsl(0, 1%, 100%);
 }
-header[class*="header-bannerimg"]{
+footer{
+  background: hsl(226, 18%, 60%);
+}
+.body p,
+header p,
+main p,
+footer p{
+  font-style: italic;
+  margin: 0.5em 0 0.5em 10px;
+}
+.body h2,
+header h2,
+main h2,
+footer h2{
+  text-shadow: 1px 1px 1px hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  padding: 0.5em 0 0.5em 10px;
+  border-bottom: 1px dashed hsl(0, 0%, 100%);
+}
+
+
+/* HEADER */
+header.L1 .header-nav li{
+  font-weight: bolder;
+  margin: 0 10px;
+  text-transform: uppercase;
+
+}
+
+header.header-bannerimg{
   background: url("../res/k-on-header.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-
 }
 
 
+/* MAIN */
+main.main-lft-content,
+main.main-mid-content{
+  background: hsl(226, 18%, 41%);
+}
+.main-rgt-content{
+  background: hsl(226, 18%, 60%);
+}
+.pins{
+  font-size: 1.5em;
+  font-weight: bold;
+  background: hsla(0, 100%, 50%, 0.5);
+  text-align: center;
+}
+
+/* MAIN-MID */
+main.main-mid-content{
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background: hsl(238, 29%, 20%);
+}
+
+.main-mid-content > .comment {
+  background: hsla(0, 0%, 0%, 0.7);
+}
+
+/* FOOTER -------------------- */
+footer.L1{
+  background: hsl(226, 18%, 60%) url(../res/foot.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 5px;
+}
+
+footer.footer-blog > h3{
+  margin: 10px 40px 10px 10px;
+  border-bottom: 1px solid white;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+footer.footer-about > p{
+  line-height: 1.7em;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+small.copyright{
+  display: block;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 2em;
+  width: 100%;
+  height: 2em;
+}
 
 /* HOVER-effects */
-
+header.L1 .header-nav li:hover{
+  background: hsla(0, 100%, 50%, 0.5);
+}
 
 
 
