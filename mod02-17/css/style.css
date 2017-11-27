@@ -197,6 +197,15 @@ small{
   margin-bottom: 10px;
 }
 
+.separator {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 2em;
+  display: block;
+  background: linear-gradient(to right, #3d1200, #752300 29%, #a33100 30%, #d13f00 59%, #ff4d00 60%);
+}
+
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES */
   /* To make coloring less hassle, determine the elements with same color values,
       assign those elements to a particular color-group,
