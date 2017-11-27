@@ -1,0 +1,23 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */
+.well img{
+  border-radius: 50%;
+}
+
+.well,
+.btn,
+.panel{
+  border-radius: 0;
+  /* background: lightgreen; */
+}
+
+
+
+
+
+/* CSS3 Template version 1.1 - 20171125 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
