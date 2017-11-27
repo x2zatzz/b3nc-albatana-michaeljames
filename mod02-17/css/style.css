@@ -6,25 +6,38 @@
 */
 
 /* FONT-FACE */
-@font-face{
-
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@font-face {
+  font-family: 'Zilla Slab Highlight';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Zilla Slab Highlight Bold'), local('ZillaSlabHighlight-Bold'), url(https://fonts.gstatic.com/s/zillaslabhighlight/v3/4GC1z5cbR6tbZfervoVHHGiOYC683oHv9smPBVAVffg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 /* UNIVERSAL DEFAULTS */
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  /* color: white; */
   font-family: Helvetica, sans-serif;
-  text-align: center;
-  border: 0.1px solid white;
+  /* border: 0.1px solid white; */
 }
 ul{
   list-style: none;
 }
 
+a{
+  color: #ff4d00;
+}
 /* CONTAINERS */
 /* these contains rules related to dimensions & positioning only
     note that elements must have Layer class designation and must be explicitly defined in HTML
@@ -61,7 +74,7 @@ body{
   align-self: auto;
 
   width: 100%;
-  /* margin: 5px 0; */
+  margin: 5px 0;
 }
 
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
@@ -73,16 +86,16 @@ body{
 .nav-main {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  align-content: flex-start;
+  align-content: space-around;
 
   flex: 0 1 auto;
   align-self: auto;
 
   width: 100%;
   height: 480px;
-  padding: 100px;
+  padding: 50px;
 }
 
 .main-banner,
@@ -101,12 +114,18 @@ body{
 
   width: 100%;
   height: auto;
-  /* margin: 10px; */
+  margin: 10px 0;
 }
 
 .main-banner{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
   width: 100%;
-  height: 80px;
+  height: 200px;
 }
 
 .main-about,
@@ -124,6 +143,7 @@ body{
 
   width: 100%;
   height: auto;
+  padding: 10px;
 }
 
 .footer-contact{
@@ -149,9 +169,13 @@ body{
 
 /* nav */
 .nav li{
-    margin-bottom: 3px;
+  margin-bottom: 3px;
   text-align: center;
   line-height: 40px;
+  padding: 0 20px;
+}
+.nav img{
+  width: 100px;
 }
 
 .footer img{
@@ -159,12 +183,21 @@ body{
   height: 50px;
 }
 
-.main img{
-  max-width: 240px;
+.services-column img,
+.gallery-column img{
+  display: block;
+  margin: 10px auto;
+  width: 240px;
+  border: 1px solid red;
 }
 
+small{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-/* COLOR & BACK-IMAGE */
+/* COLOR & BACK-IMAGE & TEXT PROPERTIES */
   /* To make coloring less hassle, determine the elements with same color values,
       assign those elements to a particular color-group,
       must be coded from parent to the child elements/containers */
@@ -177,12 +210,58 @@ body{
 main{
   background: hsla(0, 1%, 0%, 1.0);
 }
+.main-about,
+.main-services,
+.main-projects,
+.main-gallery {
+  background: linear-gradient(to bottom, #121212 30%, #1f1f1f 60%)
+}
+
+.main-banner{
+  border: 5px solid #ff4d00;
+}
+.main-banner h1,
+.main-banner p{
+  color: #ff4d00;
+}
+h1{
+  font-family: "Zilla Slab Highlight";
+  color: #ff4d00;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+footer {
+  font-family: "Zilla Slab Highlight";
+  color: #ff4d00;
+  text-transform: uppercase;
+  margin: 10px;
+  text-align: center;
+}
+
+.services-column,
+.gallery-column{
+  border: 1px solid #ff4d00;
+  padding: 10px;
+}
+
+
+
+.footer {
+  background-color: #752300;
+  padding: 10px;
+}
+
 
 .nav li{
   list-style: none;
   background: linear-gradient(to top, #1f0900, #3d1200);
   background-color: #752300;
 }
+
+
 
 /* RWD FUNCTION ---------------------------------- */
 /* MOBILE DEVICES +++++++++++++++++++++ */
@@ -193,12 +272,104 @@ main{
 
 /* TABLET DEVICES  ++++++++++++++++++++++ */
 @media only screen and (min-width: 401px){
+  body{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
 
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    border-width: 0;
+    margin: 0 auto;
+  }
+
+  .nav{
+    align-self: baseline;
+
+    max-width: 30%;
+
+  }
+
+
+  .services-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+
+    margin: 20px;
+  }
+
+  .services-column{
+    display: block;
+    padding: 10px;
+
+  }
+
+  .services-column img{
+    float: left;
+    width: 120px;
+  }
+  .footer{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: flex-end;
+
+  }
+
+  .main-services img {
+    max-width: 240px;
+    margin: 10px;
+  }
+  .main-gallery{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+
+    width: 100%;
+    padding: 10px;
+  }
+  .gallery-group{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+
+    width: 100%;
+  }
+  .gallery-column{
+    width: 50%;
+    padding: 10px;
+
+
+  }
+  .gallery-column img{
+    max-width: 200px;
+    height: auto;
+  }
 }
+
 
 
 /* DESKTOP DEVICES ++++++++++++++++++++++ */
 @media only screen and (min-width: 961px){
+
+  .services-content,
+  .gallery-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+  }
 
 }
 
