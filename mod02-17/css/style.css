@@ -1,179 +1,186 @@
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */ /*
+*{
+
 }
-@font-face {
-  font-family: 'Zilla Slab Highlight';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Zilla Slab Highlight Bold'), local('ZillaSlabHighlight-Bold'), url(https://fonts.gstatic.com/s/zillaslabhighlight/v3/4GC1z5cbR6tbZfervoVHHGiOYC683oHv9smPBVAVffg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+*/
+
+/* FONT-FACE */
+@font-face{
+
 }
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 0.5px solid hsla(0, 100%, 50%, 0.7); */
-  font-family: "Roboto";
-  text-align: center;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-align: justify;
 }
-/*
-.about,
-.services,
-.projects,
-.gallery {
-  background: linear-gradient(to bottom, #121212 30%, #1f1f1f 60%)
+ul{
+  list-style: none;
 }
 
-.footer {
-  background-color: #752300;
-}
-
-.column {
-  border: 1px solid #ff4d00;
-}
-
-.banner .box {
-  border: 5px solid #ff4d00;
-} */
-
-/* LOGO & NAV portion */
+/* CONTAINERS */
+/* these contains rules related to dimensions & positioning only
+    note that elements must have Layer class designation and must be explicitly defined in HTML
+    L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+/* LAYER-1 > MAJOR CONTAINERS (metric properties) */
+  /* these containers are direct parents of minor containers
+      should not contain inline elements used as text-holder as much as possible
+      these elements must have additional class assign
+      MAJOR CONTAINERS MUST BE BLOCK-TYPE */
 
 body{
-  position: relative;
-}
-.logo {
-  margin: 10px;
-  width: 140px;
-  height: 140px;
-  background-color: darkgray;
-  background-image: url("../img/venom-snake-140.jpg");
-  display: inline-block;
-}
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 
-.nav{
   width: 100%;
-  background: linear-gradient(to bottom, #1f0900 49%, #3d1200 51%);
-  /* background-color: #3d1200; */
   height: 100%;
-}
-
-ul>li {
-  list-style: none;
-  background: linear-gradient(to top, #1f0900, #3d1200);
-  background-color: #752300;
-  margin-bottom: 3px;
-  text-align: center;
-  line-height: 40px;
-  /* padding: 20px; */
-}
-
-ul>li:hover {
-  background: #a33100;
-}
-
-ul>li>a {
-  text-decoration: none;
-}
-
-ul {
-  padding-left: 0;
-}
-.main{
-  width: 100%;
-}
-.banner{
-  width: 100%;
-  height: 200px;
-  background: violet;
-}
-.box{
-  display: inline-block;
-  width: 70%;
-  height: 50%;
-  transform: translateY(50%);
-}
-.about{
-  width: 100%;
-  height: auto;
-  background: greenyellow;
-}
-.services{
-  width: 100%;
-  height: auto;
-  background: rosybrown;
-}
-.projects{
-  width: 100%;
-  height: auto;
-  background: peru;
-}
-
-.gallery{
-  width: 100%;
-  height: auto;
-  background: gray;
-}
-.footer{
-  width: 100%;
-  height: auto;
-  background: goldenrod;
-}
-.footer img{
-  width: 50px;
-}
-.separator {
-  width: 100%;
   padding: 0;
-  margin: 0;
-  height: 2em;
-  display: block;
-  clear: both;
-  background: linear-gradient(to right, #3d1200, #752300 29%, #a33100 30%, #d13f00 59%, #ff4d00 60%);
+  border-width: 0;
+  margin: 0 auto;
+}
+.nav,
+.main,
+.footer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  flex: 0 1 auto;
+  align-self: auto;
+
+  margin: 5px 0;
 }
 
-/* MOBILE DEVICES +++++++++++++++++++++ */
 
-@media only screen and (max-width: 400px) {
-  body {
-  }
+
+/* LAYER-2 > MINOR CONTAINERS (metric properties) */
+  /* these can contain elements for the purpose of containing END-containers,
+      each container must be attached according to their parent containers
+      it is possible to contain another create branched containers for layer-3 containers
+      rules can contain Dimensions & Positioning only */
+
+.nav-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
+  height: 480px;
+  padding: 100px;
+}
+
+.main-banner,
+.main-about,
+.main-services,
+.main-projects,
+.main-gallery{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
+  height: auto;
+}
+
+.main-banner{
+  width: 100%;
+  height: 80px;
+}
+
+.main-about,
+.main-projects,
+.main-services,
+.main-gallery{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  flex: 0 1 auto;
+  align-self: center;
+
+  width: 100%;
+  height: auto;
+}
+
+
+      /* LAYER-3 > EDGE-elements (ANY rules except color) */
+  /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+      usually it contains elements holding data or information to be displayed and rendered for viewers
+      any rules can be applied on these containers, also items must be constructed according to the flow of HTML
+      since L3 elements are the farthest elements, they could be selected uniquely without a class-name
+      class-naming is only applied when necessary, specially for div elements with special purpose other
+      than containing child elements*/
+
+
+/* COLOR & BACK-IMAGE */
+  /* To make coloring less hassle, determine the elements with same color values,
+      assign those elements to a particular color-group,
+      must be coded from parent to the child elements/containers */
+body{
+  background: hsl(0, 0%, 0%);
+}
+.body{
+  background: hsl(0, 1%, 10%);
+}
+main{
+  background: hsla(0, 1%, 0%, 1.0);
+}
+
+/* RWD FUNCTION ---------------------------------- */
+/* MOBILE DEVICES +++++++++++++++++++++ */
+@media only screen and (max-width: 400px){
+
 }
 
 
 /* TABLET DEVICES  ++++++++++++++++++++++ */
-@media only screen and (min-width: 401px) {
-  *{
-    background: #752300;
-    border: 0.1px solid hsl(0, 100%, 50%)
-  }
-  .nav {
-    height: 100%;
-    width: 25%;
-    position: fixed;
-    background: linear-gradient(to bottom, #1f0900 49%, #3d1200 51%);
-    /* z-index: 10; */
-  }
-  .main{
-    width: 75%;
-    position: absolute;
-    right: 0;
-  }
-  .gallery{
-    width: 100%;
-  }
-  .gallery .column{
-    width: 40%;
-    float: left;
-    margin: 10px;
-  }
+@media only screen and (min-width: 401px){
+
 }
 
+
 /* DESKTOP DEVICES ++++++++++++++++++++++ */
-@media only screen and (min-width: 961px) {
-  * {
-    background: blue;
-  }
+@media only screen and (min-width: 961px){
+
 }
+
+
+/* HOVER-effects */
+.footer-icons a:hover{
+  filter:
+  saturate(80%)
+  contrast(50%);
+
+}
+
+
+
+/* CSS3 Template version 1.1 - 20171125 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
