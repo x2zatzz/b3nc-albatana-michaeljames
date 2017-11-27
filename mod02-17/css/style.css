@@ -18,7 +18,8 @@
   padding: 0;
   color: white;
   font-family: Helvetica, sans-serif;
-  text-align: justify;
+  text-align: center;
+  border: 0.1px solid white;
 }
 ul{
   list-style: none;
@@ -45,7 +46,7 @@ body{
   height: 100%;
   padding: 0;
   border-width: 0;
-  margin: 0 auto;
+  margin: 0;
 }
 .nav,
 .main,
@@ -59,10 +60,9 @@ body{
   flex: 0 1 auto;
   align-self: auto;
 
-  margin: 5px 0;
+  width: 100%;
+  /* margin: 5px 0; */
 }
-
-
 
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
   /* these can contain elements for the purpose of containing END-containers,
@@ -101,6 +101,7 @@ body{
 
   width: 100%;
   height: auto;
+  /* margin: 10px; */
 }
 
 .main-banner{
@@ -125,14 +126,42 @@ body{
   height: auto;
 }
 
+.footer-contact{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 
-      /* LAYER-3 > EDGE-elements (ANY rules except color) */
+  flex: 0 1 auto;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+/* LAYER-3 > EDGE-elements (ANY rules except color) */
   /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
       usually it contains elements holding data or information to be displayed and rendered for viewers
       any rules can be applied on these containers, also items must be constructed according to the flow of HTML
       since L3 elements are the farthest elements, they could be selected uniquely without a class-name
       class-naming is only applied when necessary, specially for div elements with special purpose other
       than containing child elements*/
+
+/* nav */
+.nav li{
+    margin-bottom: 3px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.footer img{
+  width: 50px;
+  height: 50px;
+}
+
+.main img{
+  max-width: 240px;
+}
 
 
 /* COLOR & BACK-IMAGE */
@@ -147,6 +176,12 @@ body{
 }
 main{
   background: hsla(0, 1%, 0%, 1.0);
+}
+
+.nav li{
+  list-style: none;
+  background: linear-gradient(to top, #1f0900, #3d1200);
+  background-color: #752300;
 }
 
 /* RWD FUNCTION ---------------------------------- */
