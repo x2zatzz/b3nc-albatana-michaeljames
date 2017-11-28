@@ -3,7 +3,6 @@
 ## SKETCH
 
 ## WIREFRAME
-  [wireframe](link)
-  [wireframe](link)
 
-##
+- [wireframe](link)
+- [wireframe](link)
