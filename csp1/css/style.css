@@ -1,0 +1,113 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */
+
+*{
+  border: 0.25px solid white;
+}
+
+
+/* FONT-FACE */
+@font-face{
+
+}
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Helvetica, sans-serif
+}
+
+/* GRIDS ----------------------------------------- */
+
+.grid{
+  display: grid;
+  grid-template-areas:
+}
+
+
+/* CONTAINERS */
+/* these contains rules related to dimensions & positioning only
+    note that elements must have Layer class designation and must be explicitly defined in HTML
+    L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+/* LAYER-1 > MAJOR CONTAINERS (metric properties) */
+  /* these containers are direct parents of minor containers
+      should not contain inline elements used as text-holder as much as possible
+      these elements must have additional class assign
+      MAJOR CONTAINERS MUST BE BLOCK-TYPE */
+body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0 auto;
+}
+
+/* LAYER-2 > MINOR CONTAINERS (metric properties) */
+  /* these can contain elements for the purpose of containing END-containers,
+      each container must be attached according to their parent containers
+      it is possible to contain another create branched containers for layer-3 containers
+      rules can contain Dimensions & Positioning only */
+
+
+
+
+/* LAYER-3 > EDGE-elements (ANY rules except color) */
+  /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+      usually it contains elements holding data or information to be displayed and rendered for viewers
+      any rules can be applied on these containers, also items must be constructed according to the flow of HTML
+      since L3 elements are the farthest elements, they could be selected uniquely without a class-name
+      class-naming is only applied when necessary, specially for div elements with special purpose other
+      than containing child elements*/
+
+
+
+
+
+
+
+/* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
+/* To make coloring less hassle, determine the elements with same color values,
+assign those elements to a particular color-group,
+must be coded from parent to the child elements/containers */
+
+
+/* RWD FUNCTION ---------------------------------- */
+/* MOBILE DEVICES +++++++++++++++++++++ */
+@media only screen and (max-width: 400px){
+
+}
+
+
+/* TABLET DEVICES  ++++++++++++++++++++++ */
+@media only screen and (min-width: 401px){
+
+}
+
+
+/* DESKTOP DEVICES ++++++++++++++++++++++ */
+@media only screen and (min-width: 961px){
+
+}
+
+
+/* HOVER-effects */
+
+
+
+
+/* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
