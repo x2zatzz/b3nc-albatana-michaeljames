@@ -4,17 +4,17 @@ Title: Photography
 Subtitle: by Michael James
 Theme: Photograph gallery
 
-## Project Timeline
+## I. Project Timeline
 
 - Start     > Nov. 28, 2017
 - Ideation  > Nov. 28, 2017
 - Sketch    > Nov. 28, 2017
 - Wireframe > Nov. 28, 2017 to Nov. 29, 2017
-- Mock-ups  > TBA
+- Mock-ups  > Nove 29, 2017
 - Code      > TBA
 - Testing   > TBA
 
-## Gantt Chart
+## II. Gantt Chart
 
 Nov. 28   > finalize idea for website [DONE]
 Nov. 29   > finish wireframes and mockups!
@@ -23,7 +23,9 @@ Dec. 4    > coding
 Dec. 5    > finished coding!
 Dec. 6    > testing & submission
 
-## Project Details
+## III. Project Details
+
+### A. Project scope
 
 **Website owner:**
 
@@ -46,6 +48,8 @@ Dec. 6    > testing & submission
 
 - to be entertained by the photographs
 - "curiousity"????
+
+### B. Project content, structure, and elements
 
 **Informative elements:**
 
@@ -77,13 +81,9 @@ Webpage link tree structure:
 1. Home
 
 1.1 Main
-
 1.1.1 Gallery / 1.1.2 Gallery
-
 1.1.1.1 Photo
-
 1.1.2 Gears
-
 1.1.3 Contact
 
 Elements per Webpage:
@@ -124,25 +124,23 @@ Contact:
 
 ## WIREFRAME
 
-Wireframe for mobile phones:
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-home.png)
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-main.png)
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-gallery.png)
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-photo.png)
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-gears.png)
-[wireframe](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-contact.png)
-
-Wireframe for tablets:
-[wireframe](link)
-[wireframe](link)
-
-Wireframe for desktops:
-[wireframe](link)
-[wireframe](link)
+[home/index](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-home.png)
+[main](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-main.png)
+[gallery-a](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-galleryA.png)
+[gallery-b](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-galleryB.png)
+[photo](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-photo.png)
+[gear](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-gears.png)
+[contact](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/wireframe-mobile-p-contact.png)
 
 ## MOCKUPS
 
-
+[home/index](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-home.png)
+[main](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-main.png)
+[gallery-a](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-galleryA.png)
+[gallery-b](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-galleryB.png)
+[photo](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-photo.png)
+[gear](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-gears.png)
+[contact](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-contact.png)
 
 ## HTML structure
 
