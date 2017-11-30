@@ -2,8 +2,7 @@
 /* This portion is used for experimental purposes and this portion must be empty when deployed */
 
 *{
-  border: 0.25px solid white;
-  background: black;
+  /* border: 0.25px solid white; */
 }
 
 
@@ -19,24 +18,143 @@
   margin: 0;
   padding: 0;
   color: white;
-  font-family: Helvetica, sans-serif
+  font-family: Helvetica, sans-serif;
+  /* overflow: hidden; */
 }
 
 /* GRIDS ----------------------------------------- */
 
-.grid{
+
+/* TEMPLATE-GRIDS */
+.grid-page-frame{
+  grid-column-start: 2;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 12;
+
+  border-top: none;
+  border-right: none;
+  border-bottom: 4px solid gray;
+  border-left: 4px solid gray;
+
+}
+.grid-page-logo{
+  grid-column-start: 11;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 13;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+.grid-page-back{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+.grid-iframe{
+  grid-column-start: 2;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 9;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.grid-bottom{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  text-align: center;
+
+}
+.grid-bottom > small{
+  color: gray;
+  font-size: 0.5em;
+  line-height: 2em;
+}
+
+
+/* END OF TEMPLATE-GRID ---------------------------------------------- */
+
+.G1{
+  height: auto;
+  min-height: 568px;
   display: grid;
-  padding: 10px;
-  grid-template: repeat(3, minmax(100px, 200px)) / 100px 100px 100px;
-  grid-gap: 5px;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+
 }
 
 .G2{
-  width: 100%;
-  height: auto;
-  padding: 1px;
 }
 
+/* CONTACT page -------------------------------------------- */
+.grid-message1{
+  grid-column-start: 2;
+  grid-column-end: 11;
+  grid-row-start: 9;
+  grid-row-end: 10;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.grid-message2{
+  grid-column-start: 2;
+  grid-column-end: 11;
+  grid-row-start: 10;
+  grid-row-end: 11;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.grid-icon-dev{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.grid-page-logo > img{
+  width: 30px;
+  height: 30px;
+}
+.grid-message1 > p,
+.grid-message2 > p{
+  display: block;
+  font-size: 0.6em;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.grid-icon-dev img{
+  width: 30px;
+}
+/* END of CONTACT page --------------------------------------- */
+
+/* PHOTO page ------------------------------------------------ */
+
+
+
+/* END of PHOTO page ----------------------------------------- */
 
 /* CONTAINERS */
 /* these contains rules related to dimensions & positioning only
@@ -53,6 +171,7 @@ body{
   padding: 0;
   border-width: 0;
   margin: 0 auto;
+  background: black;
 }
 
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
@@ -82,6 +201,10 @@ body{
 /* To make coloring less hassle, determine the elements with same color values,
 assign those elements to a particular color-group,
 must be coded from parent to the child elements/containers */
+
+
+
+
 
 
 /* RWD FUNCTION ---------------------------------- */
