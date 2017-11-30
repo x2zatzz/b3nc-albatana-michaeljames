@@ -10,13 +10,13 @@ Theme: Photograph gallery
 - Ideation  > Nov. 28, 2017
 - Sketch    > Nov. 28, 2017
 - Wireframe > Nov. 28, 2017 to Nov. 29, 2017
-- Mock-ups  > Nove 29, 2017
-- Code      > TBA
+- Mock-ups  > Nov. 29, 2017 to Nov. 29, 2017
+- Code      > Nov. 30, 2017 to ___
 - Testing   > TBA
 
 ## II. Gantt Chart
 
-Nov. 28   > finalize idea for website [DONE]
+Nov. 28   > finalize idea for website
 Nov. 29   > finish wireframes and mockups!
 Nov. 30   > decide on frameworks to use & start coding!
 Dec. 4    > coding
