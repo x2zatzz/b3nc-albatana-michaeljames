@@ -3,6 +3,7 @@
 
 *{
   border: 0.25px solid white;
+  background: black;
 }
 
 
@@ -25,7 +26,15 @@
 
 .grid{
   display: grid;
-  grid-template-areas:
+  padding: 10px;
+  grid-template: repeat(3, minmax(100px, 200px)) / 100px 100px 100px;
+  grid-gap: 5px;
+}
+
+.G2{
+  width: 100%;
+  height: auto;
+  padding: 1px;
 }
 
 
@@ -39,12 +48,6 @@
       these elements must have additional class assign
       MAJOR CONTAINERS MUST BE BLOCK-TYPE */
 body{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-
   width: 100%;
   height: auto;
   padding: 0;
