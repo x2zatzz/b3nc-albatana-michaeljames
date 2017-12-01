@@ -1,190 +1,281 @@
 /* UNIVERSAL DEBUG ------------------ */
+
+
 /* This portion is used for experimental purposes and this portion must be empty when deployed */
 
-*{
-  /* border: 0.25px solid white; */
+* {
+    /* border: 0.25px solid white; */
 }
 
 
 /* FONT-FACE */
-@font-face{
 
-}
 
 /* UNIVERSAL DEFAULTS */
+
+
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-family: Helvetica, sans-serif;
-  /* overflow: hidden; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 
 /* GRIDS ----------------------------------------- */
 
 
 /* TEMPLATE-GRIDS */
-.grid-page-frame{
-  grid-column-start: 2;
-  grid-column-end: 11;
-  grid-row-start: 2;
-  grid-row-end: 12;
 
-  border-top: none;
-  border-right: none;
-  border-bottom: 4px solid gray;
-  border-left: 4px solid gray;
+.grid-page-leftframeA {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: linear-gradient(to bottom, hsl(0, 1%, 0%) 50%, hsl(0, 1%, 25%));
+    opacity: 0.7;
+}
+.grid-page-leftframeB {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
+    opacity: 0.7;
+}
+.grid-page-leftframeC {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 12;
+    background: linear-gradient(to bottom, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
+    opacity: 0.7;
+}
+.grid-page-bottomframeA {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    background: linear-gradient(to left, hsl(0, 1%, 0%) 5%, hsl(0, 1%, 25%));
+    opacity: 0.7;
+}
+.grid-page-bottomframeB {
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
+    opacity: 0.7;
+}
+.grid-page-bottomframeC {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    background: linear-gradient(to left, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
+    opacity: 0.7;
+}
+.grid-page-logo {
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 13;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: flex-start;
+}
 
+.grid-page-logo>img {
+    width: 25px;
+    height: 25px;
 }
-.grid-page-logo{
-  grid-column-start: 11;
-  grid-column-end: 13;
-  grid-row-start: 11;
-  grid-row-end: 13;
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.grid-page-back {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 11;
+    grid-row-end: 13;
+}
 
+.grid-bottom {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 12;
+    grid-row-end: 13;
+    text-align: center;
 }
-.grid-page-back{
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 11;
-  grid-row-end: 13;
-}
-.grid-iframe{
-  grid-column-start: 2;
-  grid-column-end: 11;
-  grid-row-start: 2;
-  grid-row-end: 9;
-  overflow: hidden;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-.grid-bottom{
-  grid-column-start: 1;
-  grid-column-end: 13;
-  grid-row-start: 12;
-  grid-row-end: 13;
-  text-align: center;
 
-}
-.grid-bottom > small{
-  color: gray;
-  font-size: 0.5em;
-  line-height: 2em;
+.grid-bottom>small {
+    color: gray;
+    font-size: 0.7em;
 }
 
 
 /* END OF TEMPLATE-GRID ---------------------------------------------- */
 
-.G1{
-  height: auto;
-  min-height: 568px;
-  display: grid;
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(12, 1fr);
-
-}
-
-.G2{
-}
 
 /* CONTACT page -------------------------------------------- */
-.grid-message1{
-  grid-column-start: 2;
-  grid-column-end: 11;
-  grid-row-start: 9;
-  grid-row-end: 10;
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.grid-message2{
-  grid-column-start: 2;
-  grid-column-end: 11;
-  grid-row-start: 10;
-  grid-row-end: 11;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.grid-icon-dev{
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 11;
-  grid-row-end: 12;
+.G1-contact {
+    /* min-height: 568px; */
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 1fr 5px 5px 5px 25px;
+    grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
 
-iframe{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-}
-.grid-page-logo > img{
-  width: 30px;
-  height: 30px;
-}
-.grid-message1 > p,
-.grid-message2 > p{
-  display: block;
-  font-size: 0.6em;
-  text-align: left;
-  padding-left: 10px;
+.grid-iframe {
+    grid-column-start: 4;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    overflow: hidden;
 }
 
-.grid-icon-dev img{
-  width: 30px;
+iframe {
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
+
+.grid-message {
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.grid-icon-dev {
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.grid-message>p {
+    display: block;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.grid-icon-dev img {
+    width: 40px;
+}
+
+
 /* END of CONTACT page --------------------------------------- */
 
-/* PHOTO page ------------------------------------------------ */
+
+/* GEARS page ------------------------------------------------ */
+
+.G1-gears {
+    /* min-height: 568px; */
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 5px 25px 50px 5px 2.5fr 0.75fr 1fr 1fr 5px 5px 5px 25px;
+    grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
+}
+
+.grid-gear-photo {
+    grid-column-start: 4;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background: red;
+}
+
+.grid-gear-gallery {
+    grid-column-start: 4;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    background: red;
+}
+
+.grid-gear-personal {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    background: red;
+}
+
+.grid-gear-description {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    background: red;
+}
+
+.grid-gear-specification {
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    background: red;
+}
 
 
+/* END of GEARS page ----------------------------------------- */
 
-/* END of PHOTO page ----------------------------------------- */
 
 /* CONTAINERS */
+
+
 /* these contains rules related to dimensions & positioning only
     note that elements must have Layer class designation and must be explicitly defined in HTML
     L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+
+
 /* LAYER-1 > MAJOR CONTAINERS (metric properties) */
-  /* these containers are direct parents of minor containers
+
+
+/* these containers are direct parents of minor containers
       should not contain inline elements used as text-holder as much as possible
       these elements must have additional class assign
       MAJOR CONTAINERS MUST BE BLOCK-TYPE */
-body{
-  width: 100%;
-  height: auto;
-  padding: 0;
-  border-width: 0;
-  margin: 0 auto;
-  background: black;
+
+body {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border-width: 0;
+    margin: 0 auto;
+    background: black;
 }
 
+
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
-  /* these can contain elements for the purpose of containing END-containers,
+
+
+/* these can contain elements for the purpose of containing END-containers,
       each container must be attached according to their parent containers
       it is possible to contain another create branched containers for layer-3 containers
       rules can contain Dimensions & Positioning only */
 
 
-
-
 /* LAYER-3 > EDGE-elements (ANY rules except color) */
-  /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
+
+
+/* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
       usually it contains elements holding data or information to be displayed and rendered for viewers
       any rules can be applied on these containers, also items must be constructed according to the flow of HTML
       since L3 elements are the farthest elements, they could be selected uniquely without a class-name
@@ -192,42 +283,33 @@ body{
       than containing child elements*/
 
 
-
-
-
-
-
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
+
+
 /* To make coloring less hassle, determine the elements with same color values,
 assign those elements to a particular color-group,
 must be coded from parent to the child elements/containers */
 
 
-
-
-
-
 /* RWD FUNCTION ---------------------------------- */
-/* MOBILE DEVICES +++++++++++++++++++++ */
-@media only screen and (max-width: 400px){
 
-}
+
+/* MOBILE DEVICES +++++++++++++++++++++ */
+
+@media only screen and (max-width: 400px) {}
 
 
 /* TABLET DEVICES  ++++++++++++++++++++++ */
-@media only screen and (min-width: 401px){
 
-}
+@media only screen and (min-width: 401px) {}
 
 
 /* DESKTOP DEVICES ++++++++++++++++++++++ */
-@media only screen and (min-width: 961px){
 
-}
+@media only screen and (min-width: 961px) {}
 
 
 /* HOVER-effects */
-
 
 
 
@@ -236,4 +318,4 @@ must be coded from parent to the child elements/containers */
 /*  Email: mjtalbatana@gmail.com                                              */
 /*  Github: https://github.com/mjtalbatana                                    */
 /*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
-/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
