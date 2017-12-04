@@ -33,54 +33,24 @@ li{
 
 /* TEMPLATE-GRIDS */
 
-.grid-page-leftframeA {
+.grid-page-leftframe {
 	grid-column-start: 2;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
-	background: linear-gradient(to bottom, hsl(0, 1%, 0%) 50%, hsl(0, 1%, 25%));
-	opacity: 0.7;
-}
-.grid-page-leftframeB {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 3;
-	grid-row-end: 4;
-	background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
-	opacity: 0.7;
-}
-.grid-page-leftframeC {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 4;
+	grid-row-start: 1;
 	grid-row-end: 12;
-	background: linear-gradient(to bottom, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
+	background: linear-gradient(to bottom, hsl(0, 1%, 15%) 50%, hsl(0, 1%, 25%));
 	opacity: 0.7;
 }
-.grid-page-bottomframeA {
+
+.grid-page-bottomframe {
 	grid-column-start: 2;
-	grid-column-end: 10;
+	grid-column-end: 13;
 	grid-row-start: 11;
 	grid-row-end: 12;
-	background: linear-gradient(to left, hsl(0, 1%, 0%) 5%, hsl(0, 1%, 10%) 5%, hsl(0, 1%, 25%));
+	background: linear-gradient(to right, hsl(0, 1%, 25%), hsl(0, 1%, 10%) 25%), hsl(0, 1%, 0%) 5%;
 	opacity: 0.7;
 }
-.grid-page-bottomframeB {
-	grid-column-start: 10;
-	grid-column-end: 11;
-	grid-row-start: 11;
-	grid-row-end: 12;
-	background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
-	opacity: 0.7;
-}
-.grid-page-bottomframeC {
-	grid-column-start: 11;
-	grid-column-end: 12;
-	grid-row-start: 11;
-	grid-row-end: 12;
-	background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 25%), hsl(0, 1%, 30%));
-	opacity: 0.7;
-}
+
 .grid-page-logo {
 	grid-column-start: 12;
 	grid-column-end: 13;
@@ -105,6 +75,7 @@ li{
 	grid-column-end: 4;
 	grid-row-start: 11;
 	grid-row-end: 13;
+	font-size: 0.5em;
 }
 
 .grid-bottom {
@@ -471,7 +442,7 @@ iframe {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 1;
-  grid-row-end: 7;
+	grid-row-end: 7;
 }
 .grid-main-mid-banner{
   grid-column-start: 6;
@@ -494,7 +465,7 @@ iframe {
 }
 .grid-main-bot-photo-03{
   grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column-end: 8;
   grid-row-start: 10;
   grid-row-end: 13;
 }
@@ -505,10 +476,14 @@ iframe {
   grid-row-end: 13;
 }
 
-.G1-main div{
-  border: 0.25px solid white;
+.grid-main-top-photo,
+.grid-main-mid-banner,
+.grid-main-bot-photo-01,
+.grid-main-bot-photo-02,
+.grid-main-bot-photo-03,
+.grid-main-bot-photo-04{
+	border: 0.5px solid white;
 }
-
 
 /* END of MAIN-page +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -549,14 +524,49 @@ body {
 
 
 /* LAYER-3 > EDGE-elements (ANY rules except color) */
-
-
 /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
 	  usually it contains elements holding data or information to be displayed and rendered for viewers
 	  any rules can be applied on these containers, also items must be constructed according to the flow of HTML
 	  since L3 elements are the farthest elements, they could be selected uniquely without a class-name
 	  class-naming is only applied when necessary, specially for div elements with special purpose other
 	  than containing child elements*/
+
+#carousel-grid-main-bot-photo-01{
+  height: 100%;
+  width: 100%;
+}
+
+.main-carousel-bot-photo-01a{
+  display: flex;
+  background-image: url("../img/try01.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.main-carousel-bot-photo-01b{
+	display: flex;
+	background-image: url("../img/try02.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.main-carousel-bot-photo-01c{
+	display: flex;
+	background-image: url("../img/try03.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.item{
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/

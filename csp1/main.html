@@ -6,53 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>PhotoHub - main</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="icon" href="mjta-v01.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <!-- END of <head> section +++++++++++++++++++++++++++++++++ -->
 
 <body>
-    <div class="G1-main">
-        <!-- GRID-TEMPLATE +++++++++++++++++++++++++++++++++++++++++++++++++ -->
-        <div class="G2 grid-page-leftframeA"></div>
-        <div class="G2 grid-page-leftframeB"></div>
-        <div class="G2 grid-page-leftframeC"></div>
-        <div class="G2 grid-page-bottomframeA"></div>
-        <div class="G2 grid-page-bottomframeB"></div>
-        <div class="G2 grid-page-bottomframeC"></div>
+  <div class="G1-main">
+    <!-- GRID-TEMPLATE +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div class="G2 grid-page-leftframe"></div>
+    <div class="G2 grid-page-bottomframe"></div>
 
 
-        <div class="G2 grid-page-logo">
-            <img src="assets/mjta-v01w-500dpi-521px.png" alt="">
-        </div>
+    <div class="G2 grid-page-logo">
+      <img src="assets/mjta-v01w-500dpi-521px.png" alt="">
+    </div>
 
-        <div class="G2 grid-page-back">"back" icon</div>
+    <div class="G2 grid-page-back">"back" icon</div>
 
-        <div class="G2 grid-bottom">
-            <small style="color:white">&copy; 2017 Michael James Turiano Albatana</small>
-        </div>
-        <!-- END of GRID-TEMPLATE ++++++++++++++++++++++++++++++++++++++ -->
+    <div class="G2 grid-bottom">
+      <small style="color:white">&copy; 2017 Michael James Turiano Albatana</small>
+    </div>
+    <!-- END of GRID-TEMPLATE ++++++++++++++++++++++++++++++++++++++ -->
 
-        <div class="G2 grid-main-top-photo">
-
-        </div>
-        <div class="G2 grid-main-mid-banner">
-
-        </div>
-        <div class="G2 grid-main-bot-photo-01">
-
-        </div>
-        <div class="G2 grid-main-bot-photo-02">
-
-        </div>
-        <div class="G2 grid-main-bot-photo-03">
-
-        </div>
-        <div class="G2 grid-main-bot-photo-04">
-
-        </div>
+    <div class="G2 grid-main-top-photo">
 
     </div>
+    <div class="G2 grid-main-mid-banner">
+
+    </div>
+    <div class="G2 grid-main-bot-photo-01">
+      <!-- CAROUSEL (trial) -->
+      <div id="carousel-grid-main-bot-photo-01" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="main-carousel-bot-photo-01a"></div>
+          </div>
+          <div class="item">
+            <div class="main-carousel-bot-photo-01b"></div>
+          </div>
+          <div class="item">
+            <div class="main-carousel-bot-photo-01c"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="G2 grid-main-bot-photo-02">
+      <!-- CAROUSEL (trial) -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                  <div class="main-carousel-img"></div>
+              </div>
+            <div class="item">
+                <div class="main-carousel-img"></div>
+            </div>
+            <div class="item">
+                <div class="main-carousel-img"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="G2 grid-main-bot-photo-03">
+      <!-- CAROUSEL (trial) -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img class="d-block img-fluid" src="img/try01.jpeg" alt="First slide">
+            </div>
+            <div class="item">
+              <img class="d-block img-fluid" src="img/try02.jpeg" alt="Second slide">
+            </div>
+            <div class="item">
+              <img class="d-block img-fluid" src="img/try03.jpeg" alt="Third slide">
+            </div>
+          </div>
+        </div>
+  
+    </div>
+    <div class="G2 grid-main-bot-photo-04">
+      <!-- CAROUSEL (trial) -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="main-carousel-img"></div>
+            </div>
+            <div class="item">
+              <img class="d-block img-fluid" src="img/try02.jpeg" alt="Second slide">
+            </div>
+            <div class="item">
+              <img class="d-block img-fluid" src="img/try03.jpeg" alt="Third slide">
+            </div>
+          </div>
+        </div>
+  
+    </div>
+
+  </div>
 </body>
 
 </html>
