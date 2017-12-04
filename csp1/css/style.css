@@ -3,8 +3,8 @@
 
 /* This portion is used for experimental purposes and this portion must be empty when deployed */
 
-* {
-    /* border: 0.25px solid white; */
+*{
+	/* border: 0.25px solid white; */
 }
 
 
@@ -12,16 +12,19 @@
 
 
 /* UNIVERSAL DEFAULTS */
+li{
+	list-style: none;
+}
 
 
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -31,88 +34,90 @@
 /* TEMPLATE-GRIDS */
 
 .grid-page-leftframeA {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background: linear-gradient(to bottom, hsl(0, 1%, 0%) 50%, hsl(0, 1%, 25%));
-    opacity: 0.7;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background: linear-gradient(to bottom, hsl(0, 1%, 0%) 50%, hsl(0, 1%, 25%));
+	opacity: 0.7;
 }
 .grid-page-leftframeB {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
-    opacity: 0.7;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background: linear-gradient(to bottom, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
+	opacity: 0.7;
 }
 .grid-page-leftframeC {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 12;
-    background: linear-gradient(to bottom, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
-    opacity: 0.7;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 12;
+	background: linear-gradient(to bottom, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
+	opacity: 0.7;
 }
 .grid-page-bottomframeA {
-    grid-column-start: 2;
-    grid-column-end: 10;
-    grid-row-start: 11;
-    grid-row-end: 12;
-    background: linear-gradient(to left, hsl(0, 1%, 0%) 5%, hsl(0, 1%, 25%));
-    opacity: 0.7;
+	grid-column-start: 2;
+	grid-column-end: 10;
+	grid-row-start: 11;
+	grid-row-end: 12;
+	background: linear-gradient(to left, hsl(0, 1%, 0%) 5%, hsl(0, 1%, 10%) 5%, hsl(0, 1%, 25%));
+	opacity: 0.7;
 }
 .grid-page-bottomframeB {
-    grid-column-start: 10;
-    grid-column-end: 11;
-    grid-row-start: 11;
-    grid-row-end: 12;
-    background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
-    opacity: 0.7;
+	grid-column-start: 10;
+	grid-column-end: 11;
+	grid-row-start: 11;
+	grid-row-end: 12;
+	background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 10%), hsl(0, 1%, 25%));
+	opacity: 0.7;
 }
 .grid-page-bottomframeC {
-    grid-column-start: 11;
-    grid-column-end: 12;
-    grid-row-start: 11;
-    grid-row-end: 12;
-    background: linear-gradient(to left, hsl(0, 0%, 0%) 1%, hsl(0, 1%, 25%) 10%, hsl(0, 1%, 30%));
-    opacity: 0.7;
+	grid-column-start: 11;
+	grid-column-end: 12;
+	grid-row-start: 11;
+	grid-row-end: 12;
+	background: linear-gradient(to left, hsl(0, 0%, 0%), hsl(0, 1%, 25%), hsl(0, 1%, 30%));
+	opacity: 0.7;
 }
 .grid-page-logo {
-    grid-column-start: 12;
-    grid-column-end: 13;
-    grid-row-start: 9;
-    grid-row-end: 13;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: baseline;
-    align-content: flex-start;
+	grid-column-start: 12;
+	grid-column-end: 13;
+	grid-row-start: 1;
+	grid-row-end: 13;
+	display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-items: center;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
 }
 
 .grid-page-logo>img {
-    width: 25px;
-    height: 25px;
+	width: 25px;
+  height: 25px;
+  margin-bottom: 15px;
 }
 
 .grid-page-back {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 11;
-    grid-row-end: 13;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 11;
+	grid-row-end: 13;
 }
 
 .grid-bottom {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 12;
-    grid-row-end: 13;
-    text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 13;
+	grid-row-start: 12;
+	grid-row-end: 13;
+	text-align: center;
 }
 
 .grid-bottom>small {
-    color: gray;
-    font-size: 0.7em;
+	color: gray;
+	font-size: 0.7em;
 }
 
 
@@ -122,60 +127,60 @@
 /* CONTACT page -------------------------------------------- */
 
 .G1-contact {
-    /* min-height: 568px; */
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 1fr 5px 5px 5px 25px;
-    grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
+	/* min-height: 568px; */
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 1fr 5px 5px 5px 25px;
+	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
 
 .grid-iframe {
-    grid-column-start: 4;
-    grid-column-end: 12;
-    grid-row-start: 5;
-    grid-row-end: 8;
-    overflow: hidden;
+	grid-column-start: 4;
+	grid-column-end: 12;
+	grid-row-start: 5;
+	grid-row-end: 8;
+	overflow: hidden;
 }
 
 iframe {
-    width: 100%;
-    height: 100%;
-    display: flex;
+	width: 100%;
+	height: 100%;
+	display: flex;
 }
 
 .grid-message {
-    grid-column-start: 5;
-    grid-column-end: 11;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+	grid-column-start: 5;
+	grid-column-end: 11;
+	grid-row-start: 8;
+	grid-row-end: 9;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
 .grid-icon-dev {
-    grid-column-start: 12;
-    grid-column-end: 13;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+	grid-column-start: 12;
+	grid-column-end: 13;
+	grid-row-start: 8;
+	grid-row-end: 9;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
 .grid-message>p {
-    display: block;
-    font-size: 0.9em;
-    text-align: left;
+	display: block;
+	font-size: 0.9em;
+	text-align: left;
 }
 
 .grid-icon-dev img {
-    width: 40px;
+	width: 40px;
 }
 
 
@@ -185,81 +190,352 @@ iframe {
 /* GEARS page ------------------------------------------------ */
 
 .G1-gears {
-    /* min-height: 568px; */
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 5px 25px 50px 5px 2.5fr 0.75fr 1fr 1fr 5px 5px 5px 25px;
-    grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
+	/* min-height: 568px; */
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 5px 25px 50px 5px 2.5fr 0.75fr 1fr 1fr 5px 5px 5px 25px;
+	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
+.grid-gear-h1{
+	grid-column-start: 4;
+	grid-column-end: 12;
+	grid-row-start: 3;
+	grid-row-end: 4;
 
-.grid-gear-photo {
-    grid-column-start: 4;
-    grid-column-end: 12;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    background: red;
+}
+.grid-gear-photo{
+	grid-column-start: 4;
+	grid-column-end: 12;
+	grid-row-start: 5;
+	grid-row-end: 6;
 }
 
 .grid-gear-gallery {
-    grid-column-start: 4;
-    grid-column-end: 12;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    background: red;
+	grid-column-start: 4;
+	grid-column-end: 12;
+	grid-row-start: 6;
+	grid-row-end: 7;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.grid-gear-gallery img{
+	width: 25%;
+	height: auto;
 }
 
 .grid-gear-personal {
-    grid-column-start: 4;
-    grid-column-end: 9;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    background: red;
+	grid-column-start: 4;
+	grid-column-end: 9;
+	grid-row-start: 7;
+	grid-row-end: 8;
 }
 
 .grid-gear-description {
-    grid-column-start: 4;
-    grid-column-end: 9;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    background: red;
+	grid-column-start: 4;
+	grid-column-end: 9;
+	grid-row-start: 8;
+	grid-row-end: 9;
 }
 
 .grid-gear-specification {
-    grid-column-start: 9;
-    grid-column-end: 12;
-    grid-row-start: 7;
-    grid-row-end: 9;
-    background: red;
+	grid-column-start: 9;
+	grid-column-end: 12;
+	grid-row-start: 7;
+	grid-row-end: 9;
+}
+.grid-gear-h1,
+.grid-gear-photo,
+.grid-gear-gallery,
+.grid-gear-gallery img,
+.grid-gear-personal,
+.grid-gear-description,
+.grid-gear-specification{
+	border: 0.5px solid white;
+}
+
+/* END of GEARS page ----------------------------------------- */
+
+/* home page +++++++++++++++++++++++++++++++++++++++++++++++++ */
+.G1-home{
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 1.5fr 1.5fr 1.5fr 0.25fr 1fr 1fr 1fr 1fr 0.25fr 1.5fr 1.5fr 1.5fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.G1-home div{
+	border: 0.5px solid white;
+}
+
+.home-top-mosaic{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.home-mid-borderA{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.home-mid-photo{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+.home-mid-borderB{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+.home-bot-mosaic{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+
+.home-top-mosaic-r01a{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.home-top-mosaic-r01b{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.home-top-mosaic-r01c{
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 
-/* END of GEARS page ----------------------------------------- */
+
+.home-top-mosaic-r02a{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.home-top-mosaic-r02b{
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.home-top-mosaic-r02c{
+  grid-column-start: 7;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.home-top-mosaic-r02d{
+  grid-column-start: 11;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.home-top-mosaic-r03a{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.home-top-mosaic-r03b{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.home-top-mosaic-r03c{
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.home-bot-mosaic-r01a{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+.home-bot-mosaic-r01b{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+.home-bot-mosaic-r01c{
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.home-bot-mosaic-r02a{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+.home-bot-mosaic-r02b{
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+.home-bot-mosaic-r02c{
+  grid-column-start: 7;
+  grid-column-end: 11;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+.home-bot-mosaic-r02d{
+  grid-column-start: 11;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+
+.home-bot-mosaic-r03a{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 12;
+  grid-row-end: 13;
+}
+.home-bot-mosaic-r03b{
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 12;
+  grid-row-end: 13;
+}
+.home-bot-mosaic-r03c{
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 12;
+  grid-row-end: 13;
+}
+
+/* END of home page +++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* EXTRA page +++++++++++++++++++++++++++++++++++++++++++++++++ */
+.G1-extra{
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 1fr 5px 5px 5px 25px;
+	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
+}
+.grid-extra-header{
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.grid-extra-easteregg{
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+.grid-extra-header > h1{
+  font-size: 1.5em;
+}
+.grid-extra-easteregg > p{
+  font-size: 0.8em;
+}
+/* END of EXTRA page +++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* MAIN page +++++++++++++++++++++++++++++++ */
+.G1-main {
+	/* min-height: 568px; */
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 5px 25px 50px 5px 2fr 1fr 1.5fr 1fr 2fr 2fr 5px 25px;
+	grid-template-columns: 25px 5px 5px 5px 0.5fr 1fr 1fr 1fr 1fr 0.25fr 12.5px 50px;
+}
+.grid-main-top-photo{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+.grid-main-mid-banner{
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  z-index: 5;
+}
+.grid-main-bot-photo-01{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+.grid-main-bot-photo-02{
+  grid-column-start: 8;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+.grid-main-bot-photo-03{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+.grid-main-bot-photo-04{
+  grid-column-start: 8;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+
+.G1-main div{
+  border: 0.25px solid white;
+}
+
+
+/* END of MAIN-page +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 /* CONTAINERS */
 
 
 /* these contains rules related to dimensions & positioning only
-    note that elements must have Layer class designation and must be explicitly defined in HTML
-    L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
+	note that elements must have Layer class designation and must be explicitly defined in HTML
+	L1 for layer-1, L2 for layer-2, L3 elements can be selected using ":last-child" selector */
 
 
 /* LAYER-1 > MAJOR CONTAINERS (metric properties) */
 
 
 /* these containers are direct parents of minor containers
-      should not contain inline elements used as text-holder as much as possible
-      these elements must have additional class assign
-      MAJOR CONTAINERS MUST BE BLOCK-TYPE */
+	  should not contain inline elements used as text-holder as much as possible
+	  these elements must have additional class assign
+	  MAJOR CONTAINERS MUST BE BLOCK-TYPE */
 
 body {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    border-width: 0;
-    margin: 0 auto;
-    background: black;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	border-width: 0;
+	margin: 0 auto;
+	background: black;
 }
 
 
@@ -267,20 +543,20 @@ body {
 
 
 /* these can contain elements for the purpose of containing END-containers,
-      each container must be attached according to their parent containers
-      it is possible to contain another create branched containers for layer-3 containers
-      rules can contain Dimensions & Positioning only */
+	  each container must be attached according to their parent containers
+	  it is possible to contain another create branched containers for layer-3 containers
+	  rules can contain Dimensions & Positioning only */
 
 
 /* LAYER-3 > EDGE-elements (ANY rules except color) */
 
 
 /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
-      usually it contains elements holding data or information to be displayed and rendered for viewers
-      any rules can be applied on these containers, also items must be constructed according to the flow of HTML
-      since L3 elements are the farthest elements, they could be selected uniquely without a class-name
-      class-naming is only applied when necessary, specially for div elements with special purpose other
-      than containing child elements*/
+	  usually it contains elements holding data or information to be displayed and rendered for viewers
+	  any rules can be applied on these containers, also items must be constructed according to the flow of HTML
+	  since L3 elements are the farthest elements, they could be selected uniquely without a class-name
+	  class-naming is only applied when necessary, specially for div elements with special purpose other
+	  than containing child elements*/
 
 
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
