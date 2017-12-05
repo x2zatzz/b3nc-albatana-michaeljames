@@ -4,24 +4,24 @@ Title: Photography
 Subtitle: by Michael James
 Theme: Photograph gallery
 
-## I. Project Timeline
+## I. Project Actual Timeline
 
 - Start     > Nov. 28, 2017
 - Ideation  > Nov. 28, 2017
 - Sketch    > Nov. 28, 2017
 - Wireframe > Nov. 28, 2017 to Nov. 29, 2017
 - Mock-ups  > Nov. 29, 2017 to Nov. 29, 2017
-- Code      > Nov. 30, 2017 to ___
+- Code      > Nov. 30, 2017 to __
 - Testing   > TBA
 
 ## II. Gantt Chart
 
-Nov. 28   > finalize idea for website
-Nov. 29   > finish wireframes and mockups!
-Nov. 30   > decide on frameworks to use & start coding!
-Dec. 4    > coding
-Dec. 5    > finished coding!
-Dec. 6    > testing & submission
+- Nov. 28   > finalize idea for website
+- Nov. 29   > finish wireframes and mockups!
+- Nov. 30   > decide on frameworks to use & start coding!
+- Dec. 4    > coding
+- Dec. 5    > coding & partial-tests (must complete more than 60% of the project)
+- Dec. 6    > touch-ups, testing & submission
 
 ## III. Project Details
 
