@@ -531,41 +531,45 @@ body {
 	  class-naming is only applied when necessary, specially for div elements with special purpose other
 	  than containing child elements*/
 
-#carousel-grid-main-bot-photo-01{
+#carousel-grid-main-top-photo,
+#carousel-grid-main-bot-photo-01,
+.carousel-inner,
+.item,
+.item div{
   height: 100%;
   width: 100%;
+}
+
+.item div{
+  background-size: cover;
+  background-position: center;
 }
 
 .main-carousel-bot-photo-01a{
-  display: flex;
   background-image: url("../img/try01.jpeg");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 .main-carousel-bot-photo-01b{
-	display: flex;
 	background-image: url("../img/try02.jpeg");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 .main-carousel-bot-photo-01c{
-	display: flex;
 	background-image: url("../img/try03.jpeg");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+}
+.main-carousel-top-photoa{
+	background-image: url("../img/Sony_A77_+_Zeiss_85.jpg");
+}
+.main-carousel-top-photob{
+	background-image: url("../img/1313612363000_IMG_216801.jpg");
+}
+.main-carousel-top-photoc{
+	background-image: url("../img/1313612437000_817859.jpg");
+}
+.main-carousel-top-photod{
+	background-image: url("../img/highres-sonyalphaa77shots_1327670866.jpg");
+}
+.main-carousel-top-photoe{
+	background-image: url("../img/SLT-A77_zm.jpg");
 }
 
-.item{
-  width: 100%;
-  height: 100%;
-}
-.carousel-inner{
-  width: 100%;
-  height: 100%;
-}
 
 
 
@@ -582,22 +586,36 @@ must be coded from parent to the child elements/containers */
 
 /* MOBILE DEVICES +++++++++++++++++++++ */
 
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 450px) {}
 
 
-/* TABLET DEVICES  ++++++++++++++++++++++ */
+/* Tablet, netbook, compact notebooks/ultrabooks 9in-13.3in)  ++++++++++++++++++++++ */
 
-@media only screen and (min-width: 401px) {}
+@media only screen and (min-width: 451px) {}
 
 
-/* DESKTOP DEVICES ++++++++++++++++++++++ */
+/* Standard Notebooks/Ultrabook, desktops, monitors @ > 14in DEVICES ++++++++++++++++++++++ */
 
-@media only screen and (min-width: 961px) {}
+@media only screen and (min-width: 961px) {
+  .G1-main{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 
 
 /* HOVER-effects */
 
+/* MAIN-page */
 
+a.grid-main-top-photo:hover{
+  z-index: 10;
+  /* opacity: 0.5; */
+}
+a.grid-main-top-photo:active{
+  z-index: 10;
+  opacity: 0.5;
+}
 
 /* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
 /*  Developer: Michael James Turiano Albatana                                 */
