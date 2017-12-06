@@ -15,7 +15,13 @@
 li{
 	list-style: none;
 }
-
+a{
+  text-decoration: none;
+}
+a:hover,
+a:active{
+  color: blue !important;
+}
 
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
 
@@ -116,7 +122,7 @@ li{
 
 .grid-bottom>small {
 	color: gray;
-	font-size: 0.7em;
+	font-size: 0.6em;
 }
 
 
@@ -223,27 +229,27 @@ iframe {
 	height: 100vh;
 	width: 100vw;
 	display: grid;
-	grid-template-rows: 5px 25px 0.25fr 5px 2.5fr 1fr 0.5fr 0.75fr 5px 5px 5px 25px;
+	grid-template-rows: 5px 25px 0.25fr 5px 2.5fr 1fr 0.5fr 0.4fr 5px 5px 5px 25px;
 	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
 .grid-gear-content{
   grid-column-start: 5;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 3;
   grid-row-end: 8;
   display: grid;
-  grid-template-rows: 0.25fr 5px 2.5fr 1fr 0.5fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 25px 12.5px;
+  grid-template-rows: 0.25fr 5px 2.5fr 0.75fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
 .grid-gear-content-h2{
   grid-column-start: 1;
-  grid-column-end: 8;
+  grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 .grid-gear-content-img{
   grid-column-start: 1;
-  grid-column-end: 8;
+  grid-column-end: 9;
   grid-row-start: 3;
   grid-row-end: 4;
 }
@@ -260,23 +266,22 @@ iframe {
 
 .grid-gear-content-text{
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 9;
   grid-row-start: 4;
   grid-row-end: 5;
 }
 .grid-gear-content-review{
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 6;
 }
 .grid-gear-content-specs{
-  grid-column-start: 5;
-  grid-column-end: 8;
-  grid-row-start: 4;
+  grid-column-start: 4;
+  grid-column-end: 9;
+  grid-row-start: 5;
   grid-row-end: 6;
 }
-
 
 .grid-gear-photothumb{
   grid-column-start: 5;
@@ -294,8 +299,9 @@ iframe {
 .photothumb04{
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -308,9 +314,6 @@ iframe {
 	display: grid;
 	grid-template-rows: 1.5fr 1.5fr 1.5fr 0.25fr 1fr 1fr 1fr 1fr 0.25fr 1.5fr 1.5fr 1.5fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.G1-home div{
 }
 
 .home-top-mosaic{
@@ -472,6 +475,10 @@ iframe {
   grid-row-end: 13;
 }
 
+.G1-home .brick{
+  border: 0.25px solid hsla(0, 1%, 50%, 0.7);
+}
+
 /* END of home page +++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* EXTRA page +++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -504,7 +511,6 @@ iframe {
 
 /* MAIN page +++++++++++++++++++++++++++++++ */
 .G1-main {
-	/* min-height: 568px; */
 	height: 100vh;
 	width: 100vw;
 	display: grid;
@@ -567,6 +573,46 @@ iframe {
 	
 /* END of MAIN-page +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* GALLERY A & B page */
+.G1-galleryA{
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: 10px 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 20px 5px 25px;
+  grid-template-columns: 25px 5px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
+}
+
+.grid-gallerya-row-1-h2{
+  grid-area: 2 / 3 / 3 / 13;
+}
+.grid-gallerya-row-1-thumb{
+  grid-area: 3 / 3 / 4 / 13;
+}
+.grid-gallerya-row-2-h2{
+  grid-area: 4 / 3 / 5 / 13;
+}
+.grid-gallerya-row-2-thumb{
+  grid-area: 5 / 3 / 6 / 13;
+}
+.grid-gallerya-row-3-h2{
+  grid-area: 6 / 3 / 7 / 13;
+}
+.grid-gallerya-row-3-thumb{
+  grid-area: 7 / 3 / 8 / 13;
+}
+.grid-gallerya-row-4-h2{
+  grid-area: 8 / 3 / 9 / 13;
+}
+.grid-gallerya-row-4-thumb{
+  grid-area: 9 / 3 / 10 / 13;
+}
+
+.grid-gallerya-row-1-thumb .gallery-thumb{
+  width: 33%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 /* CONTAINERS */
 
@@ -634,6 +680,35 @@ body {
 .grid-main-mid-banner p{
   font-size: 0.5em;
 }
+.G1-gears p,
+.G1-gears li{
+  font-size: 0.65em;
+  color: hsla(0, 1%, 77%, 1);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.G1-gears .grid-gear-content-text,
+.G1-gears .grid-gear-content-review,
+.G1-gears .grid-gear-content-specs{
+  padding: 2px;
+}
+.G1-gears h3{
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}
+
+.G1-home p{
+  text-align: center;
+  font-size: 0.7em;
+  margin: 2px;
+}
+
+.G1-galleryA h2{
+  font-size: 1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 
 /* GEARS thumbnail effecs*/
 .photothumb{
@@ -700,16 +775,16 @@ body {
 	background-image: url("../img/SLT-A77_zm.jpg");
 }
 .home-carousel-mid-photoa{
-  background-image: url('../img/night/DSC01074_v1.jpg');
+  background-image: url('../img/_lowres-img/night/lowres_DSC01074_v1.jpg');
 }
 .home-carousel-mid-photob{
-  background-image: url('../img/night/DSC01082_v1.jpg');
+  background-image: url('../img/_lowres-img/night/lowres_DSC01082_v1.jpg');
 }
 .home-carousel-mid-photoc{
-  background-image: url('../img/night/DSC01112_v1.jpg');
+  background-image: url('../img/_lowres-img/night/lowres_DSC01112_v1.jpg');
 }
 .home-carousel-mid-photod{
-  background-image: url('../img/night/DSC06525_converted.jpg');
+  background-image: url('../img/_lowres-img/night/lowres_DSC06525_converted.jpg');
 }
 
 .grid-gear-content-img-A,
@@ -728,6 +803,17 @@ body {
 .photothumb04{
   background-image: url('../img/_gears/sony_hvl-f58am_front_450.jpg');
 }
+
+.gallerya-carousel-seta-photo-1{
+  background-image: url('../img/_lowres-img/_black_and_night/lowres_2017.09.09-11_DSC03377.JPG')
+}
+.gallerya-carousel-seta-photo-2{
+  background-image: url('../img/_lowres-img/_black_and_night/lowres_converted_converted_DSC04364.JPG')
+}
+.gallerya-carousel-seta-photo-3{
+  background-image: url('../img/_lowres-img/_black_and_night/lowres_DSC01074_v1.jpg')
+}
+
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
 
 
@@ -782,7 +868,7 @@ must be coded from parent to the child elements/containers */
 /* MAIN-page */
 .item:hover,
 .item:active{
-  z-index: 10;
+  z-index: 4;
   opacity: 0.5;
 }
 
