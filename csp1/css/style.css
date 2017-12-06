@@ -69,10 +69,10 @@ li{
 	z-index: 2;
 }
 
-.grid-page-logo {
+.grid-page-logo{
 	grid-column-start: 12;
 	grid-column-end: 13;
-	grid-row-start: 1;
+	grid-row-start: 12;
 	grid-row-end: 13;
 	display: flex;
   flex-flow: column-reverse nowrap;
@@ -86,7 +86,7 @@ li{
 .grid-page-logo>img {
 	width: 25px;
   height: 25px;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .grid-page-back {
@@ -101,7 +101,7 @@ li{
 	background-size: 150px auto;
 	margin-left: 5px;
 	opacity: 0.7;
-	z-index: 20;
+	z-index: 4;
 
 }
 
@@ -111,6 +111,7 @@ li{
 	grid-row-start: 12;
 	grid-row-end: 13;
 	text-align: center;
+	z-index: 4;
 }
 
 .grid-bottom>small {
@@ -162,13 +163,17 @@ iframe {
 .grid-icon-dev {
 	grid-column-start: 12;
 	grid-column-end: 13;
-	grid-row-start: 8;
+	grid-row-start: 6;
 	grid-row-end: 9;
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: center;
+	justify-content: flex-end;
+	justify-items: center;
 	align-items: center;
 	align-content: center;
+	text-align: center;
+	z-index: 6;
+	position: relative;
 }
 
 .grid-message>p {
@@ -178,8 +183,34 @@ iframe {
 }
 
 .grid-icon-dev img {
-	width: 40px;
+	width: 30px;
+	margin: 5px;
 }
+.tool-tip:hover .tool-tip-text,
+.tool-tip:active .tool-tip-text{
+	display: inline-block;
+	/* opacity: 0.5; */
+	visibility: visible;
+}
+
+.tool-tip-text{
+	visibility: hidden;
+	color: darkgray;
+	background: black;
+	position: absolute;
+	right: 0;
+	transform: translate(-50px, -35px);
+	height: auto;
+	line-height: auto;
+	width: fit-content;
+	border: 0;
+	padding: 5px;
+}
+
+.grid-icon-dev > p{
+	display: flex;
+}
+
 
 
 /* END of CONTACT page --------------------------------------- */
@@ -192,65 +223,81 @@ iframe {
 	height: 100vh;
 	width: 100vw;
 	display: grid;
-	grid-template-rows: 5px 25px 50px 5px 2.5fr 0.75fr 1fr 1fr 5px 5px 5px 25px;
+	grid-template-rows: 5px 25px 0.25fr 5px 2.5fr 1fr 0.5fr 0.75fr 5px 5px 5px 25px;
 	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
-.grid-gear-h1{
-	grid-column-start: 4;
-	grid-column-end: 12;
-	grid-row-start: 3;
-	grid-row-end: 4;
-
+.grid-gear-content{
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 8;
+  display: grid;
+  grid-template-rows: 0.25fr 5px 2.5fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 25px 12.5px;
 }
-.grid-gear-photo{
-	grid-column-start: 4;
-	grid-column-end: 12;
-	grid-row-start: 5;
-	grid-row-end: 6;
+.grid-gear-content-h2{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
-
-.grid-gear-gallery {
-	grid-column-start: 4;
-	grid-column-end: 12;
-	grid-row-start: 6;
-	grid-row-end: 7;
-	display: flex;
-	flex-flow: row nowrap;
+.grid-gear-content-img{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
-.grid-gear-gallery img{
-	width: 25%;
-	height: auto;
-}
-
-.grid-gear-personal {
-	grid-column-start: 4;
-	grid-column-end: 9;
-	grid-row-start: 7;
-	grid-row-end: 8;
+.grid-gear-content-img-A,
+.grid-gear-content-img-B,
+.grid-gear-content-img-C,
+.grid-gear-content-img-D{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
-.grid-gear-description {
-	grid-column-start: 4;
-	grid-column-end: 9;
-	grid-row-start: 8;
-	grid-row-end: 9;
+.grid-gear-content-text{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.grid-gear-content-review{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.grid-gear-content-specs{
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
 
-.grid-gear-specification {
-	grid-column-start: 9;
-	grid-column-end: 12;
-	grid-row-start: 7;
-	grid-row-end: 9;
+
+.grid-gear-photothumb{
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
-.grid-gear-h1,
-.grid-gear-photo,
-.grid-gear-gallery,
-.grid-gear-gallery img,
-.grid-gear-personal,
-.grid-gear-description,
-.grid-gear-specification{
-	border: 0.5px solid white;
+
+.photothumb01,
+.photothumb02,
+.photothumb03,
+.photothumb04{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
+
 
 /* END of GEARS page ----------------------------------------- */
 
@@ -264,7 +311,6 @@ iframe {
 }
 
 .G1-home div{
-	border: 0.5px solid white;
 }
 
 .home-top-mosaic{
@@ -510,7 +556,7 @@ iframe {
   display: flex;
   flex-flow: column nowrap;
   justify-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	align-content: space-around;
   margin-bottom: 0;
@@ -582,52 +628,62 @@ body {
 /* TEXT formatting */
 /* MAIN.html */
 .grid-main-mid-banner h1{
-  font-size: 1.5em;
+	font-size: 1.5em;
+	margin-top: 0;
 }
 .grid-main-mid-banner p{
   font-size: 0.5em;
 }
 
+/* GEARS thumbnail effecs*/
+.photothumb{
+	display: none;
+}
+.photothumb:target{
+	display: grid;
+}
 
 
 
 /* IMAGE sources of all webpages +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .main-carousel-bot-photo-01a{
-  background-image: url("../img/try01.jpeg");
+  background-image: url("../img/_lowres-img/water/lowres_converted_DSC01422.JPG");
 }
 .main-carousel-bot-photo-01b{
-	background-image: url("../img/try02.jpeg");
+	background-image: url("../img/_lowres-img/water/lowres_2017.09.09-11_DSC03440.JPG");
 }
 .main-carousel-bot-photo-01c{
-	background-image: url("../img/try03.jpeg");
+	background-image: url("../img/_lowres-img/water/lowres_2017.09.09-11_DSC03440.JPG");
 }
 .main-carousel-bot-photo-02a{
-  background-image: url("../img/try01.jpeg");
+  background-image: url("../img/_lowres-img/building/lowres_DSC03868.JPG");
 }
 .main-carousel-bot-photo-02b{
-	background-image: url("../img/try02.jpeg");
+	background-image: url("../img/_lowres-img/building/lowres_DSC03880.JPG");
 }
 .main-carousel-bot-photo-02c{
-	background-image: url("../img/try03.jpeg");
+	background-image: url("../img/_lowres-img/building/lowres_converted_converted_DSC04236.JPG");
 }
 .main-carousel-bot-photo-03a{
-  background-image: url("../img/try01.jpeg");
+  background-image: url("../img/_lowres-img/patterns/lowres_converted_converted_DSC00954.JPG");
 }
 .main-carousel-bot-photo-03b{
-	background-image: url("../img/try02.jpeg");
+	background-image: url("../img/_lowres-img/patterns/lowres_converted_DSC01232.JPG");
 }
 .main-carousel-bot-photo-03c{
-	background-image: url("../img/try03.jpeg");
+	background-image: url("../img/_lowres-img/patterns/lowres_converted_DSC01230.JPG");
 }
 .main-carousel-bot-photo-04a{
-  background-image: url("../img/try01.jpeg");
+  background-image: url("../img/_lowres-img/roadways/lowres_DSC08581.JPG");
 }
 .main-carousel-bot-photo-04b{
-	background-image: url("../img/try02.jpeg");
+	background-image: url("../img/_lowres-img/roadways/lowres_converted_DSC01225.JPG");
 }
 .main-carousel-bot-photo-04c{
-	background-image: url("../img/try03.jpeg");
+	background-image: url("../img/_lowres-img/roadways/lowres_converted_converted_DSC01083.JPG");
 }
+
 .main-carousel-top-photoa{
 	background-image: url("../img/Sony_A77_+_Zeiss_85.jpg");
 }
@@ -644,29 +700,34 @@ body {
 	background-image: url("../img/SLT-A77_zm.jpg");
 }
 .home-carousel-mid-photoa{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC01048.jpg')
+  background-image: url('../img/night/DSC01074_v1.jpg');
 }
 .home-carousel-mid-photob{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC04254.JPG')
+  background-image: url('../img/night/DSC01082_v1.jpg');
 }
 .home-carousel-mid-photoc{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC04269.JPG')
+  background-image: url('../img/night/DSC01112_v1.jpg');
 }
 .home-carousel-mid-photod{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01250.JPG')
-}
-.home-carousel-mid-photoe{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01252.JPG')
-}
-.home-carousel-mid-photof{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01263.JPG')
-}
-.home-carousel-mid-photog{
-  background-image: url('../img/_lowres-img/branches/lowres_DSC04492.JPG')
+  background-image: url('../img/night/DSC06525_converted.jpg');
 }
 
-
-
+.grid-gear-content-img-A,
+.photothumb01{
+  background-image: url('../img/_gears/specs1.jpg');
+}
+.grid-gear-content-img-B,
+.photothumb02{
+  background-image: url('../img/_gears/imageedit_4_3624554526.jpg');
+}
+.grid-gear-content-img-C,
+.photothumb03{
+  background-image: url('../img/_gears/55_1.jpg');
+}
+.grid-gear-content-img-D,
+.photothumb04{
+  background-image: url('../img/_gears/sony_hvl-f58am_front_450.jpg');
+}
 /* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
 
 
