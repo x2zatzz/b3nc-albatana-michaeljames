@@ -11,7 +11,7 @@ Theme: Photograph gallery
 - Sketch    > Nov. 28, 2017
 - Wireframe > Nov. 28, 2017 to Nov. 29, 2017
 - Mock-ups  > Nov. 29, 2017 to Nov. 29, 2017
-- Code      > Nov. 30, 2017 to Dec. 6, 2017 
+- Code      > Nov. 30, 2017 to Dec. 6, 2017
 - Testing   > Dec. 6, 2017
 
 ## II. Gantt Chart
