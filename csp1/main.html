@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>PhotoHub - main</title>
+    <title>PhotoHub</title>
     <link rel="icon" href="mjta-v01.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -17,20 +17,18 @@
 <body>
   <div class="G1-main">
     <!-- GRID-TEMPLATE +++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <div class="G2 grid-page-leftframe"></div>
-      <div class="G2 grid-page-bottomframe"></div>
-      
-      
-      <div class="G2 grid-page-logo tool-tip">
-        <img src="assets/mjta-v01w-500dpi-521px.png" alt="" onclick="location='contact.html'">
-        <p class="tool-tip-text">About me.</p>
-      </div>
-      
-      <div class="G2 grid-page-back" onclick="location='index.html'"></div>
-
-      <div class="G2 grid-bottom">
-        <small style="color:white">&copy; 2017 by MJTA</small>
-      </div>
+    <div class="G2 grid-page-leftframe slideInUp animated"></div>
+    <div class="G2 grid-page-bottomframe slideInLeft animated"></div>
+    <div class="G2 grid-page-logo tool-tip">
+      <img class="fadeIn animated" src="assets/mjta-v01w-500dpi-521px.png" alt="" onclick="location='contact.html'">
+      <p class="tool-tip-text tool-tip-text-logo">About me.</p>
+    </div>
+    <div class="G2 grid-page-back tool-tip" onclick="location='index.html'">
+      <p class="tool-tip-text tool-tip-text-back">Previous</p>
+    </div>
+    <div class="G2 grid-bottom">
+      <small>&copy; 2017 by MJTA</small>
+    </div>
     <!-- END of GRID-TEMPLATE ++++++++++++++++++++++++++++++++++++++ -->
 
     <div class="G2 grid-main-top-photo" onclick="location='gears.html'">
@@ -54,17 +52,22 @@
         </div>
       </div>
     </div>
-    
+
+    <div class="G2 grid-main-upperclick" onclick="location='gears.html'">
+      <p>go to: Photography Equipment</p>
+    </div>
     <div class="G2 grid-main-mid-banner">
       <blockquote cite="http://www.dictionary.com/browse/photography">
         <dfn><h1>Photography</h1></dfn>
         <p>the process or art of producing images of objects on sensitized surfaces by the chemical action of light or of other forms of radiant energy, as x-rays, gamma rays, or cosmic rays.</p>
-
       </blockquote>
     </div>
-    
+    <div class="G2 grid-main-lowerclick" onclick="location='galleryA.html'">
+      <p>go to: Photo Gallery</p>
+    </div>
 
-    <div class="G2 grid-main-bot-photo-01" onclick="location='galleryA.html'">
+
+    <div class="G2 grid-main-bot-photo-01">
       <div id="carousel-grid-main-bot-photo-01" class="carousel slide" data-ride="carousel" data-interval="5000">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
@@ -79,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="G2 grid-main-bot-photo-02" onclick="location='galleryA.html'">
+    <div class="G2 grid-main-bot-photo-02">
       <div id="carousel-grid-main-bot-photo-02" class="carousel slide" data-ride="carousel" data-interval="5600">
           <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -94,7 +97,7 @@
           </div>
         </div>
     </div>
-    <div class="G2 grid-main-bot-photo-03" onclick="location='galleryA.html'">
+    <div class="G2 grid-main-bot-photo-03">
       <div id="carousel-grid-main-bot-photo-03" class="carousel slide" data-ride="carousel" data-interval="6200">
           <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -109,7 +112,7 @@
           </div>
         </div>
     </div>
-    <div class="G2 grid-main-bot-photo-04" onclick="location='galleryA.html'">
+    <div class="G2 grid-main-bot-photo-04">
       <div id="carousel-grid-main-bot-photo-04" class="carousel slide" data-ride="carousel" data-interval="6800">
           <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -123,9 +126,8 @@
             </div>
           </div>
         </div>
-
     </div>
-
+    <div class="G2 grid-main-bot-onclick" onclick="location='galleryA.html'"></div>
   </div>
 </body>
 
