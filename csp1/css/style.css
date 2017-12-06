@@ -197,13 +197,13 @@ iframe {
 	position: relative;
 }
 
-.grid-message>p {
+.grid-message > p{
 	display: block;
 	font-size: 0.9em;
 	text-align: left;
 }
 
-.grid-icon-dev img {
+.grid-icon-dev img{
 	width: 30px;
 	margin: 5px;
 }
@@ -650,8 +650,8 @@ body {
 }
 
 /* gears.html +++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.G1-gears p,
-.G1-gears li{
+.G1-gears G3 p,
+.G1-gears G3 li{
   font-size: 0.65em;
   color: hsla(0, 1%, 77%, 1);
   margin-left: 5px;
@@ -696,40 +696,40 @@ body {
 /* IMAGE sources of all webpages +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .main-carousel-bot-photo-01a{
-  background-image: url("../img/_lowres-img/blue_and_birds/lowres_converted_DSC01422.JPG");
+  background-image: url("../img/lowres-img/blue_and_birds/lowres_converted_DSC01422.JPG");
 }
 .main-carousel-bot-photo-01b{
-	background-image: url("../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG");
+	background-image: url("../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG");
 }
 .main-carousel-bot-photo-01c{
-	background-image: url("../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG");
+	background-image: url("../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG");
 }
 .main-carousel-bot-photo-02a{
-  background-image: url("../img/_lowres-img/lines_and_perspective/lowres_DSC03868.JPG");
+  background-image: url("../img/lowres-img/lines_and_perspective/lowres_DSC03868.JPG");
 }
 .main-carousel-bot-photo-02b{
-	background-image: url("../img/_lowres-img/lines_and_perspective/lowres_DSC03880.JPG");
+	background-image: url("../img/lowres-img/lines_and_perspective/lowres_DSC03880.JPG");
 }
 .main-carousel-bot-photo-02c{
-	background-image: url("../img/_lowres-img/lines_and_perspective/lowres_converted_converted_DSC04236.JPG");
+	background-image: url("../img/lowres-img/lines_and_perspective/lowres_converted_converted_DSC04236.JPG");
 }
 .main-carousel-bot-photo-03a{
-  background-image: url("../img/_lowres-img/lines_and_perspective/lowres_converted_converted_DSC00954.JPG");
+  background-image: url("../img/lowres-img/lines_and_perspective/lowres_converted_converted_DSC00954.JPG");
 }
 .main-carousel-bot-photo-03b{
-	background-image: url("../img/_lowres-img/lines_and_perspective/lowres_converted_DSC01232.JPG");
+	background-image: url("../img/lowres-img/lines_and_perspective/lowres_converted_DSC01232.JPG");
 }
 .main-carousel-bot-photo-03c{
-	background-image: url("../img/_lowres-img/green/lowres_converted_DSC01230.JPG");
+	background-image: url("../img/lowres-img/green/lowres_converted_DSC01230.JPG");
 }
 .main-carousel-bot-photo-04a{
-  background-image: url("../img/_lowres-img/roadways/lowres_DSC08581.JPG");
+  background-image: url("../img/lowres-img/roadways/lowres_DSC08581.JPG");
 }
 .main-carousel-bot-photo-04b{
-	background-image: url("../img/_lowres-img/roadways/lowres_converted_DSC01225.JPG");
+	background-image: url("../img/lowres-img/roadways/lowres_converted_DSC01225.JPG");
 }
 .main-carousel-bot-photo-04c{
-	background-image: url("../img/_lowres-img/roadways/lowres_converted_converted_DSC01083.JPG");
+	background-image: url("../img/lowres-img/roadways/lowres_converted_converted_DSC01083.JPG");
 }
 
 .main-carousel-top-photoa{
@@ -748,151 +748,151 @@ body {
 	background-image: url("../img/SLT-A77_zm.jpg");
 }
 .home-carousel-mid-photoa{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01074_v1.jpg');
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01074_v1.jpg');
 }
 .home-carousel-mid-photob{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01082_v1.jpg');
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01082_v1.jpg');
 }
 .home-carousel-mid-photoc{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01112_v1.jpg');
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01112_v1.jpg');
 }
 .home-carousel-mid-photod{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC06525_converted.jpg');
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC06525_converted.jpg');
 }
 
 .grid-gear-content-img-A,
 .photothumb01{
-  background-image: url('../img/_gears/specs1.jpg');
+  background-image: url('../img/gears/specs1.jpg');
 }
 .grid-gear-content-img-B,
 .photothumb02{
-  background-image: url('../img/_gears/imageedit_4_3624554526.jpg');
+  background-image: url('../img/gears/imageedit_4_3624554526.jpg');
 }
 .grid-gear-content-img-C,
 .photothumb03{
-  background-image: url('../img/_gears/55_1.jpg');
+  background-image: url('../img/gears/55_1.jpg');
 }
 .grid-gear-content-img-D,
 .photothumb04{
-  background-image: url('../img/_gears/sony_hvl-f58am_front_450.jpg');
+  background-image: url('../img/gears/sony_hvl-f58am_front_450.jpg');
 }
 
 .gallerya-carousel-row1-seta-photo-1{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_2017.09.09-11_DSC03377.JPG')
+  background-image: url('../img/lowres-img/black_and_night/lowres_2017.09.09-11_DSC03377.JPG')
 }
 .gallerya-carousel-row1-seta-photo-2{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_converted_converted_DSC04364.JPG')
+  background-image: url('../img/lowres-img/black_and_night/lowres_converted_converted_DSC04364.JPG')
 }
 .gallerya-carousel-row1-seta-photo-3{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01074_v1.jpg')
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01074_v1.jpg')
 }
 .gallerya-carousel-row1-setb-photo-1{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01082_v1.jpg')
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01082_v1.jpg')
 }
 .gallerya-carousel-row1-setb-photo-2{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC01112_v1.jpg')
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC01112_v1.jpg')
 }
 .gallerya-carousel-row1-setb-photo-3{
-  background-image: url('../img/_lowres-img/black_and_night/lowres_DSC06525_converted.jpg')
+  background-image: url('../img/lowres-img/black_and_night/lowres_DSC06525_converted.jpg')
 }
 .gallerya-carousel-row2-seta-photo-1{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03383.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03383.JPG')
 }
 .gallerya-carousel-row2-seta-photo-2{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03387.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03387.JPG')
 }
 .gallerya-carousel-row2-seta-photo-3{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03431.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03431.JPG')
 }
 .gallerya-carousel-row2-setb-photo-1{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_2017.09.09-11_DSC03440.JPG')
 }
 .gallerya-carousel-row2-setb-photo-2{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_converted_converted_DSC04238.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_converted_converted_DSC04238.JPG')
 }
 .gallerya-carousel-row2-setb-photo-3{
-  background-image: url('../img/_lowres-img/blue_and_birds/lowres_converted_DSC01422.JPG')
+  background-image: url('../img/lowres-img/blue_and_birds/lowres_converted_DSC01422.JPG')
 }
 .gallerya-carousel-row3-seta-photo-1{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC01048.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_converted_DSC01048.JPG')
 }
 .gallerya-carousel-row3-seta-photo-2{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC04254.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_converted_DSC04254.JPG')
 }
 .gallerya-carousel-row3-seta-photo-3{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_converted_DSC04269.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_converted_DSC04269.JPG')
 }
 .gallerya-carousel-row3-setb-photo-1{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01250.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_DSC01250.JPG')
 }
 .gallerya-carousel-row3-setb-photo-2{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01252.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_DSC01252.JPG')
 }
 .gallerya-carousel-row3-setb-photo-3{
-  background-image: url('../img/_lowres-img/branches/lowres_converted_DSC01263.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_converted_DSC01263.JPG')
 }
 .gallerya-carousel-row3-setc-photo-1{
-  background-image: url('../img/_lowres-img/branches/lowres_DSC04492.JPG')
+  background-image: url('../img/lowres-img/branches/lowres_DSC04492.JPG')
 }
 .gallerya-carousel-row4-seta-photo-1{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01214.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01214.JPG')
 }
 .gallerya-carousel-row4-seta-photo-2{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01217.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01217.JPG')
 }
 .gallerya-carousel-row4-seta-photo-3{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01220.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01220.JPG')
 }
 .gallerya-carousel-row4-setb-photo-1{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01230.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01230.JPG')
 }
 .gallerya-carousel-row4-setb-photo-2{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01318.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01318.JPG')
 }
 .gallerya-carousel-row4-setb-photo-3{
-  background-image: url('../img/_lowres-img/green/lowres_converted_DSC01379.JPG')
+  background-image: url('../img/lowres-img/green/lowres_converted_DSC01379.JPG')
 }
 .galleryb-carousel-row1-seta-photo-1{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_converted_converted_DSC00954.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_converted_converted_DSC00954.JPG')
 }
 .galleryb-carousel-row1-seta-photo-2{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_converted_converted_DSC04236.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_converted_converted_DSC04236.JPG')
 }
 .galleryb-carousel-row1-seta-photo-3{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_converted_DSC01232.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_converted_DSC01232.JPG')
 }
 .galleryb-carousel-row1-setb-photo-1{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_DSC03868.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_DSC03868.JPG')
 }
 .galleryb-carousel-row1-setb-photo-2{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_DSC03880.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_DSC03880.JPG')
 }
 .galleryb-carousel-row1-setb-photo-3{
-  background-image: url('../img/_lowres-img/lines_and_perspective/lowres_DSC03889.JPG')
+  background-image: url('../img/lowres-img/lines_and_perspective/lowres_DSC03889.JPG')
 }
 .galleryb-carousel-row2-seta-photo-1{
-  background-image: url('../img/_lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03368.JPG')
+  background-image: url('../img/lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03368.JPG')
 }
 .galleryb-carousel-row2-seta-photo-2{
-  background-image: url('../img/_lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03369.JPG')
+  background-image: url('../img/lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03369.JPG')
 }
 .galleryb-carousel-row2-setb-photo-1{
-  background-image: url('../img/_lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03539.JPG')
+  background-image: url('../img/lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03539.JPG')
 }
 .galleryb-carousel-row2-setb-photo-2{
-  background-image: url('../img/_lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03549.JPG')
+  background-image: url('../img/lowres-img/orange_and_twilight/lowres_2017.09.09-11_DSC03549.JPG')
 }
 .galleryb-carousel-row3-seta-photo-1{
-  background-image: url('../img/_lowres-img/roadways/lowres_converted_converted_DSC01083.JPG')
+  background-image: url('../img/lowres-img/roadways/lowres_converted_converted_DSC01083.JPG')
 }
 .galleryb-carousel-row3-seta-photo-2{
-  background-image: url('../img/_lowres-img/roadways/lowres_converted_DSC01221.JPG')
+  background-image: url('../img/lowres-img/roadways/lowres_converted_DSC01221.JPG')
 }
 .galleryb-carousel-row3-setb-photo-1{
-  background-image: url('../img/_lowres-img/roadways/lowres_converted_DSC01225.JPG')
+  background-image: url('../img/lowres-img/roadways/lowres_converted_DSC01225.JPG')
 }
 .galleryb-carousel-row3-setb-photo-2{
-  background-image: url('../img/_lowres-img/roadways/lowres_DSC08581.JPG')
+  background-image: url('../img/lowres-img/roadways/lowres_DSC08581.JPG')
 }
 
 
