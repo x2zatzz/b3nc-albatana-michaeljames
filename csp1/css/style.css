@@ -120,7 +120,6 @@ a:active{
 .tool-tip:active .tool-tip-text{
 	display: inline-block;
   visibility: visible;
-  z-index: 8;
 }
 
 .tool-tip-text-logo,
@@ -131,25 +130,37 @@ a:active{
 	color: darkgray;
 	background: black;
 	position: absolute;
-	right: 0;
 	height: auto;
 	width: fit-content;
 	border: 0;
-	padding: 5px;
+  padding: 5px;
+  z-index: 8;
 }
 
 .tool-tip-text-devicon{
-  transform: translate(-50px, -35px);
-
+  position: absolute;
+  right: 0;
+  transform: translate(-35px, -35px);
+  font-size: 12px;
+  
+  
 }
 
 .tool-tip-text-logo{
-  transform: translate(-50px, -10px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-35px, -35px);
+  font-size: 12px;
+  
 }
 
 .tool-tip-text-back{
-  transform: translate(70px, -20px);
-  font-size: 2em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, -15px);
+  font-size: 12px;
 }
 
 
@@ -160,12 +171,12 @@ a:active{
 	height: 100vh;
 	width: 100vw;
 	display: grid;
-	grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 1fr 5px 5px 5px 25px;
+	grid-template-rows: 5px 25px 50px 5px 1fr 1fr 1fr 0.4fr 5px 5px 5px 25px;
 	grid-template-columns: 25px 5px 5px 5px 1fr 1fr 1fr 1fr 1fr 25px 12.5px 50px;
 }
 
 .grid-iframe {
-  grid-area: 5 / 4 / 8 / 12;
+  grid-area: 3 / 4 / 8 / 12;
 	overflow: hidden;
 }
 
@@ -176,7 +187,7 @@ iframe {
 }
 
 .grid-message {
-  grid-area: 8 / 5 / 9 / 11;
+  grid-area: 8 / 5 / 9 / 12;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -240,6 +251,7 @@ iframe {
 }
 .grid-gear-content-img{
   grid-area: 3 / 1 / 4 / 9;
+  padding: 5px;
 }
 .grid-gear-content-img-A,
 .grid-gear-content-img-B,
@@ -613,84 +625,6 @@ body {
 }
 
 
-/* TEXT formatting */
-/* template */
-.grid-page-back{
-  font-size: 0.5em;
-}
-
-/* extra.html ++++++++++++++++++++++++++++++++++ */
-.grid-extra-header > h1{
-  font-size: 1.5em;
-}
-.grid-extra-easteregg > p{
-  font-size: 0.8em;
-}
-
-/* index.html ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.G1-home p{
-  color: hsl(0, 1%, 30%);
-}
-
-/* MAIN.html +++++++++++++++++++++++++++++++++++++ */
-.grid-main-mid-banner h1{
-	font-size: 1em;
-	margin-top: 0;
-}
-.grid-main-mid-banner p{
-  font-size: 0.5em;
-  text-align: justify;
-}
-.grid-main-upperclick,
-.grid-main-lowerclick{
-  text-align: center;
-  z-index: 8;
-  color: white !important;
-  font-size: 0.75em;
-}
-
-/* gears.html +++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.G1-gears G3 p,
-.G1-gears G3 li{
-  font-size: 0.65em;
-  color: hsla(0, 1%, 77%, 1);
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.G1-gears .grid-gear-content-text,
-.G1-gears .grid-gear-content-review,
-.G1-gears .grid-gear-content-specs{
-  padding: 2px;
-}
-.G1-gears h3{
-  font-size: 0.8em;
-  margin-bottom: 2px;
-}
-
-.G1-home p{
-  text-align: center;
-  font-size: 0.7em;
-  margin: 2px;
-}
-/* GEARS thumbnail effects ++++++++++++++++++++++++++++++++++++++++++ */
-.photothumb{
-	display: none;
-}
-.photothumb:target{
-	display: grid;
-}
-
-/* galleryA&B.html +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.G1-galleryA h2,
-.G1-galleryB h2{
-  margin-left: 5px;
-  font-weight: bold;
-  text-align: center;
-  color: gray;
-  font-size: 1em;
-  margin: 0;
-  text-transform: uppercase;
-}
 
 
 /* IMAGE sources of all webpages +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -899,12 +833,90 @@ body {
 
 
 
-/* COLOR & BACK-IMAGE & TEXT PROPERTIES*/
+/* COLOR & BACK-IMAGE & TEXT PROPERTIES ++++++++++++++++++++++++++++++++++++++ */
 
 
 /* To make coloring less hassle, determine the elements with same color values,
 assign those elements to a particular color-group,
 must be coded from parent to the child elements/containers */
+
+/* template ---------------------------------------------------------------*/
+.grid-page-back{
+  font-size: 0.5em;
+}
+
+/* extra.html ----------------------------------- */
+.grid-extra-header > h1{
+  font-size: 1.5em;
+}
+.grid-extra-easteregg > p{
+  font-size: 0.8em;
+}
+
+/* index.html ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.G1-home p{
+  color: hsl(0, 1%, 30%);
+  text-align: center;
+  font-size: 0.7em;
+  margin: 2px;
+}
+
+/* MAIN.html +++++++++++++++++++++++++++++++++++++ */
+.grid-main-mid-banner h1{
+	font-size: 1em;
+	margin-top: 0;
+}
+.grid-main-mid-banner p{
+  font-size: 0.6em;
+  text-align: justify;
+}
+.grid-main-upperclick,
+.grid-main-lowerclick{
+  text-align: center;
+  z-index: 8;
+  color: white !important;
+  font-size: 0.75em;
+}
+
+/* gears.html +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.G1-gears h3{
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+.G1-gears .G3 p,
+.G1-gears .G3 li{
+  font-size: 0.85em;
+  color: hsla(0, 1%, 77%, 1);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.G1-gears .grid-gear-content-text,
+.G1-gears .grid-gear-content-review,
+.G1-gears .grid-gear-content-specs{
+  padding: 2px;
+}
+
+/* GEARS thumbnail effects ++++++++++++++++++++++++++++++++++++++++++ */
+.photothumb{
+	display: none;
+}
+.photothumb:target{
+	display: grid;
+}
+
+/* galleryA&B.html +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.G1-galleryA h2,
+.G1-galleryB h2{
+  margin-left: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: gray;
+  font-size: 1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 
 
 /* RWD FUNCTION ---------------------------------- */
@@ -928,7 +940,20 @@ must be coded from parent to the child elements/containers */
   .G1-photo{
 		width: 70%;
 		margin: 0 auto;
-	}
+  }
+
+  /* MAIN.html +++++++++++++++++++++++++++++++++++++ */
+  .grid-main-mid-banner h1{
+    font-size: 2em;
+  }
+  .grid-main-mid-banner p{
+    font-size: 1em;
+  }
+  .grid-main-upperclick,
+  .grid-main-lowerclick{
+    font-size: 0.9em;
+  }
+
 }
 
 /* Standard Notebooks/Ultrabook, desktops, monitors @ > 14in DEVICES ++++++++++++++++++++++ */
@@ -945,6 +970,17 @@ must be coded from parent to the child elements/containers */
     width: 40%;
     margin: 0 auto;
   }
+  .grid-main-mid-banner h1{
+    font-size: 2em;
+  }
+  .grid-main-mid-banner p{
+    font-size: 1em;
+  }
+  .grid-main-upperclick,
+  .grid-main-lowerclick{
+    font-size: 0.8em;
+  }
+
 }
 
 /* animate.css ++++++++++++++++++++++++++++++++++++++++++++= */
@@ -999,6 +1035,23 @@ must be coded from parent to the child elements/containers */
   animation-name: slideInUp;
 }
 
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+
 @keyframes slideInLeft {
   from {
     transform: translate3d(-100%, 0, 0);
@@ -1013,6 +1066,23 @@ must be coded from parent to the child elements/containers */
 .slideInLeft {
   animation-name: slideInLeft;
 }
+
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
 
 @keyframes rotateIn {
   from {
@@ -1030,6 +1100,21 @@ must be coded from parent to the child elements/containers */
 
 .rotateIn {
   animation-name: rotateIn;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
 }
 
 /* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
