@@ -66,20 +66,20 @@ a:active{
 }
 
 .grid-page-logo{
-  grid-area: 12 / 12 / 13 / 13;
-display: flex;
-  flex-flow: column-reverse nowrap;
-  justify-items: center;
-	justify-content: flex-start;
+  grid-area: 1 / 12 / 13 / 13;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-items: center; */
+	justify-content: flex-end;
 	align-items: center;
-	align-content: center;
-	z-index: 6;
+  z-index: 6;
+  /* margin-bottom: 5px; */
+  padding-bottom: 15px;
 }
 
 .grid-page-logo>img {
 	width: 25px;
   height: 25px;
-	margin-bottom: 15px;
 }
 
 .grid-page-back {
