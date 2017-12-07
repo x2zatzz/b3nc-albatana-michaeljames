@@ -4,7 +4,8 @@
 /* This portion is used for experimental purposes and this portion must be empty when deployed */
 
 *{
-	/* border: 0.25px solid white; */
+  /* border: 0.25px solid white; */
+  overflow: hidden;
 }
 
 
@@ -20,7 +21,7 @@ a{
 }
 a:hover,
 a:active{
-  color: blue !important;
+  color: blue;
 }
 
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
@@ -29,7 +30,6 @@ a:active{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: white;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -118,48 +118,32 @@ a:active{
 
 .tool-tip:hover .tool-tip-text,
 .tool-tip:active .tool-tip-text{
-	display: inline-block;
+	display: block;
   visibility: visible;
+  color: white;
+  background: black;
 }
 
 .tool-tip-text-logo,
 .tool-tip-text-back,
 .tool-tip-text-next,
 .tool-tip-text-devicon{
-	visibility: hidden;
-	color: darkgray;
-	background: black;
-	position: absolute;
-	height: auto;
-	width: fit-content;
-	border: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  text-align: center;
+  display: none;
+  height: auto;
+  border: 0;
   padding: 5px;
   z-index: 8;
 }
 
-.tool-tip-text-devicon{
-  position: absolute;
-  right: 0;
-  transform: translate(-35px, -35px);
-  font-size: 12px;
-  
-  
-}
-
-.tool-tip-text-logo{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(-35px, -35px);
-  font-size: 12px;
-  
-}
-
+.tool-tip-text-devicon,
+.tool-tip-text-logo,
 .tool-tip-text-back{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(0, -15px);
   font-size: 12px;
 }
 
@@ -176,7 +160,7 @@ a:active{
 }
 
 .grid-iframe {
-  grid-area: 3 / 4 / 8 / 12;
+  grid-area: 2 / 4 / 8 / 12;
 	overflow: hidden;
 }
 
@@ -208,11 +192,6 @@ iframe {
 	position: relative;
 }
 
-.grid-message > p{
-	display: block;
-	font-size: 0.9em;
-	text-align: left;
-}
 
 .grid-icon-dev img{
 	width: 30px;
@@ -841,8 +820,8 @@ assign those elements to a particular color-group,
 must be coded from parent to the child elements/containers */
 
 /* template ---------------------------------------------------------------*/
-.grid-page-back{
-  font-size: 0.5em;
+.copyright{
+  font-size: 0.7em !important;
 }
 
 /* extra.html ----------------------------------- */
@@ -855,30 +834,32 @@ must be coded from parent to the child elements/containers */
 
 /* index.html ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .G1-home p{
-  color: hsl(0, 1%, 30%);
+  color: light;
   text-align: center;
   font-size: 0.7em;
   margin: 2px;
 }
 
-/* MAIN.html +++++++++++++++++++++++++++++++++++++ */
+/* main.html --------------------------------------------------- */
 .grid-main-mid-banner h1{
 	font-size: 1em;
-	margin-top: 0;
+  margin-top: 0;
+  color: white;
 }
 .grid-main-mid-banner p{
-  font-size: 0.6em;
+  font-size: 0.5em;
   text-align: justify;
+  color: white
 }
 .grid-main-upperclick,
 .grid-main-lowerclick{
   text-align: center;
   z-index: 8;
-  color: white !important;
+  color: white;
   font-size: 0.75em;
 }
 
-/* gears.html +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* gears.html ------------------------------------------ */
 .G1-gears h3{
   font-size: 1em;
   margin-bottom: 2px;
@@ -897,7 +878,7 @@ must be coded from parent to the child elements/containers */
   padding: 2px;
 }
 
-/* GEARS thumbnail effects ++++++++++++++++++++++++++++++++++++++++++ */
+/* GEARS thumbnail effects --------------------------------- */
 .photothumb{
 	display: none;
 }
@@ -905,7 +886,7 @@ must be coded from parent to the child elements/containers */
 	display: grid;
 }
 
-/* galleryA&B.html +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* galleryA&B.html ------------------------------------- */
 .G1-galleryA h2,
 .G1-galleryB h2{
   margin-left: 5px;
@@ -917,7 +898,17 @@ must be coded from parent to the child elements/containers */
   text-transform: uppercase;
 }
 
+/* contact.html --------------------------------------- */
 
+.G1-contact small{
+	display: block;
+	font-size: 0.9em;
+  text-align: center;
+  color: gray;
+}
+.G1-contact .grid-message{
+  color: white;
+}
 
 /* RWD FUNCTION ---------------------------------- */
 
