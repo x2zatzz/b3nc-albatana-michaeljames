@@ -120,8 +120,11 @@ a:active{
 .tool-tip:active .tool-tip-text{
 	display: block;
   visibility: visible;
-  color: white;
   background: black;
+}
+
+.tool-tip-text-next{
+
 }
 
 .tool-tip-text-logo,
@@ -129,21 +132,26 @@ a:active{
 .tool-tip-text-next,
 .tool-tip-text-devicon{
   position: fixed;
+  display: none;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   visibility: hidden;
   text-align: center;
-  display: none;
   height: auto;
   border: 0;
-  padding: 5px;
-  z-index: 8;
+  opacity: 0.8;
+  z-index: 6;
+  color: white;
+  padding: 0;
+  margin: 0;
+  
 }
 
 .tool-tip-text-devicon,
 .tool-tip-text-logo,
-.tool-tip-text-back{
+.tool-tip-text-back,
+.tool-tip-text-next{
   font-size: 12px;
 }
 
