@@ -1003,7 +1003,7 @@ must be coded from parent to the child elements/containers */
 
 .G1-contact small{
 	display: block;
-	font-size: 0.9em;
+	font-size: 0.7em;
   text-align: center;
   color: gray;
 }
@@ -1076,6 +1076,10 @@ must be coded from parent to the child elements/containers */
 
   /*  */
     .G1-contact p{
+      font-size: 1em;
+    }
+
+    .grid-icon-dev small{
       font-size: 1em;
     }
 }
