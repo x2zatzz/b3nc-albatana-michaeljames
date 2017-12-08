@@ -925,7 +925,7 @@ must be coded from parent to the child elements/containers */
 .G1-home p{
   color: gray;
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.6em;
   vertical-align: middle;
   margin: 0;
   padding: 0;
@@ -956,14 +956,18 @@ must be coded from parent to the child elements/containers */
 .G1-gears h3{
   color: white;
 }
+.G1-gears h2{
+  font-size: 0.7em;
+  margin-bottom: 2px;
+}
 .G1-gears h3{
-  font-size: 1em;
+  font-size: 0.6em;
   margin-bottom: 2px;
 }
 
 .G1-gears .G3 p,
 .G1-gears .G3 li{
-  font-size: 0.85em;
+  font-size: 0.6em;
   color: hsla(0, 1%, 77%, 1);
   margin-left: 5px;
   margin-right: 5px;
@@ -989,9 +993,10 @@ must be coded from parent to the child elements/containers */
   font-weight: bold;
   text-align: center;
   color: gray;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0;
   text-transform: uppercase;
+  overflow: visible;
 }
 
 /* contact.html --------------------------------------- */
@@ -1001,6 +1006,10 @@ must be coded from parent to the child elements/containers */
 	font-size: 0.9em;
   text-align: center;
   color: gray;
+}
+
+.G1-contact p{
+  font-size: 0.7em;
 }
 .G1-contact .grid-message{
   color: white;
@@ -1029,6 +1038,10 @@ must be coded from parent to the child elements/containers */
 		margin: 0 auto;
   }
 
+  .G1-home p{
+    font-size: 1em;
+  }
+
   /* MAIN.html +++++++++++++++++++++++++++++++++++++ */
   .grid-main-mid-banner h1{
     font-size: 2em;
@@ -1045,6 +1058,9 @@ must be coded from parent to the child elements/containers */
   }
 
   /* gears.html --------------------------------- */
+  .G1-gears h2{
+    font-size: 1.5em;
+  }
   .G1-gears h3{
     font-size: 1.5em;
   }
@@ -1052,7 +1068,18 @@ must be coded from parent to the child elements/containers */
   .G1-gears .G3 li{
     font-size: 1em;
   }
+  /* galleryA & galleryB -------------------------- */
+    .G1-galleryA h2,
+    .G1-galleryB h2{
+      font-size: 1.5em;
+    }
+
+  /*  */
+    .G1-contact p{
+      font-size: 1em;
+    }
 }
+
 
 /* Standard Notebooks/Ultrabook, desktops, monitors @ > 14in DEVICES ++++++++++++++++++++++ */
 
