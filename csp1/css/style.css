@@ -62,17 +62,18 @@ a{
 }
 
 .grid-page-nav{
-  grid-area: 1 / 1 / 4 / 2;
-  visibility: flex;
+  grid-area: 1 / 1 / 4 / 3;
+  visibility: block;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-content: center;
-  align-items: center;
+  /* align-content: center;
+  align-items: center; */
   background-image: url('../assets/if_Menu_2190974.png');
   background-size: 25px 25px;
   background-repeat: no-repeat;
-  font-size: 0.75em;
   margin-left: 2px;
+  z-index: 4;
+  overflow: visible;
 }
 
 .grid-page-nav:hover .grid-page-nav-menu{
@@ -86,20 +87,24 @@ a{
 .grid-page-nav-menu a{
   color: white;
 }
-
+.grid-page-nav-menu li{
+  margin: 2px 0;
+  font-size: 0.75em !important;
+  
+}
 
 .grid-page-logo{
   grid-area: 1 / 12 / 13 / 13;
   display: flex;
   flex-flow: column nowrap;
-	justify-content: flex-end;
-	align-items: center;
-  z-index: 4;
+  justify-content: flex-end;
+  align-items: center;
   padding-bottom: 15px;
+  z-index: 6;  
 }
 
 .grid-page-logo>img {
-	width: 25px;
+  width: 25px;
   height: 25px;
 }
 
@@ -462,7 +467,7 @@ iframe {
 }
 
 .grid-main-bot-onclick{
-  grid-area: 8 / 1 / 11 / 13;
+  grid-area: 8 / 1 / 10 / 13;
   z-index: 5;
   content: "";
 }
