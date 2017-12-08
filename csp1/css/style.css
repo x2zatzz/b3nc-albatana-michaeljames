@@ -485,6 +485,7 @@ iframe {
 	align-content: space-around;
   margin-bottom: 0;
   height: 100%;
+  padding: 5px;
 }
 
 
@@ -1024,7 +1025,7 @@ must be coded from parent to the child elements/containers */
   .G1-home,
   .G1-main,
   .G1-photo{
-		width: 70%;
+		width: 60%;
 		margin: 0 auto;
   }
 
@@ -1033,18 +1034,29 @@ must be coded from parent to the child elements/containers */
     font-size: 2em;
   }
   .grid-main-mid-banner p{
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .grid-main-upperclick,
   .grid-main-lowerclick{
     font-size: 0.9em;
   }
+  .grid-main-mid-banner blockquote{
+    padding: 5px;
+  }
 
+  /* gears.html --------------------------------- */
+  .G1-gears h3{
+    font-size: 1.5em;
+  }
+  .G1-gears .G3 p,
+  .G1-gears .G3 li{
+    font-size: 1em;
+  }
 }
 
 /* Standard Notebooks/Ultrabook, desktops, monitors @ > 14in DEVICES ++++++++++++++++++++++ */
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px){
   .G1-extra,
   .G1-contact,
   .G1-galleryA,
@@ -1057,15 +1069,26 @@ must be coded from parent to the child elements/containers */
     margin: 0 auto;
   }
   .grid-main-mid-banner h1{
-    font-size: 2em;
+    font-size: 1.7em;
   }
   .grid-main-mid-banner p{
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .grid-main-upperclick,
   .grid-main-lowerclick{
     font-size: 0.8em;
   }
+
+
+  /* gears.html --------------------------------- */
+  .G1-gears h3{
+    font-size: 1.5em;
+  }
+  .G1-gears .G3 p,
+  .G1-gears .G3 li{
+    font-size: 1em;
+
+}
 
 }
 
