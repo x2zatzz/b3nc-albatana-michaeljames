@@ -61,15 +61,40 @@ a{
 	z-index: 2;
 }
 
+.grid-page-nav{
+  grid-area: 1 / 1 / 4 / 2;
+  visibility: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  background-image: url('../assets/if_Menu_2190974.png');
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  font-size: 0.75em;
+  margin-left: 2px;
+}
+
+.grid-page-nav:hover .grid-page-nav-menu{
+  margin-top: 30px;
+  display: block;
+}
+.grid-page-nav-menu{
+  display: none;
+  background: black;
+}
+.grid-page-nav-menu a{
+  color: white;
+}
+
+
 .grid-page-logo{
   grid-area: 1 / 12 / 13 / 13;
   display: flex;
   flex-flow: column nowrap;
-  /* justify-items: center; */
 	justify-content: flex-end;
 	align-items: center;
   z-index: 4;
-  /* margin-bottom: 5px; */
   padding-bottom: 15px;
 }
 
