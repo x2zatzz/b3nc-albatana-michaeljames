@@ -66,8 +66,6 @@ a{
   visibility: block;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  /* align-content: center;
-  align-items: center; */
   background-image: url('../assets/if_Menu_2190974.png');
   background-size: 25px 25px;
   background-repeat: no-repeat;
@@ -89,7 +87,8 @@ a{
 }
 .grid-page-nav-menu li{
   margin: 2px 0;
-  font-size: 0.75em !important;
+  font-size: 0.7em;
+  overflow: visible;
   
 }
 
@@ -1038,6 +1037,7 @@ must be coded from parent to the child elements/containers */
 		margin: 0 auto;
   }
 
+  
   .G1-home p{
     font-size: 1em;
   }
