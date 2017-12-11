@@ -6,13 +6,15 @@ Theme: Photograph gallery
 
 ## I. Project Actual Timeline
 
-- Start     > Nov. 28, 2017
-- Ideation  > Nov. 28, 2017
-- Sketch    > Nov. 28, 2017
-- Wireframe > Nov. 28, 2017 to Nov. 29, 2017
-- Mock-ups  > Nov. 29, 2017 to Nov. 29, 2017
-- Code      > Nov. 30, 2017 to Dec. 6, 2017
-- Testing   > Dec. 6, 2017
+- Start         > Nov. 28, 2017
+- Ideation      > Nov. 28, 2017
+- Sketch        > Nov. 28, 2017
+- Wireframe     > Nov. 28, 2017 to Nov. 29, 2017
+- Mock-ups      > Nov. 29, 2017 to Nov. 29, 2017
+- Coding        > Nov. 30, 2017 to Dec. 6, 2017
+- Coding        > Dec. 6, 2017
+- Touchups      > Dec. 7, 2017
+- Presentation  > Dec. 8, 2017
 
 ## II. Gantt Chart
 
@@ -22,6 +24,8 @@ Theme: Photograph gallery
 - Dec. 4    > coding
 - Dec. 5    > coding & partial-tests (must complete more than 60% of the project)
 - Dec. 6    > touch-ups, testing & submission
+- Dec. 7    > presentation (session cancelled)
+- Dec. 8    > presentation
 
 ## III. Project Details
 
@@ -36,7 +40,7 @@ Theme: Photograph gallery
 - Convey photographs to audiences
 - Share owner's passion on photography
 - Attract audience to owner's profile
-- Create a sophisticated static websites that consists of layouting to promote developer's experience in layouting, typography, and web-artistry in general
+- Create a sophisticated static websites that consists of layouting to promote developer's experience in layouting, typography, and web-artistry in general.
 
 **Website audiences:**
 
@@ -46,7 +50,7 @@ Theme: Photograph gallery
 
 **Purpose of audiences:**
 
-- to be entertained by the photographs
+- to be entertained by the owner's photographs
 - "curiousity"????
 
 ### B. Project content, structure, and elements
@@ -58,64 +62,56 @@ Theme: Photograph gallery
 
 **User-interaction elements:**
 
-- message form
+- navigation links to every webpages
 
 **RWD:**
 
-- Mobile phones & phablets:   > Portrait & Landscape
-- Tablets:                    > Portrait & Landscape
-- Desktops & Laptops:         > Landscape
+- Mobile phones & phablets:   > Portrait
+- Tablets:                    > Portrait
+- Desktops & Laptops:         > Portrait
 
 Webpage organization:
 
 - Home/index:   > photo-mosaic
 - Main:         > main page
-- GalleryA:     > contains collection of photos (all photos)
-- GalleryB:     > contains collection of photos (grouped)
+- GalleryA:     > contains collection of photos
+- GalleryB:     > contains collection of photos
 - Photo:        > the actual photo with more details and information
 - Gears:        > information about the photographic equipment of the owner
 - Contact:      > external links to profile & portfolio
 
 Webpage link tree structure:
 
-1. Home
-
-1.1 Main
-1.1.1 Gallery / 1.1.2 Gallery
-1.1.1.1 Photo
-1.1.2 Gears
-1.1.3 Contact
+- 1 Home
+- 1.1 Main
+- 1.1.1 Gallery / 1.1.2 Gallery
+- 1.2 Gears
+- 1.3 Contact
 
 Elements per Webpage:
 
-Home/index:
+Home/index page:
 
 - photographs (many)
 
-Main:
+Main page:
 
 - selected photograph
 - camera photo
 - welcome message
 
-Gallery:
+Gallery page:
 
 - photographs (sorted)
 
-Photo:
-
-- highlighted-photograph
-- texts (camera info and picture details)
-- texts (story)
-
-Gears:
+Gears page:
 
 - photograph
 - image-list
 - texts (item specs, review ratings)
 - texts (story)
 
-Contact:
+Contact page:
 
 - texts
 - forms
@@ -141,9 +137,3 @@ Contact:
 [photo](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-photo.png)
 [gear](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-gears.png)
 [contact](https://gitlab.com/tuitt/students/b3nc/mjtalbatana/blob/master/csp1/docs/mockup-mobile-p-contact.png)
-
-## HTML structure
-
-HOME:
-
-MAIN:
