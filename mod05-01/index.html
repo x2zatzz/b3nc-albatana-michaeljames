@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0"> -->
+    <meta http-equiv="X-UA-compatible" content="IE=Edge">
+    <title>What JavaScript can do</title>
+    <link rel="icon" href="mjta-v01.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head><!-- END of <head> section +++++++++++++++++++++++++++++++++ -->
+
+  <body>
+    <div class="wrapper">
+      <h1 id="elements1">What JavaScript can do?</h1>
+      <hr>
+      <h2>JavaScript can hide/show HTML elements</h2>
+      <button onclick="hideAll()">Hide All</button>
+      <br>
+      <button onclick="showAll()">Show All</button>
+      <div id="all">
+        <h2 id="content">JavaScript can change HTML content.</h2>
+        <button onclick="changeContent()">Change HTML content</button>
+        <h2>JavaScript can change HTML attributes.</h2>
+        <button onclick="changeAttr()">Change image height</button>
+        <button onclick="changeImg()">Change image</button>
+        <br>
+        <img id="attr" src="img/image1.jfif" alt="" height="230">
+        <h2 id="css">JavaScript can change HTML styles.</h2>
+        <button onclick="changeColor()">Change style</button>
+
+        <h2 id="elements">JavaScript can get and manipulate HTML elements</h2>
+        <form method="" action="">
+          <input type="number" id="input1" value="1">+
+          <input type="number" id="input2" value="2">=
+          <span id="sum"></span>
+        </form>
+        <br>
+        <button onclick="computeSum()">Compute sum</button>
+      </div>
+
+      <hr>
+
+      <button onclick="alert('This is an inline')">Inline</button>
+
+      <hr>
+
+      <h3 id="heading">This is a heading</h3>
+    </div>
+
+
+    <script src="js/script.js"></script>
+    
+    <script>
+      document.getElementById("heading").innerHTML = "JavaScript";
+    </script>
+  </body>
+
+</html>
+<!-- HTML5 Template version 1.2 - 20171128 (subset file) ++ -->
+<!-- Developer: Michael James Turiano Albatana              -->
+<!-- Email: mjtalbatana@gmail.com                           -->
+<!-- Github: https://github.com/mjtalbatana                 -->
+<!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana      -->
+<!-- END OF HTML FILE +++++++++++++++++++++++++++++++++++++ -->
