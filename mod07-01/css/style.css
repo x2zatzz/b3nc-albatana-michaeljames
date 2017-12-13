@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  margin: 0 auto;
+}
+
+body{
+  background: black;
+}
+
+h1,
+p,
+span{
+  padding: 25px;
+}
+
+hr{
+  margin-top: 25px;
+
+}
+
+.buttons{
+  text-align: center;
+}
+
+.buttons > button{
+  padding: 5px;
+}
+
+
+#var1,
+#var2{
+  margin-left: 25px;
+}
+
+.expressions p,
+.expressions input{
+  display: inline;
+  margin: 5px;
+}
