@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Simple JavaScript DOM Activity</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="wrapper clear" id="violet-box">
+		<nav>
+			<div class="nav-box red" onclick="changeColor(this.className)"></div>
+			<div class="nav-box orange" onclick="changeColor(this.className)"></div>
+			<div class="nav-box yellow" onclick="changeColor(this.className)"></div>
+			<div class="nav-box green" onclick="changeColor(this.className)"></div>
+			<div class="nav-box blue" onclick="changeColor(this.className)"></div>
+			<div class="nav-box indigo" onclick="changeColor(this.className)"></div>
+			<div class="nav-box violet" onclick="changeColor(this.className)"></div>
+		</nav>
+		<div class="box" id="red-box" onclick="changeColor(this.className, this.id)"></div>
+		<div class="box" id="orange-box" onclick="changeColor(this.className, this.id)"></div>
+		<div class="box" id="yellow-box" onclick="changeColor(this.className, this.id)"></div>
+		<div class="box" id="green-box" onclick="changeColor(this.className, this.id)"></div>
+		<div class="box" id="blue-box" onclick="changeColor(this.className, this.id)"></div>
+		<div class="box" id="indigo-box" onclick="changeColor(this.className, this.id)"></div>
+	</div> <!-- /.wrapper -->
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
