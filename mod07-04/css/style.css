@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: Helvetica;
+}
+
+body {
+  background-color: grey;
+}
+
+
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: white;
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+h1,
+input,
+button,
+p{
+  border: 0.25px solid black;
+  padding: 10px;
+  width: inherit;
+  text-align: center;
+}
+
+
+hr{
+  margin: 25px 0;
+}
+
+p{
+  font-size: 2em;
+  color: black;
+}
+
+button{
+  padding: 25px;
+}
+
