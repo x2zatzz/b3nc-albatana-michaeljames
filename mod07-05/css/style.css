@@ -1,0 +1,64 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */ /*
+*{
+
+}
+*/
+
+/* FONT-FACE */
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+body{
+  background: black;
+}
+
+.uppersection{
+  height: 30vh;
+  width: 100%;
+  border: 0.5px solid black;
+}
+
+.body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: white;
+}
+
+form{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+
+}
+
+h1,
+input{
+  color: black;
+}
+
+.chessboard{
+  border: 0.25px solid black;
+}
+
+
+/* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
