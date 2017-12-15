@@ -13,16 +13,18 @@
 
   <body>
     <div class="body">
-      <div class="uppersection">
+      <div class="panel">
         <h1>Chessboard Generator</h1>
-        <form action="" name="inputform">
-          <input type="text" name="num" value="" id="num" placeholder="Enter a number">
-          <input type="text" name="step" id="num" placeholder="Enter a step">
-          <input type="button" value="Generate" onclick="generateTable">
+        <form action="" name="panelform">
+          <input type="text" name="num" value="" id="n" placeholder="Enter a number">
+          <!-- <input type="text" name="step" id="num" placeholder="Enter a step"> -->
+          <input type="button" value="Generate" onclick="generateTable()">
         </form>
       </div>
-      <div class="chessboard">
-        <div class="basebox"></div>
+      <div class="tablegenerator">
+        <ul id="tablegenerator">
+
+        </ul>
       </div>
     </div>
 

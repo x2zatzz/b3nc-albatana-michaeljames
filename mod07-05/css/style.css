@@ -19,25 +19,25 @@ body{
   background: black;
 }
 
-.uppersection{
-  height: 30vh;
-  width: 100%;
-  border: 0.5px solid black;
-}
-
 .body{
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  align-content: space-around;
+  align-content: center;
   width: 70vw;
-  height: 100vh;
+  height: auto;
   margin: 0 auto;
   background: white;
 }
 
-form{
+.panel{
+  height: auto;
+  width: 100%;
+  border: 0.5px solid black;
+}
+
+.panel > form{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -45,14 +45,43 @@ form{
   align-content: space-around;
 
 }
+.tablegenerator{
+  min-height: 100px;
+  width: auto;
+  border: 0.5px solid black;
+  display: flex;
 
-h1,
-input{
-  color: black;
 }
 
-.chessboard{
-  border: 0.25px solid black;
+h1,
+form{
+  margin: 10px;
+  color: black;
+  text-align: center;
+}
+form > input{
+  margin: 2px;
+}
+
+.box{
+  border: 0.1px solid black;
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+
+ul{
+  display: flex;
+  flex-flow: row wrap;
+  width: auto;
+  height: auto;
+  background: gray;
+
+}
+li{
+  display: block;
+  height: 100px;
+  width: 100px;
 }
 
 
