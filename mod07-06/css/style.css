@@ -1,0 +1,147 @@
+/* UNIVERSAL DEBUG ------------------ */
+/* This portion is used for experimental purposes and this portion must be empty when deployed */ /*
+*{
+
+}
+*/
+
+
+/* UNIVERSAL DEFAULTS */
+/* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: Helvetica, sans-serif
+}
+ul{
+  list-style: none;
+}
+
+body{
+  background: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.calcBorder{
+  display: Grid;
+  background: white;
+  width: 40vw;
+  height: 300px;
+  margin: 0 auto;
+  grid-template-rows: 1fr 1fr 0.25fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.25fr 1fr 1fr 1fr 0.25fr 1fr 1fr;
+  border: 0.25px solid black;
+}
+
+.calcScreen{
+  grid-area: 2 / 2 / 3 / 9;
+}
+
+.calcOpr{
+  grid-area: 4 / 2 / 8 / 3;
+}
+.calcAdd{
+  grid-area: 4 / 2 / 5 / 3;
+}
+.calcSubt{
+  grid-area: 5 / 2 / 6 / 3;
+}
+.calcMult{
+  grid-area: 6 / 2 / 7 / 3;
+}
+.calcDiv{
+  grid-area: 7 / 2 / 8 / 3;
+}
+
+.calcNum{
+  grid-area: 4 / 4 / 8 / 7;
+}
+.calcNum0{
+  grid-area: 7 / 4 / 8 / 6;
+}
+.calcNumDot{
+  grid-area: 7 / 6 / 8 / 7;
+}
+.calcNum1{
+  grid-area: 6 / 4 / 7 / 5;
+}
+.calcNum2{
+  grid-area: 6 / 5 / 7 / 6;
+}
+.calcNum3{
+  grid-area: 6 / 6 / 7 / 7;
+}
+.calcNum4{
+  grid-area: 5 / 4 / 6 / 5;
+}
+.calcNum5{
+  grid-area: 5 / 5 / 6 / 6;
+}
+.calcNum6{
+  grid-area: 5 / 6 / 6 / 7;
+}
+.calcNum7{
+  grid-area: 4 / 4 / 5 / 5;
+}
+.calcNum8{
+  grid-area: 4 / 5 / 5 / 6;
+}
+.calcNum9{
+  grid-area: 4 / 6 / 5 / 7;
+}
+
+
+
+.calcOut{
+  grid-area: 4 / 8 / 8 / 9;
+}
+.calcClear{
+  grid-area: 4 / 8 / 5 / 9;
+}
+.calcBack{
+  grid-area: 5 / 8 / 6 / 9;
+}
+.calcEquals{
+  grid-area: 6 / 8 / 8 / 9;
+}
+
+.calcBorder > div{
+  border: 0.25px solid black;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.calcBorder input{
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+
+.button:hover{
+  background: darkgray;
+}
+
+
+/* HOVER-effects */
+/* .button:hover{
+  filter:
+  saturate(80%);
+  contrast(50%);
+
+} */
+
+
+
+/* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
+/*  Developer: Michael James Turiano Albatana                                 */
+/*  Email: mjtalbatana@gmail.com                                              */
+/*  Github: https://github.com/mjtalbatana                                    */
+/*  LinkedIn: https://www.linkedin.com/in/mjtalbatana                         */
+/* END OF CSS FILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
