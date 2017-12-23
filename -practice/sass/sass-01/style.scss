@@ -1,0 +1,15 @@
+//Color Variables
+$blue: #0072ff;
+$light_blue: #60a7ff;
+
+//links
+a{
+    text-decoration: none;
+    color: $blue;
+
+    //Links on Hover
+    &:hover{
+        text-decoration: underline;
+        color: $light_blue;
+    }
+}

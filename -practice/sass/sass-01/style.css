@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: #0072ff;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #60a7ff;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
