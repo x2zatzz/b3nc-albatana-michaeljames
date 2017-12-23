@@ -3,8 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Loops - Table Generator</title>
     <link rel="icon" href="mjta-v01.ico" type="image/x-icon">
@@ -12,22 +12,30 @@
   </head><!-- END of <head> section +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
   <body>
-    <div class="body">
-      <div class="panel">
-        <h1>Chessboard Generator</h1>
-        <form action="" name="panelform">
-          <input type="text" name="num" value="" id="n" placeholder="Enter a number">
-          <!-- <input type="text" name="step" id="num" placeholder="Enter a step"> -->
-          <input type="button" value="Generate" onclick="generateTable()">
+    <div class="g0">
+      <div class="g0r01">
+        <h1>Table Generator</h1>
+        <h3>This is a JavaScript application to generate table from total number of boxes</h3>
+      </div>
+      <div class="g0r02">
+        <form method="" action="">
+          <label for="input_number"># of cells</label>
+          <input id="input_number" type="number" name="" value="0" placeholder="please enter integer">
+          <input id="check_checkered"  type="checkbox" name="check_checkered" value="checkered">
+          <label for="checkered">checkered</label>
+          <input id="check_inverted" type="checkbox" name="check_inverted" value="inverted">
+          <label for="inverted">inverted</label>
+          <input id="check_display_num" type="checkbox" name="check_display_num" value="displayed" checked>
+          <label for="display_num">display #</label>
+          <input type="button" name="" value="Generate" onclick="generateTable()">
+          <input type="button" name="" value="Clear" onclick="clearTable()">
         </form>
       </div>
-      <div class="tablegenerator">
-        <ul id="tablegenerator">
-
-        </ul>
+      <div id="tablegenerator" class="g0r03">
+      </div>
+      <div id="tooltipmessage" class="g0r04">
       </div>
     </div>
-
     <script src="js/script.js"></script>
   </body>
 
