@@ -1,13 +1,16 @@
 var expression = "";
 var operator = "";
 function numEntry(value) {
+  if(document.getElementById('numScreen').innerHTML == 0){
+    expression = "";
+  }
   expression += value;
   document.getElementById('numScreen').innerHTML = expression;
 }
 
 function numClear() {
-  document.getElementById('numScreen').innerHTML = '0';
   expression = "";
+  document.getElementById('numScreen').innerHTML = "0";
 }
 
 function numOperator(operator){
@@ -26,10 +29,14 @@ function numEquals() {
 
 function numBack() {
   expression = document.getElementById('numScreen').innerHTML;
-  if (document.getElementById('numScreen').innerHTML == '') {
-    numClear();
-  }
   expression = expression.substr(0, expression.length-1);
   document.getElementById('numScreen').innerHTML = expression;
-  
+  console.log(isNaN(document.getElementById('numScreen').innerHTML));
+  console.log(document.getElementById('numScreen').innerHTML.length === 0);
+  if ((isNaN(document.getElementById('numScreen').innerHTML) == true) || (expression == 0)) {
+    numClear();
+  } else {
+
+  }
+
 }
