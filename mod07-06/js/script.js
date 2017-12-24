@@ -36,7 +36,5 @@ function numBack() {
   if ((isNaN(document.getElementById('numScreen').innerHTML) == true) || (expression == 0)) {
     numClear();
   } else {
-
   }
-
 }
