@@ -5,85 +5,72 @@
 }
 */
 
-/* FONT-FACE */
-
 /* UNIVERSAL DEFAULTS */
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
 *{
+  background: black;
+  color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* CSS-grid setup */
+/* main grid = 3-rows 1-column */
 body{
-  background: black;
+  width: 100vw;
+  height: 100vh;
 }
-
-.body{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  width: 70vw;
-  height: auto;
+.g0{
+  display: grid;
+  width: 70%;
+  height: 100%;
   margin: 0 auto;
-  background: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 70px 1fr 15px;
+  grid-template-areas: "g0r01" "g0r02" "g0r03" "g0r04";
 }
-
-.panel{
-  height: auto;
-  width: 100%;
-  border: 0.5px solid black;
-}
-
-.panel > form{
+.g0r01{
+  grid-area: g0r01;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-
-}
-.tablegenerator{
-  min-height: 100px;
-  width: auto;
-  border: 0.5px solid black;
-  display: flex;
-
-}
-
-h1,
-form{
-  margin: 10px;
-  color: black;
   text-align: center;
 }
-form > input{
-  margin: 2px;
+
+.g0r02{
+  grid-area: g0r02;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  justify-items: space-around;
+  align-content: center;
+  align-items: center;
+}
+.g0r02 form{
+  height: fit-content;
+}
+
+.g0r03{
+  grid-area: g0r03;
+  border: 0.5px solid white;
+}
+.g0r04{
+  grid-area: g0r04;
 }
 
 .box{
-  border: 0.1px solid black;
-  background: red;
-  width: 50px;
-  height: 50px;
+  border: 0.1px solid gray;
+}
+#tablegenerator{
+  border: 0.1px solid white;
 }
 
-ul{
+#tooltipmessage{
   display: flex;
-  flex-flow: row wrap;
-  width: auto;
-  height: auto;
-  background: gray;
-
+  justify-content: center;
 }
-li{
-  display: block;
-  height: 100px;
-  width: 100px;
-}
-
 
 /* CSS3 Template version 1.3 - 20171128 +++++++++++++++++++++++++++++++++++++ */
 /*  Developer: Michael James Turiano Albatana                                 */

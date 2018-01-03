@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TEMPLATE</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/mjtalbatana/profile-logo/master/mjta-v01.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background: gray;
+      border: 1px solid black;
+    }
+    .class1,
+    .class2,
+    .class3{
+      width: 100px;
+      height: 100px;
+      border: 0.5px dotted orange;
+    }
+    .enclosure{
+      display: flex;
+      flex-flow: row nowrap;
+      border: 1px solid black;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+<!-- END of <head> section ======================================================================================= -->
+
+<body>
+  <div id="enclose" class="enclosure">
+    <div class="class1">megger</div>
+    <div class="class2"></div>
+    <div class="class3">class3a</div>
+    <div class="class3">class3b
+      <p></p>
+      <div></div>
+    </div>
+    <div class="class3">
+      class3c
+      <h1>wowoweeee</h1>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <div id="demo">
+    <p>some text</p>
+    <p>some other text  </p>
+  </div>
+
+  <div class="box" id="function" onclick="runTheFunction()">
+
+  </div>
+
+  <div class="box" id="function2" onclick="runThatFunction2()">
+
+  </div>
+
+  <div class="box" id="function3" onclick="runThatFunction3()">
+    <h1>mike</h1>
+    <h2>maikeru</h2>
+  </div>
+
+  <div class="box" id="function4" onclick="runThatFunction4()">
+    <span>michael</span>
+    <small>james</small>
+  </div>
+
+  <div class="box" id="function5" onclick="runThatFunction5()">
+    <div class="box" style="background: orange; height: 20px;"></div>
+    <div class="box" style="background: blue; height: 20px;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!-- HTML5 Template version 1.5 20171225 ===================-->
+<!-- Developer: Michael James Turiano Albatana              -->
+<!-- Email: mjtalbatana@gmail.com                           -->
+<!-- Github: https://github.com/mjtalbatana                 -->
+<!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana      -->
+<!-- END OF HTML FILE ======================================-->

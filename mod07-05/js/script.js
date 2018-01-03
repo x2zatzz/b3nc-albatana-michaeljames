@@ -1,59 +1,83 @@
-// function generateTable() {
-//   var num = document.inputform.num.value;
-//   var step = document.inputform.step.value;
+function generateTable(){
+  var input_number = document.getElementById("input_number").value;
+  var check_checkered = document.getElementById("check_checkered").checked;
+  var check_inverted = document.getElementById("check_inverted").checked;
+  var check_display_num = document.getElementById("check_display_num").checked;
+  var table_length = Math.ceil(Math.sqrt(input_number));
+  console.log("table_length:" + table_length);
 
-//   var row = num / step;
-//   var element = "";
-//   var boxClass = "";
-//   var classBox = "";
+  if(input_number == 0 || input_number < 0 || isNaN(input_number)){
+    tooltipMessage("Please enter cell value of more than zero to generate a table.");
+    return;
+  }
 
-//   var boxHeight = row / 4;
+  document.getElementById("tablegenerator").style.display = "grid";
+  document.getElementById("tablegenerator").style.gridTemplateColumns = "repeat(" + table_length + ", 1fr";
+  document.getElementById("tablegenerator").style.gridTemplateRows = "repeat(" + table_length + ", 1fr";
 
-//   boxHeight = Math.round(boxHeight);
-//   boxHeight = 100 / boxHeight;
 
-//   var z = step;
-//   for (var x = 0; x <= (row / 4); x++) {
-//     for (var y = 0; y < 4; y++) {
-//       if (step <= num) {
-//         if ((x % 2 == 0) && (y % 2 == 0)) {
-//           boxClass = "black";
-//         }
-//         if ((x % 2 == 0) && (y % 2 == 1)) {
-//           boxClass = "white";
-//         }
-//         if ((x % 2 == 1) && (y % 2 == 0)) {
-//           boxClass = "white";
-//         }
-//         if ((x % 2 == 1) && (y % 2 == 1)) {
-//           boxClass = "black";
-//         }
-//         element += "<div class ='box " + boxClass + "'><h2>" + z + "</h2></div>";
-//         z += step;
+  var row_pos = 1;
+  var col_pos = 1;
+  var generator_formula = "";
+  var i = 1;
+  for(; i <= input_number; i++){
+    if(i <= (table_length * row_pos)){
+      row_pos = row_pos;
+    }
+    else{
+      row_pos ++;
+    }
+    col_pos = (i - (table_length*(row_pos - 1)));
+    if(check_display_num == true){
+      generator_formula += "<div class='box' id='r" + row_pos + "c" + col_pos + "'>" + i + "</div>";
+    }
+    else{
+      generator_formula += "<div class='box' id='r" + row_pos + "c" + col_pos + "'>" + "</div>";
+    }
+    document.getElementById("tablegenerator").innerHTML = generator_formula;
+  }
 
-//       }
-//     }
-//   }
+  if(check_checkered == true){
+    row_pos = 1;
+    col_pos = 1;
+    i = 1;
+    for (; i <= input_number; i++) {
+      if (i <= (table_length * row_pos)) {
+        row_pos = row_pos;
+      }
+      else {
+        row_pos++;
+      }
+      col_pos = (i - (table_length * (row_pos - 1)));
+      if ((((row_pos % 2) !== 0) && ((col_pos % 2) !== 0)) || (((row_pos % 2) == 0) && ((col_pos % 2) == 0))) {
+        rowcol = "r" + row_pos + "c" + col_pos;
+        if (check_inverted == true) {
+          document.getElementById(rowcol).style.background = "black";
+        } else {
+          document.getElementById(rowcol).style.background = "gray";
+        }
+      }
+      else if ((((row_pos % 2) == 0) && ((col_pos % 2) !== 0)) || (((row_pos % 2) !== 0) && ((col_pos % 2) == 0))) {
+        rowcol = "r" + row_pos + "c" + col_pos;
+        if(check_inverted == true){
+          document.getElementById(rowcol).style.background = "gray";
+        } else{
+          document.getElementById(rowcol).style.background = "black";
+        }
+      }
+      else {
+      }
+    }
+  }
+  tooltipMessage("Table generated with " + table_length + "x" + table_length + " table size.");
+}
 
-//   document.getElementsById("chessboard").innerHTML = element;
-//   classBox = document.getElementsByClassName("box");
+function clearTable(){
+  document.getElementById("tablegenerator").innerHTML = "";
+  tooltipMessage("Table cleared.");
+  document.getElementById("input_number").value = 0;
+}
 
-//   for (var i = 0; i < classBox.length; i++) {
-//     classBox[i].style.height = boxHeight + "vh";
-//     classBox[i].style.lineHeight = boxHeight + "vh";
-//   }
-
-// }
-
-function generateTable() {
-  var n = document.getElementById("n").value;
-  // for (i=0; i < n; i++) {
-  //   document.getElementById("tablegenerator").append
-  //   console.log(i);
-  // }
-  var node = document.createElement("LI");
-  var textnode = document.createElement("<h1>header</h1>");
-  node.appendChild(textnode);
-  document.getElementById("tablegenerator").appendChild(node);
-
+function tooltipMessage(message){
+  document.getElementById("tooltipmessage").innerHTML = "<small>" + message + "</small>";
 }
