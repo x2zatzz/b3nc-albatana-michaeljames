@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JS Intro</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/mjtalbatana/profile-logo/master/mjta-v01.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+  <style>
+    h1{
+      text-align: center;
+    }
+  </style>
+</head><!-- END of <head> section ======================================================================================= -->
+
+
+<body>
+<!-- <script>
+    function getName(){
+      var fname = document.getElementById("fname").value;
+      alert(fname);
+    }
+</script> -->
+  <!-- <h1 id="intro">JavaScript Introduction</h1>
+  <input type="button" onclick="changeColor1()" id="red" name="red" value="change to red">
+  <input type="button" onclick="changeColor2()" id="orange" name="orange" value="change to orange">
+  <input type="button" onclick="changeColor3()" id="blue" name="blue" value="change to blue"> -->
+<!-- onamaewa? <input type="text" id="fname">
+<button onclick="getName()">ikou!</button> -->
+<script>
+  function getCode(){
+    var textboxValue = document.getElementById("code").value;
+    document.getElementById("display").innerHTML = textboxValue;
+  }
+</script>
+
+<input type="text" id="code" onchange="getCode()">
+<h2 id="display">Show here</h2>
+
+
+</body>
+<!-- <script>
+  var x;
+
+  function changeColor1(){
+    x = document.getElementById("intro");
+    x.style.backgroundColor = document.getElementById("red").name;
+  }
+  function changeColor2(){
+    x = document.getElementById("intro");
+    x.style.backgroundColor = document.getElementById("orange").name;
+  }
+  function changeColor3(){
+    x = document.getElementById("intro");
+    x.style.backgroundColor = document.getElementById("blue").name;
+  }
+</script> -->
+
+</html>
+<!-- HTML5 Template version 1.5 20171225 ===================-->
+<!-- Developer: Michael James Turiano Albatana              -->
+<!-- Email: mjtalbatana@gmail.com                           -->
+<!-- Github: https://github.com/mjtalbatana                 -->
+<!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana      -->
+<!-- END OF HTML FILE ======================================-->
