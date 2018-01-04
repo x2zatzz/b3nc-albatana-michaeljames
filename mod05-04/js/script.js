@@ -1,33 +1,31 @@
 var attemptNumber = 0;
+var theNumber = 7;
+var promptMessage = "Please enter a number..."
+var userNum = 7;
 function guessNumber(){
-  var userNumber;
-  var theNumber = 7;
-  
+  console.log(attemptNumber);
+  console.log(theNumber);
+  console.log(promptMessage);
   while(attemptNumber !== 3){
-    prompt(userNumber);
-    if(userNumber == theNumber){
-      document.getElementById("display").innerHTML = "You got it right!";
-      document.getElementById("display").style.color = "green";
+    prompt(promptMessage,userNum);
+    parseInt(userNum);
+    console.log(userNum);
+    if(userNum == theNumber){
+      promptMessage = "You got it right!";
       attemptNumber = 0;
-    } else if(userNumber > theNumber){
-      document.getElementById("display").innerHTML = "Lower...";
-      document.getElementById("display").style.color = "orange";
+      break;
+    } else if(userNum > theNumber){
+      promptMessage = "Lower...";
       attemptNumber++;
-    } else if(userNumber < theNumber){
-      document.getElementById("display").innerHTML = "Higher...";
-      document.getElementById("display").style.color = "orange";
+    } else if(userNum < theNumber){
+      promptMessage = "Higher...";
       attemptNumber++;
     } else{
-      userNumber *= 1;
-      document.getElementById("display").innerHTML = "That is not a number!";
-      document.getElementById("display").style.color = "red";
+      promptMessage = "That is not a number!";
       attemptNumber++;
     }
   }
   alert("GAME OVER!");
-  
-}
+  attemptNumber = 0;
 
-function reset(){
-  
 }
