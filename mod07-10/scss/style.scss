@@ -1,0 +1,78 @@
+@keyframes animate01{
+  0%{width: 0;
+      display: none;}
+  25%{width: 10px;
+      display: none;}
+  50%{width: 10px;
+      display: none;}
+  75%{width: 10px;
+      display: none;}
+  100%{width: 10px;
+      display: inline-block;}
+}
+// @keyframes animate02{
+//   0%{height: };
+// }
+
+@mixin default-stack{
+  border: 0.5px solid black;
+  padding: 10px 5px;
+  width: 100%;
+  height: 50px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+  background: black;
+  main{
+    background: lightgray;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    h1{
+      text-transform: uppercase;
+      @include default-stack();
+    }
+    .completed{
+      color: gray;
+      text-decoration: aquamarine;
+    }
+    .panel{
+      @include default-stack();
+      display: flex;
+      padding: 0;
+      input{
+        width: 80%;
+        height: 100%;
+      }
+      button{
+        width: 20%;
+        height: 100%;
+      }
+    }
+    ul{
+      li{
+        @include default-stack;
+        list-style: none;
+        animation-name: animate02;
+        animation-duration: 1s;
+        span{
+          display: none;
+        }
+        &:hover span{
+          display: inline-block;
+          animation-name: animate01;
+          animation-duration: 1s;
+        }
+      }
+    }
+  }
+}
