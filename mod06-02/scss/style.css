@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+}
+
+body ul li {
+  text-transform: capitalize;
+}
+
+body table {
+  border: 1px solid black;
+  border-spacing: 0;
+  margin-left: 10px;
+}
+
+body table tbody tr th {
+  color: white;
+  background: black;
+  text-align: center;
+  padding: 5px;
+}
+
+body table tbody tr td {
+  text-align: left;
+  border: 1px solid black;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */
