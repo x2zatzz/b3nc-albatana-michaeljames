@@ -1,0 +1,33 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: white;
+  width: 80%;
+  height: auto;
+}
+
+body h1,
+body h2,
+body h3 {
+  color: black;
+}
+
+body .board {
+  background: white;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-gap: 0;
+  border: 1px solid black;
+}
+
+body .board .box {
+  border: 1px solid black;
+  min-width: 20px;
+  min-height: 20px;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */
