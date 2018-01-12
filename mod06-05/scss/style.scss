@@ -4,7 +4,11 @@
   box-sizing: 0;
 }
 body{
+  background: gray;
+  width: 80%;
+  margin: 0 auto;
   .container{
-    display: grid;
+    width: 100%;
   }
+
 }

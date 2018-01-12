@@ -48,25 +48,34 @@
     for($i = 1; $i <= 10; $i++){
       $echodisplay .= '* ';
     }
-    echo $echodisplay . '<br>';
+    echo $echodisplay . '<tr>';
   }
   ?>
 
 <?php
   echo '<h2>Activity#3</h2>';
-  echo '<div class=\'container\'>';
   echo '<h3>Solution#1(immediate echo)</h3>';
+  echo 'hello';
+  echo '<table class=\'container\'><tbody>';
   for($i = 1; $i <= 100; $i++){
-    echo "<div class=\"box\">$i</div> ";
-    if(($i % 10) == 0){
-      echo "<br>";
+    if(((($i - 1) % 10) == 0) AND (($i % 10) <> 0)){
+      echo "<tr>";
+      echo "hello";
     }
+    if(($i % 10) == 0){
+      echo "</tr>";
+      echo 'konnichiwa';
+    }
+    echo ($i - 1) % 10;
+    echo "<td class=\"box\">$i</td> ";
+    echo "hi";
   }
+  echo '</tbody></table>';
+  echo 'mai';
   echo '<h3>Solution#2</h3>';
-  for($i = 1, $echodisplay = ''; $i <= 100; $i++){
-    
-  }
-  echo '</div>';
+  // for($i = 1, $echodisplay = ''; $i <= 100; $i++){
+
+  // }
   ?>
 
 <?php
