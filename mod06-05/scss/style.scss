@@ -2,13 +2,28 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 body{
+  h1,
+  h2,
+  h3{
+    margin: 5px 0;
+    padding: 2px 5px;
+    background: black;
+    color: white;
+  }
   background: gray;
   width: 80%;
   margin: 0 auto;
   .container{
     width: 100%;
+    border-spacing: 0;
+    td{
+      text-align: center;
+      padding: 5px;
+      border: 1px solid black;
+    }
   }
 
 }

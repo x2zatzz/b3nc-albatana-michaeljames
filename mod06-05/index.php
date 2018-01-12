@@ -55,23 +55,18 @@
 <?php
   echo '<h2>Activity#3</h2>';
   echo '<h3>Solution#1(immediate echo)</h3>';
-  echo 'hello';
   echo '<table class=\'container\'><tbody>';
   for($i = 1; $i <= 100; $i++){
-    if(((($i - 1) % 10) == 0) AND (($i % 10) <> 0)){
-      echo "<tr>";
-      echo "hello";
+    if(((($i - 1) % 10) == 0)){
+      echo "<tr><td>$i </td>";
     }
-    if(($i % 10) == 0){
-      echo "</tr>";
-      echo 'konnichiwa';
+    else if(($i % 10) == 0){
+      echo "<td>$i </td></tr>";
+    } else{
+      echo "<td>$i </td>";
     }
-    echo ($i - 1) % 10;
-    echo "<td class=\"box\">$i</td> ";
-    echo "hi";
   }
   echo '</tbody></table>';
-  echo 'mai';
   echo '<h3>Solution#2</h3>';
   // for($i = 1, $echodisplay = ''; $i <= 100; $i++){
 
@@ -87,16 +82,14 @@
 ?>
 <?php
   echo '<h2>Activity#5</h2>';
-  // for($i = 10, $echodisplay = ''; $i >= 1; $i--){
-  //   for(){
+  for($i = 10, $echodisplay = ''; $i >= 1; $i--){
+    echo "* ";
 
-  //   }
-  //   $echodisplay .= "* ";
-  //   echo $echodisplay . '<br>';
-  // }
+  }
 ?>
 
 <?php
+      echo '<h2>Activity#6</h2>';
   for($i = 1, $echodisplay = ''; $i <= 50; $i++){
     $echodisplay .= $i;
     if(($i % 3) == TRUE){
