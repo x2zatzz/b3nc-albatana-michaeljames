@@ -1,0 +1,20 @@
+body {
+  width: 70%;
+  background: black;
+  margin: 0 auto;
+}
+
+body .container {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+}
+
+body .container .stanza {
+  display: flex;
+  background: gray;
+  margin: 5px 0;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
