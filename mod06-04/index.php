@@ -13,9 +13,11 @@
 
 <body>
 <h1>LOOPS</h1>
+<input type="number" value="0" name="weight" placeholder="enter weight (in kilograms)">
+<input type="number" value="0" name="height" placeholder="enter height (in meters)">
 <?php
   echo '<h2>IF ELSEIF ELSE statement:</h2>';
-  $mass = 90; //in kilograms
+  $mass = 600; //in kilograms
   $height = 1.7; //in meters
   $bmi = round(($mass / ($height * $height)), 2);
   $echomsg = '';
@@ -44,9 +46,6 @@
 
 <?php
   echo '<h2>SWITCH statement:</h2>';
-  $mass = 90; //in kilograms
-  $height = 1.7; //in meters
-  $bmi = round(($mass / ($height * $height)), 2);
   $echomsg = '';
   switch ($bmi){
     case ($bmi < 16):
@@ -82,26 +81,15 @@
 
 <?php
   echo '<h2>WHILE statement:</h2>';
-  $a = 0;
-  $b = 0;
+  $arraypoints1 = array(0, 16, 17, 18.5, 25, 30, 35, 40, 999);
+  $arraypoints2 = array('severe thinness', 'moderate thinness', 'mild thinness', 'normal', 'overweight', 'obese class 1', 'obese class 2', 'obese class 3');
   $i = 1;
-  $mass = 90; //in kilograms
-  $height = 1.7; //in meters
-  $bmi = round(($mass / ($height * $height)), 2);
-  $arraypoints = array(16, 17, 18.5, 25, 30, 35, 40);
   while($i <= 9){
-    if($i == 1){
-      if($bmi < $arraypoints[$i-1]){
-      } else{break;}
-    } elseif($i == 9){
-      if($bmi >= $arraypoints[$i-1]){
-      } else{break;}
-    } else{
-      if(($bmi >= $arraypoints[$i-1]) AND ($bmi < $arraypoints[$i])){
-      }
+    if(($bmi >= $arraypoints1[$i-1]) AND ($bmi < $arraypoints1[$i])){
+      echo "Your weight is: $mass kg, and your height is: $height meters" . '<br>';
+      echo "Your BMI is: $bmi and it is a <strong>" .  $arraypoints2[$i - 1] . "</strong> condition" . '<br>';
+      break;
     }
-    echo "Your weight is: $mass kg, and your height is: $height meters" . '<br>';
-    echo "Your BMI is: $bmi and it is a <strong>$echomsg</strong> condition" . '<br>';
     $i++;
   }
 
