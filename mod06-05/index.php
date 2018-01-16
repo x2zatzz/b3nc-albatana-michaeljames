@@ -48,12 +48,13 @@
     for($i = 1; $i <= 10; $i++){
       $echodisplay .= '* ';
     }
-    echo $echodisplay . '<br>';
+    echo $echodisplay . '<tr>';
   }
   ?>
 
 <?php
   echo '<h2>Activity#3</h2>';
+  echo '<h3>Solution#1(immediate echo)</h3>';
   echo '<table class=\'container\'><tbody>';
   for($i = 1; $i <= 100; $i++){
     if(((($i - 1) % 10) == 0)){
@@ -66,6 +67,10 @@
     }
   }
   echo '</tbody></table>';
+  echo '<h3>Solution#2</h3>';
+  // for($i = 1, $echodisplay = ''; $i <= 100; $i++){
+
+  // }
   ?>
 
 <?php
@@ -78,12 +83,8 @@
 <?php
   echo '<h2>Activity#5</h2>';
   for($i = 10, $echodisplay = ''; $i >= 1; $i--){
-    $j = $i;
-    for(; $j >= 1; $j--){
-      $echodisplay .= "* ";
-    }
-    echo $echodisplay . '<br>';
-    $echodisplay = '';
+    echo "* ";
+
   }
 ?>
 
