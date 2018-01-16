@@ -1,3 +1,37 @@
+@keyframes stanzaanimate {
+  30% {
+    background: red;
+    color: gray;
+  }
+  70% {
+    background: green;
+    color: darkgray;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes stanzaanimateentry {
+  20% {
+  }
+  40% {
+  }
+  60% {
+  }
+  80% {
+  }
+  100% {
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 body {
   width: 70%;
   background: black;
@@ -5,16 +39,34 @@ body {
 }
 
 body .container {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   color: white;
+  position: relative;
 }
 
 body .container .stanza {
   display: flex;
-  background: gray;
-  margin: 5px 0;
+  background: gold;
+  margin: 5px;
+  padding: 0 5px;
   flex-flow: column nowrap;
   align-items: center;
+  animation: stanzaanimate 3s infinite;
+}
+
+body .container .stanza .lineA {
+  font-weight: bold;
+}
+
+body .container .stanza .lineB {
+  margin-left: 10px;
+}
+
+body main {
+  width: 80%;
+  border: 1px solid goldenrod;
+  min-height: 100px;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

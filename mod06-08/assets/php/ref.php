@@ -21,19 +21,25 @@
     );
 
     echo "<div class=\"container\">";
-    for($i = 1, $giftsValue1 ="", $giftsValue2 ="", $giftsValue3 = ""; $i <= 12; $i++){
-      echo "<div class=\"stanza\">On the " . $days[$i -1] . " of day Christmas my true love sent to me:" . '<br>';
-      for($j = $i, $giftsValue1 ="", $giftsValue2 ="", $giftsValue3 = ""; $j != 0; $j--){
+    for($i = 1, $giftsValue1 ="", $giftsValue2 =""; $i <= 12; $i++){
+      echo "<div class=\"stanza\" id=\"stanza" . $i . "\"><div class=\"lineA\">On the " . $days[$i -1] . " of day Christmas my true love sent to me: </div>";
+      echo "<div class=\"lineB\">";
+      if($i == 1){
+        echo "a partridge in a pear tree.";
+      } else{}
+      for($j = $i, $giftsValue1 ="", $giftsValue2 =""; ($j != 0) && ($i != 1); $j--){
         $giftsValue1 = $gifts[$j-1];
-
+        // echo "<div class=\"lineB\">";
         if($j == 1){
-          $giftsValue2 = $giftsValue2 . $giftsValue1 .'. ';
-        } else{
+          $giftsValue2 = $giftsValue2 . ' and ' . $giftsValue1 .'. ';
+        }
+        else{
+          // echo "<div class=\"lineB\">";
           $giftsValue2 = $giftsValue2 . $giftsValue1 .', ';
         }
+        // echo "</div>";
       }
-      echo $giftsValue2 . '<br>';
-      echo "</div>";
+      echo "$giftsValue2 </div></div>";
     }
     echo "</div>";
   }

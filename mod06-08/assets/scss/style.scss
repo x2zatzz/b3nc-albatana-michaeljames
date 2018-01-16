@@ -1,17 +1,63 @@
+@keyframes stanzaanimate{
+  30%{
+    background: red;
+    color: gray;
+  }
+  70%{
+    background: green;
+    color: darkgray;
+  }
+  100%{
+    color: black;
+  }
+}
+
+@keyframes stanzaanimateentry{
+  20%{}
+  40%{}
+  60%{}
+  80%{}
+  100%{}
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 body{
   width: 70%;
   background: black;
   margin: 0 auto;
   .container{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     color: white;
+    position: relative;
     .stanza{
       display: flex;
-      background: gray;
-      margin: 5px 0;
+      background: gold;
+      margin: 5px;
+      padding: 0 5px;
       flex-flow: column nowrap;
       align-items: center;
+      animation: stanzaanimate 3s infinite;
+      // animation-name: stanzaanimate;
+      // animation-delay: 3s;
+      .lineA{
+        font-weight: bold;
+      }
+      .lineB{
+        margin-left: 10px;
+      }
     }
+  }
+  main{
+    width: 80%;
+    border: 1px solid goldenrod;
+    min-height: 100px;
+    height: auto;
   }
 }

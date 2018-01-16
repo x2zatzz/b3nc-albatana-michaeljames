@@ -14,18 +14,13 @@
   <link rel="stylesheet" href="assets/scss/style.css" type="text/css">
 </head><!-- END of <head> section ======================================================================================= -->
 
-<body>
-<?php
-  getLyrics();
-?>
-
-
+<body onload="onloadScript()">
+  <main id="main">
+  <?php
+    getLyrics();
+  ?>
+  </main>
+  <script language="javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
-<!-- HTML5 Template version 1.5 20171225 ===================-->
-<!-- Developer: Michael James Turiano Albatana              -->
-<!-- Email: mjtalbatana@gmail.com                           -->
-<!-- Github: https://github.com/mjtalbatana                 -->
-<!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana      -->
-<!-- END OF HTML FILE ======================================-->
