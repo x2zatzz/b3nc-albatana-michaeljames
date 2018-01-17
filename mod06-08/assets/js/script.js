@@ -7,7 +7,7 @@ function onloadScript(){
   alert("Click to start singing");
 }
 
-document.getElementById("main").addEventListener("click", loadstanza, false);
+document.getElementsByTagName("body")[0].addEventListener("click", loadstanza, false);
 
 function loadstanza(){
   if(j > 12){

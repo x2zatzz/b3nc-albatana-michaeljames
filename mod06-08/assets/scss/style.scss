@@ -1,4 +1,4 @@
-@keyframes stanzaanimate{
+@keyframes stanzaanimatecolor{
   30%{
     background: red;
     color: gray;
@@ -28,36 +28,47 @@
 }
 
 body{
-  width: 70%;
-  background: black;
+  width: 100%;
+  height: 100vh;
+  background: gray;
   margin: 0 auto;
-  .container{
-    width: 100%;
-    margin: 0 auto;
-    color: white;
-    position: relative;
-    .stanza{
-      display: flex;
-      background: gold;
-      margin: 5px;
-      padding: 0 5px;
-      flex-flow: column nowrap;
-      align-items: center;
-      animation: stanzaanimate 3s infinite;
-      // animation-name: stanzaanimate;
-      // animation-delay: 3s;
-      .lineA{
-        font-weight: bold;
-      }
-      .lineB{
-        margin-left: 10px;
-      }
-    }
-  }
   main{
     width: 80%;
-    border: 1px solid goldenrod;
-    min-height: 100px;
-    height: auto;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    .container{
+      width: 100%;
+      margin: 0 auto;
+      color: white;
+      .stanza{
+        display: flex;
+        margin: 5px;
+        padding: 0 5px;
+        flex-flow: column nowrap;
+        align-items: center;
+        // animation: stanzaanimatecolor 5s linear 0s infinite normal;
+        .lineA{
+          display: inline-block;
+          padding: 5px;
+          width: 100%;
+          font-weight: bold;
+          background: gold;
+          animation: stanzaanimateentry 2s linear 0s 1 normal ;
+        }
+        .lineB{
+          display: inline-block;
+          padding: 5px;
+          width: 100%;
+          background: goldenrod;
+          animation: stanzaanimateentry 2s linear 0s 1 normal ;
+        }
+      }
+    }
   }
 }
