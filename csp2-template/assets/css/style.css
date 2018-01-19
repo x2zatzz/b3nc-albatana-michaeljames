@@ -1,0 +1,25 @@
+/*body {
+	background-color: purple;
+}*/
+
+.main-footer {
+	background-color: lightgrey;
+	padding: 15px;
+	text-align: center;
+}
+
+.wrapper {
+	background-color: white;
+	width: 80vw;
+	margin: 0 auto;
+	height: 84vh;
+}
+
+body {
+	background-color: brown;
+}
+
+.navbar-inverse,
+h1 {
+	margin: 0;
+}
