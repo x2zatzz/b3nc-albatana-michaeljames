@@ -1,0 +1,53 @@
+* {
+  background: black;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  border: 0.1px solid white;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  display: grid;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  grid-template-areas: "nav" "main" "footer";
+  grid-template-rows: 2em 1fr 1em;
+}
+
+body nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-areas: "h2 ul";
+  grid-template-rows: auto;
+  grid-template-columns: "1fr auto" h2;
+}
+
+body nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+body nav ul li {
+  list-style: none;
+  padding: 0 5px;
+}
+
+body main {
+  grid-area: main;
+}
+
+body main #snackbar {
+  height: 1em;
+}
+
+body footer {
+  grid-area: footer;
+  font-size: 0.8em;
+}
+/*# sourceMappingURL=style.css.map */
