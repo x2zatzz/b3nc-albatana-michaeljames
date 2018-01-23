@@ -1,5 +1,7 @@
 <?php
-  session_start();
+  require_once 'assets/php/phpfunctions.php';
+  fn_pagecheck();
+  fn_session_init();
   $v_username = htmlspecialchars($_POST['username']);
   $v_password = htmlspecialchars($_POST['password']);
 
@@ -13,13 +15,17 @@
       $_SESSION['snackbar'] = 'login successful';
       break;
     } elseif($v_username_base === $v_username && $v_password_base !== $v_password){
-      $_SESSION['snackbar'] = 'wrong password, please try again';
+      if($_SESSION['password_wrong'] >= 3){
+        $_SESSION['snackbar'] = 'your account is temporarily locked because of multiple invalid attempts';
+      } else{
+        $_SESSION['snackbar'] = 'wrong password, please try again';
+      }
+      $_SESSION['password_wrong']++;
       break;
     } else{
       $_SESSION['snackbar'] = "$v_username not yet registered";
     }
   }
 
-  // print_r($_SESSION['snackbar']);
-  header('location: signin.php');
+  header('location: ' . $_SESSION['prevpage']);
 ?>

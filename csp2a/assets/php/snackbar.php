@@ -1,4 +1,6 @@
 <?php
+require_once 'assets/php/phpfunctions.php';
+fn_session_init();
 echo
 "
 <div id=\"snackbar\"><small>

@@ -61,7 +61,6 @@ body footer {
 
 body footer .console {
   grid-area: console;
-  width: 100%;
 }
 
 body footer .footer {

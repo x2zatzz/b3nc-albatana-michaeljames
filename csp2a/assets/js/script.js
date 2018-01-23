@@ -14,4 +14,5 @@ document.getElementById("snackbar").setAttribute("onchange", "fn_snackbar()");
 
 function fn_snackbar(){
   document.getElementById("snackbar").style.height = "1em";
+  document.getElementById("snackbar").style.background = "red";
 }

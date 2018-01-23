@@ -1,11 +1,7 @@
 <?php
-  session_start();
-  print_r($_SERVER['PHP_SELF']);
-  print_r($_SESSION['currentpage']);
-  print_r($_SESSION['prevpage']);
-  require 'assets/php/phpfunctions.php';
+  require_once 'assets/php/phpfunctions.php';
   fn_pagecheck();
-
+  fn_session_init();
 ?>
 <!DOCTYPE html>
 <html lang="en">

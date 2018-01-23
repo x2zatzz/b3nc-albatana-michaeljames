@@ -1,9 +1,7 @@
 <?php
-  session_start();
-  // require 'assets/php/phpfunctions.php';
-  // fn_pagecheck();
-  // $_SESSION['username'] = null;
-  // $_SESSION['webtitle'] = 'Whiskey Web App ';
+  require_once 'assets/php/phpfunctions.php';
+  fn_pagecheck();
+  fn_session_init();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +9,7 @@
 <body>
 <?php require 'assets/php/navheader.php'?>
   <main>
-    <div id="snackbar">
-      <small>
-        <?php include 'assets/php/snackbar.php' ?>
-        <!-- <?php print_r($_SESSION['snackbar'])?> -->
-      </small>
-    </div>
+    <?php include 'assets/php/snackbar.php' ?>
     <form action="auth.php" method="post" id="signinform">
       <label for="username">Username: </label>
       <input type="text" name="username" value="mjtalbatana">
@@ -24,6 +17,7 @@
       <input type="password" name="password" value="password">
       <input type="submit" value="Sign In">
     </form>
+    <?php var_dump($_SESSION)?>
   </main>
   <?php require 'assets/php/footer.php'?>
 </body>

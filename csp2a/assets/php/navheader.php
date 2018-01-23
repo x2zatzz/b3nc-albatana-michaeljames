@@ -11,21 +11,22 @@ echo "
     <li id=\"careers\">Careers</li>
     <li id=\"catalog\">Catalog</li>
 ";
-if($_SESSION['username'] !== null){
+if(isset($_SESSION['username'])){
   echo "
-  <li id=\"profile\">Profile</li>
-  <li id=\"settings\">Settings</li>
-  <li id=\"\">Log Out</li>
-    </ul>
-  </nav>
-  ";
+    <li id=\"profile\">Profile</li>
+    <li id=\"settings\">Settings</li>
+    <li id=\"logout\">Log Out</li>
+  </ul>
+</nav>
+";
   } else{
-    echo
+  echo
     "
-        <li id=\"\">Sign In</li>
-        <li id=\"\">Signup</li>
-      </ul>
-    </nav>
-    ";
+    <li id=\"signin\">Sign In</li>
+    <li id=\"signup\">Signup</li>
+  </ul>
+</nav>
+";
+
   }
 ?>

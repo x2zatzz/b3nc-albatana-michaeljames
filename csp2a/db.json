@@ -1,14 +1,16 @@
 [
   {
     "username": "mjtalbatana",
-    "name": "maikerujeimuzu",
+    "name": "michael james",
     "email": "mjtalbatana@gmail.com",
-    "password": "1234"
+    "password": "mjta",
+    "account-lock-flag": false
   },
   {
-    "username": "admin",
-    "name": "admin",
-    "email": "admin@gmail.com",
-    "password": "adm1n"
+    "username": "mjta",
+    "name": "maikerujeimuzu",
+    "email": "maikeru@gmail.com",
+    "password": "1234",
+    "account-lock-flag": false
   }
 ]
