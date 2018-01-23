@@ -6,52 +6,39 @@
   $v_password = htmlspecialchars($_POST['password']);
   $v_name = htmlspecialchars($_POST['name']);
   $v_email = htmlspecialchars($_POST['email']);
-  $uploadarray = array('username' => $v_username, 'name' => $v_name, 'email' => $v_email, 'password' => $v_password);
+  $uploadarray = array('username' => $v_username, 'name' => $v_name, 'email' => $v_email, 'password' => $v_password, 'account-role' => 'user');
 
   $currentfile = file_get_contents('db.json');
   $decodedarray = json_decode($currentfile, true);
-  $encodedarray = array();
 
-  $flag_arraymatch = '';
+  $flag_arraymatch = 0;
   $array_length = count($decodedarray);
-  foreach($decodedarray as $field => $value){
-    if($v_username == $value){
-      $flag_arraymatch = true;
+
+  for($i=1; $i<=$array_length; $i++){
+    if($decodedarray[$i-1]['username'] == $v_username){
+      $flag_arraymatch = 1;
       break;
     } else{
-      $flag_arraymatch = false;
+      $flag_arraymatch = 0;
     }
   }
 
   switch ($flag_arraymatch){
-    case true:
-      $_SESSION['snackbar'] = "$v_username is not available.";
+    case 1:
+     $_SESSION['snackbar'] = "$v_username is not available.";
       break;
-    case false:
-      fn_arrayencode();
-      // fn_arrayupload();
-      $_SESSION['snackbar'] = 'database update successful';
-      // header('location: ' . $_SESSION['prevpage']);
-      break;
-  }
-
-  function fn_arrayencode(){
-    foreach($uploadarray as $field => $value){
-      $decodedarray[$array_length][$field] = $value;
-    }
+    case 0:
+      foreach($uploadarray as $field => $value){
+        $decodedarray[$array_length][$field] = $value;
+      }
     $encodedarray = json_encode($decodedarray, JSON_PRETTY_PRINT);
-  }
 
-  function fn_arrayupload(){
     copy('db.json', 'db_back.json');
     $fileopen = fopen('db.json', 'w');
     fwrite($fileopen, $encodedarray);
     fclose($fileopen);
+    $_SESSION['snackbar'] = 'database update successful';
+    break;
   }
-  var_dump($decodedarray);
-  echo '<br>';
-  var_dump($uploadarray);
-  echo '<br>';
-  var_dump($encodedarray);
-  echo '<br>';
+  header('location: ' . $_SESSION['prevpage']);
   ?>

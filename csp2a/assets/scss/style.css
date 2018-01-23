@@ -3,7 +3,7 @@
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   border: 0.1px solid white;
-  padding: 0;
+  padding: 0 2px;
   margin: 0;
   box-sizing: content-box;
 }
@@ -44,6 +44,29 @@ body main {
 
 body main #snackbar {
   height: 1em;
+}
+
+body main #snackbar small {
+  font-size: 0.7em;
+}
+
+body main #signinform,
+body main #signupform {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body main #signinform input,
+body main #signupform input {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+body main table tbody tr .userlink:hover {
+  color: purple;
 }
 
 body footer {

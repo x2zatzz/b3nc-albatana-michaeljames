@@ -16,3 +16,10 @@ function fn_snackbar(){
   document.getElementById("snackbar").style.height = "1em";
   document.getElementById("snackbar").style.background = "red";
 }
+
+
+document.getElementById("username").addEventListener("keypress", fn_ajax_validation);
+function fn_ajax_validation(){
+  var textretrieve = document.getElementById("username").value;
+  console.log(textretrieve)
+}

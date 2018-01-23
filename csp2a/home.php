@@ -1,6 +1,7 @@
 <?php
   require_once 'assets/php/phpfunctions.php';
   fn_pagecheck();
+  fn_session_validation();
   fn_session_init();
   $_SESSION['webtitle'] = 'Whiskey Web App ';
   ?>
@@ -12,6 +13,7 @@
   <main>
   <?php require 'assets/php/snackbar.php'?>
   <?php
+    echo "こんにちわ！ " . $_SESSION['username'];
   // var_dump($_SESSION);
   ?>
   </main>

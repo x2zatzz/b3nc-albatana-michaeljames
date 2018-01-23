@@ -1,0 +1,37 @@
+[
+    {
+        "username": "mjtalbatana",
+        "name": "michael james",
+        "email": "mjtalbatana@gmail.com",
+        "password": "mjta",
+        "account-role": "user"
+    },
+    {
+        "username": "mjta",
+        "name": "maikerujeimuzu",
+        "email": "maikeru@gmail.com",
+        "password": "1234",
+        "account-role": "user"
+    },
+    {
+        "username": "admin",
+        "name": "admin",
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "account-role": "admin"
+    },
+    {
+        "username": "luanne",
+        "name": "yuan",
+        "email": "lymaikeru@gmail.com",
+        "password": "12345",
+        "account-role": "user"
+    },
+    {
+        "username": "admin1",
+        "name": "administrator",
+        "email": "administrator@gmail.com",
+        "password": "admin1",
+        "account-role": "admin"
+    }
+]

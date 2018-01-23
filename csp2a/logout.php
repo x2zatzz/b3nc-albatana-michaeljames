@@ -1,5 +1,9 @@
 <?php
   require_once 'assets/php/phpfunctions.php';
   fn_pagecheck();
-  header('location: ' . $_SESSION['prevpage']);
+  fn_session_init();
+  unset($_SESSION['username']);
+  unset($_SESSION['role']);
+  $_SESSION['snackbar'] = 'you have been manually logged out';
+  header('location: index.php');
 ?>

@@ -12,20 +12,30 @@
     $v_username_base = $decodedarray[$i-1]['username'];
     $v_password_base = $decodedarray[$i-1]['password'];
     if($v_username_base === $v_username && $v_password_base === $v_password){
-      $_SESSION['snackbar'] = 'login successful';
+      if($decodedarray[$i-1]['account-role'] == 'admin'){
+        $_SESSION['role'] = 'admin';
+        $_SESSION['snackbar'] = 'login successful, logged as admin';
+      } else{
+        $_SESSION['role'] = 'user';
+        $_SESSION['snackbar'] = 'login successful';
+      }
+      $_SESSION['username'] = $v_username;
       break;
     } elseif($v_username_base === $v_username && $v_password_base !== $v_password){
       if($_SESSION['password_wrong'] >= 3){
         $_SESSION['snackbar'] = 'your account is temporarily locked because of multiple invalid attempts';
       } else{
+        unset($_SESSION['username']);
         $_SESSION['snackbar'] = 'wrong password, please try again';
       }
+      unset($_SESSION['username']);
       $_SESSION['password_wrong']++;
       break;
     } else{
+      unset($_SESSION['username']);
       $_SESSION['snackbar'] = "$v_username not yet registered";
     }
   }
 
-  header('location: ' . $_SESSION['prevpage']);
+  header('location: home.php');
 ?>

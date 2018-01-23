@@ -19,4 +19,21 @@ function fn_session_init(){
   }
 }
 
+function fn_session_validation(){
+  if(is_null($_SESSION['username']) == true){
+    $_SESSION['snackbar'] = 'You are accessing resources with an unauthorized credentials';
+    header('location: index.php');
+  } else{
+  }
+}
+
+function fn_admin_validation(){
+  if(is_null($_SESSION['username']) == true || $_SESSION['role'] !== 'admin'){
+    $_SESSION['snackbar'] = 'You are accessing resources with an unauthorized credentials';
+    header('location: index.php');
+  } else{
+
+  }
+}
+
 ?>

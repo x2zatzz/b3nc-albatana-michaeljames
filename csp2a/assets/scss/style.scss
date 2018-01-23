@@ -3,7 +3,7 @@
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   border: 0.1px solid white;
-  padding: 0;
+  padding: 0 2px;
   margin: 0;
   box-sizing: content-box;
 }
@@ -39,10 +39,42 @@ body{
     grid-area: main;
     #snackbar{
       height: 1em;
+      small{
+        font-size: 0.7em;
+      }
+    }
+    #signinform,
+    #signupform{
+      display: flex;
+      flex-flow: column nowrap;
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      input{
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+    table{
+      thead{
+
+      }
+      tbody{
+        tr{
+          .userlink:hover{
+            color: purple;
+
+          }
+        }
+      }
     }
   }
   footer{
     grid-area: footer;
     font-size: 0.8em;
   }
+}
+
+.userlink:hover{
+  color: purple;
 }

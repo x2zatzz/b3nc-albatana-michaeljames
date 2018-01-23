@@ -1,10 +1,6 @@
 <?php
 
-$users = [
-  ['username' => 'admin', 'password' => "!admin"],
-  ['username' => 'dummyuser', 'password' => "#dummy"],
-  ['username' => 'dummyuser1', 'password' => "#dummy"]
-];
+require 'users.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
