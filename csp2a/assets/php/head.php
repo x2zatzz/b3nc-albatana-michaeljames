@@ -13,6 +13,7 @@ echo "
 </title>
   <link rel=\"icon\" href=\"https://raw.githubusercontent.com/mjtalbatana/profile-logo/master/mjta-v01.ico\" type=\"image/x-icon\">
   <link rel=\"stylesheet\" href=\"assets/scss/style.css\" type=\"text/css\">
+  <script language=\"javascript\" src=\"assets/js/jquery-3.2.1.min.js\"></script>
   <script language=\"javascript\" src=\"assets/js/script.js\" defer></script>
 </head>
 "

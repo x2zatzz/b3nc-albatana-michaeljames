@@ -33,5 +33,19 @@
         "email": "administrator@gmail.com",
         "password": "admin1",
         "account-role": "admin"
+    },
+    {
+        "username": "",
+        "name": "",
+        "email": "",
+        "password": "",
+        "account-role": "user"
+    },
+    {
+        "username": "]]]slhtoaens-",
+        "name": "",
+        "email": "",
+        "password": "",
+        "account-role": "user"
     }
 ]

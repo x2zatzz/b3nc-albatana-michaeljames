@@ -20,6 +20,22 @@
     <!-- <?php var_dump($_SESSION)?> -->
   </main>
   <?php require 'assets/php/footer.php'?>
+  <script language="javascript" defer>
+    // document.getElementById("username").addEventListener("keypress", fn_ajax_validation);
+    // function fn_ajax_validation(){
+    // var username_entry = document.getElementById("username").value;
+    // }
+		$('#username').on('input', function() {
+			var usernameText = $(this).val();
+			// console.log(usernameText);
+
+			$.post('validation.php',
+				{ username: usernameText },
+				function(data, status) {
+					console.log('Processed: ' + data);
+				});
+		});
+  </script>
 </body>
 </html>
 <?php require 'assets/php/signature.php'?>

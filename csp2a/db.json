@@ -40,5 +40,19 @@
         "email": "",
         "password": "",
         "account-role": "user"
+    },
+    {
+        "username": "]]]slhtoaens-",
+        "name": "",
+        "email": "",
+        "password": "",
+        "account-role": "user"
+    },
+    {
+        "username": "maiker",
+        "name": "",
+        "email": "",
+        "password": "1234",
+        "account-role": "user"
     }
 ]

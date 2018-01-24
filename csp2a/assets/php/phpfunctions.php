@@ -10,12 +10,13 @@ function fn_pagecheck(){
 
 function fn_session_init(){
   if(session_status()==2){
-    return;
   } elseif(session_status()==1){
     session_start();
-    return;
   } else{
-    return;
+  }
+  if(isset($_SESSION['snackbar']) == true){
+  } else{
+    $_SESSION['snackbar'] == 'initializing...';
   }
 }
 
