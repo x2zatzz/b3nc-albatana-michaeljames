@@ -25,16 +25,26 @@
     // function fn_ajax_validation(){
     // var username_entry = document.getElementById("username").value;
     // }
-		$('#username').on('input', function() {
-			var usernameText = $(this).val();
-			// console.log(usernameText);
 
-			$.post('validation.php',
-				{ username: usernameText },
-				function(data, status) {
-					console.log('Processed: ' + data);
-				});
-		});
+    function fn_runajax(){
+      var ajax = new XMLHttpRequest();
+      ajax.onreadstatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          document.getElementById()
+        }
+      }
+    }
+
+    $('#username').on('input', function(){
+      var usernameText = $(this).val();
+      // console.log(usernameText);
+
+      $.post('validation.php',
+        { username: usernameText },
+        function(data, status) {
+          console.log('Processed: ' + data);
+        });
+    });
   </script>
 </body>
 </html>

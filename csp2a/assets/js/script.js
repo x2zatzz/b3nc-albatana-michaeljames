@@ -19,12 +19,18 @@ function fn_snackbar(){
 
 
 // VALIDATiONS
+var currentpage = window.location.pathname;
+if(currentpage.search("signup.php") !== -1 || currentpage.search("signin.php") !== -1){
+  document.getElementById("password").setAttribute("disabled", "disabled");
+  document.getElementById("passwordconfirm").setAttribute("disabled", "disabled");
+  document.getElementById("name").setAttribute("disabled", "disabled");
+  document.getElementById("email").setAttribute("disabled", "disabled");
+  document.getElementById("username").addEventListener("input", fn_username_validation);
+  document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
+  document.getElementById("passwordconfirm").addEventListener("focusout", fn_empty_snackbar);
+} else{
 
-document.getElementById("password").setAttribute("disabled", "disabled");
-document.getElementById("passwordconfirm").setAttribute("disabled", "disabled");
-document.getElementById("name").setAttribute("disabled", "disabled");
-document.getElementById("email").setAttribute("disabled", "disabled");
-document.getElementById("username").addEventListener("input", fn_username_validation);
+}
 function fn_username_validation(){
   var username_entry = document.getElementById("username").value;
   if(username_entry == ""){
@@ -37,7 +43,6 @@ function fn_username_validation(){
   }
 }
 
-document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
 function fn_password_validation(){
   var password_entry = document.getElementById("password").value;
   var passwordconfirm_entry = document.getElementById("passwordconfirm").value;
@@ -50,9 +55,7 @@ function fn_password_validation(){
   }
 }
 
-document.getElementById("passwordconfirm").addEventListener("focusout", fn_empty_snackbar);
 function fn_empty_snackbar(){
   document.getElementById("snackbarsmall").textContent = "";
 }
-
 

@@ -20,37 +20,38 @@
   $decodedarray = json_decode($fileopen, true);
 
   echo "
-  <table>
-    <tr>
-      <td>Username</td>
-      <td>";
-      echo $decodedarray[$id-1]['username'];
-echo "
-      </td>
-    </tr>
-    <tr>
-      <td>Password</td>
-      <td>";
-      echo $decodedarray[$id-1]['password'];
-echo "
-      </td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td>";
-      echo $decodedarray[$id-1]['email'];
-echo "
-      </td>
-    </tr>
-    <tr>
-      <td>Role</td>
-      <td>";
-      echo $decodedarray[$id-1]['account-role'];
-echo "
-      </td>
-    </tr>
-  </table>
-  ";
+    <table>
+      <tr>
+        <td>Username</td>
+        <td>";
+        echo $decodedarray[$id-1]['username'];
+  echo "
+        </td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>";
+        echo $decodedarray[$id-1]['password'];
+  echo "
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>";
+        echo $decodedarray[$id-1]['email'];
+  echo "
+        </td>
+      </tr>
+      <tr>
+        <td>Role</td>
+        <td>";
+        echo $decodedarray[$id-1]['account-role'];
+  echo "
+        </td>
+      </tr>
+    </table>
+    <button onclick=\"window.location.href='users.php'\">Back to User list</button>
+    ";
   ?>
   <?php
 
