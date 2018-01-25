@@ -65,43 +65,36 @@
     {
         "name": "lambanog",
         "price": "123",
-        "description": "Velit ad laboris eiusmod occaecat ipsum reprehenderit mollit non consequat magna proident ipsum quis. In proident voluptate in sunt pariatur. Nostrud ex aliquip tempor cillum. Irure officia cupidatat Lorem dolore non incididunt elit elit magna nostrud ut pariatur. Ex enim ex ex culpa fugiat amet culpa incididunt veniam fugiat reprehenderit aliquip.",
+        "description": "aoetnuhaoueaoheuoastn",
         "category": "vodka",
         "image": "https:\/\/picsum.photos\/150\/150\/?image=110"
     },
     {
         "name": "tequila",
         "price": "1200",
-        "description": "Pariatur reprehenderit sit anim do. Dolor et eu aliqua labore eu labore aliquip. Nostrud mollit sunt esse occaecat amet ut consequat id. Id mollit tempor ad in. Ea laboris ex commodo excepteur aute in excepteur consequat laborum. Commodo do cupidatat deserunt irure laborum tempor tempor sint dolor labore mollit.",
+        "description": "aoetnbuoneduaoheouhnt",
         "category": "whiskey",
         "image": "https:\/\/picsum.photos\/150\/150\/?image=111"
     },
     {
         "name": "sake",
         "price": "1000",
-        "description": "Sit velit veniam nisi cupidatat consectetur amet enim do quis. Esse consectetur cupidatat veniam eu dolore ea in ex laboris dolor incididunt aliquip nostrud magna. Dolore laboris nostrud amet excepteur qui magna in do cupidatat. Occaecat commodo minim sit nisi in deserunt enim amet id labore aliquip est. Ea occaecat sit deserunt adipisicing adipisicing cupidatat.",
+        "description": "Japanese rice wine",
         "category": "wine",
         "image": "https:\/\/picsum.photos\/150\/150\/?image=112"
     },
     {
         "name": "Blue Label",
         "price": "5000",
-        "description": "Reprehenderit dolor minim esse consectetur. Culpa sit duis voluptate aute esse eiusmod sit quis ex dolore. Cillum exercitation labore aliqua do anim incididunt. In elit ullamco irure occaecat mollit consequat ut commodo nisi. Voluptate sit esse cupidatat incididunt deserunt esse quis ut irure Lorem tempor duis.",
+        "description": "blue label",
         "category": "whiskey",
-        "image": "https:\/\/picsum.photos\/150\/150\/?image=113"
+        "image": "https:\\\/\\\/picsum.photos\\\/150\\\/150\\\/?image=113"
     },
     {
         "name": "toeuaoe",
         "price": "45646",
-        "description": "Quis occaecat esse aute id ipsum laborum ea. Officia minim incididunt mollit aute. Reprehenderit occaecat ipsum ex id consectetur elit laboris magna nisi consequat aliqua.",
+        "description": "aobeuhnaoheutnsoa",
         "category": "whiskey",
         "image": "https:\/\/picsum.photos\/150\/150\/?image=200"
-    },
-    {
-        "name": "aoeuaoeu",
-        "price": "8978",
-        "description": "Nisi Lorem adipisicing elit anim eu. Incididunt tempor duis id non ex magna. Fugiat veniam non proident reprehenderit. Reprehenderit deserunt non aute tempor eu consequat officia qui sunt commodo et anim minim id. Deserunt dolor aute pariatur nisi ullamco cillum veniam laboris dolore minim.",
-        "category": "wine",
-        "image": "https:\/\/picsum.photos\/150\/150\/?image=201"
     }
 ]

@@ -3,7 +3,7 @@
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   border: 0.1px solid white;
-  padding: 0 2px;
+  padding: 0;
   margin: 0;
   box-sizing: content-box;
 }
@@ -11,7 +11,7 @@
 body {
   display: grid;
   width: 90vw;
-  height: 90vh;
+  height: auto;
   margin: 0 auto;
   grid-template-areas: "nav" "main" "footer";
   grid-template-rows: 2em 1fr 1em;
@@ -81,39 +81,64 @@ body footer {
 
 #thumbnail {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   width: 100%;
-  flex-flow: row;
 }
 
 #thumbnail .containers {
   display: grid;
-  height: 250px;
+  height: auto;
   width: 150px;
-  grid-template-areas: "name" "description" "image" "price" "category";
-  grid-template-rows: 1em 1fr 1fr 1em 1em;
-  grid-template-columns: 1fr;
+  padding: 10px;
+  margin: 5px 0;
+  grid-template-areas: "name name" "image image" "price price" "description description" "addtocart category";
+  grid-template-rows: 1.5em 125px 1em  150px 1em;
+  grid-template-columns: 1fr auto;
 }
 
 #thumbnail .containers .name {
   grid-area: name;
-}
-
-#thumbnail .containers .description {
-  grid-area: description;
+  display: flex;
   font-size: 0.7em;
+  font-weight: bold;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 #thumbnail .containers .image {
   grid-area: image;
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: auto;
 }
 
 #thumbnail .containers .price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   grid-area: price;
+  text-align: center;
+  font-size: 0.6em;
+}
+
+#thumbnail .containers .description {
+  grid-area: description;
+  display: flex;
+  padding: 2px;
+  font-size: 0.6em;
+  text-align: justify;
+}
+
+#thumbnail .containers .addtocart {
+  grid-area: addtocart;
 }
 
 #thumbnail .containers .category {
   grid-area: category;
+  font-size: 0.7em;
 }
 /*# sourceMappingURL=style.css.map */

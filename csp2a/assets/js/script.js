@@ -19,7 +19,18 @@ function fn_snackbar(){
 
 
 // VALIDATiONS
+var currentpage = window.location.pathname;
+if(currentpage.search("signup.php") !== -1 || currentpage.search("signin.php") !== -1){
+  document.getElementById("password").setAttribute("disabled", "disabled");
+  document.getElementById("passwordconfirm").setAttribute("disabled", "disabled");
+  document.getElementById("name").setAttribute("disabled", "disabled");
+  document.getElementById("email").setAttribute("disabled", "disabled");
+  document.getElementById("username").addEventListener("input", fn_username_validation);
+  document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
+  document.getElementById("passwordconfirm").addEventListener("focusout", fn_empty_snackbar);
+} else{
 
+<<<<<<< HEAD
 fn_disable_forms();
 document.getElementById("username").addEventListener("input", fn_username_validation);
 document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
@@ -33,6 +44,8 @@ function fn_async_validation(){
     // XMLHttpRequest().send;
   }
   console.log('this function is working');
+=======
+>>>>>>> ca24717... php coding activity: adding new items to catalog
 }
 function fn_username_validation(){
   var username_entry = document.getElementById("username").value;
@@ -61,14 +74,16 @@ function fn_password_validation(){
   }
 }
 
-document.getElementById("passwordconfirm").addEventListener("focusout", fn_empty_snackbar);
 function fn_empty_snackbar(){
   document.getElementById("snackbarsmall").textContent = "";
 }
 
+<<<<<<< HEAD
 function fn_disable_forms(){
   document.getElementById("password").setAttribute("disabled", "disabled");
   document.getElementById("passwordconfirm").setAttribute("disabled", "disabled");
   document.getElementById("name").setAttribute("disabled", "disabled");
   document.getElementById("email").setAttribute("disabled", "disabled");
 }
+=======
+>>>>>>> ca24717... php coding activity: adding new items to catalog

@@ -14,7 +14,7 @@ function fn_session_init(){
     session_start();
   } else{
   }
-  if(isset($_SESSION['snackbar']) == true){
+  if(isset($_SESSION['snackbar']) == false){
   } else{
     $_SESSION['snackbar'] == 'initializing...';
   }
