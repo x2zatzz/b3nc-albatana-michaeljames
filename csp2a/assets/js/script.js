@@ -29,12 +29,7 @@ if(currentpage.search("signup.php") !== -1 || currentpage.search("signin.php") !
   document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
   document.getElementById("passwordconfirm").addEventListener("focusout", fn_empty_snackbar);
 } else{
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 803c624... recommit
+}
 fn_disable_forms();
 document.getElementById("username").addEventListener("input", fn_username_validation);
 document.getElementById("passwordconfirm").addEventListener("input", fn_password_validation);
@@ -48,13 +43,8 @@ function fn_async_validation(){
     // XMLHttpRequest().send;
   }
   console.log('this function is working');
-<<<<<<< HEAD
-=======
->>>>>>> ca24717... php coding activity: adding new items to catalog
-=======
->>>>>>> 508beac... study ajax
->>>>>>> 803c624... recommit
 }
+
 function fn_username_validation(){
   var username_entry = document.getElementById("username").value;
   if(username_entry == ""){
@@ -86,20 +76,10 @@ function fn_empty_snackbar(){
   document.getElementById("snackbarsmall").textContent = "";
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 803c624... recommit
+
 function fn_disable_forms(){
   document.getElementById("password").setAttribute("disabled", "disabled");
   document.getElementById("passwordconfirm").setAttribute("disabled", "disabled");
   document.getElementById("name").setAttribute("disabled", "disabled");
   document.getElementById("email").setAttribute("disabled", "disabled");
 }
-<<<<<<< HEAD
-=======
->>>>>>> ca24717... php coding activity: adding new items to catalog
-=======
->>>>>>> 508beac... study ajax
->>>>>>> 803c624... recommit
