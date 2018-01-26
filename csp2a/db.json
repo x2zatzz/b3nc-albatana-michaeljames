@@ -1,6 +1,6 @@
 [
     {
-        "username": "mjtalbatana",
+        "username": "mjtalbatana1",
         "name": "michael james",
         "email": "mjtalbatana@gmail.com",
         "password": "mjta",
@@ -29,37 +29,37 @@
     },
     {
         "username": "admin1",
-        "name": "administrator",
-        "email": "administrator@gmail.com",
+        "name": "administrator1",
+        "email": "administrator1@gmail.com",
         "password": "admin1",
         "account-role": "admin"
     },
     {
-        "username": "",
-        "name": "",
-        "email": "",
-        "password": "",
+        "username": "new_user",
+        "name": "new user",
+        "email": "email@email.com",
+        "password": "user",
         "account-role": "user"
     },
     {
-        "username": "]]]slhtoaens-",
-        "name": "",
-        "email": "",
-        "password": "",
+        "username": "user1",
+        "name": "username",
+        "email": "username@domain.com",
+        "password": "user1",
         "account-role": "user"
     },
     {
-        "username": "maiker",
+        "username": "aoeuaoeuaoe",
         "name": "",
         "email": "",
+        "password": "aoeuaou",
+        "account-role": "user"
+    },
+    {
+        "username": "aoeuaoeu",
+        "name": "aoeuaoeu",
+        "email": "aoeu@aoeu",
         "password": "1234",
-        "account-role": "user"
-    },
-    {
-        "username": "aoeuaoe",
-        "name": "",
-        "email": "",
-        "password": "",
         "account-role": "user"
     }
 ]

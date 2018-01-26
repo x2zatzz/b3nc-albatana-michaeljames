@@ -39,9 +39,7 @@
       ?>
     </tbody>
   </table>
-  <?php
-  // var_dump($_SESSION);
-  ?>
+  <button onclick="window.location.href='signup.php'">Add user</button>
   </main>
   <?php require 'assets/php/footer.php'?>
 </body>

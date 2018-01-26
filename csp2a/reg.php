@@ -8,6 +8,15 @@
   $v_email = htmlspecialchars($_POST['email']);
   $uploadarray = array('username' => $v_username, 'name' => $v_name, 'email' => $v_email, 'password' => $v_password, 'account-role' => 'user');
 
+  if($_POST['username'] == "" || $_POST['password'] == "" || $_POST['name'] == "" || $_POST['email'] == ""){
+    $_SESSION['snackbar'] = "please complete the form to proceed";
+    header('location: signup.php');
+
+  } else{
+
+  }
+
+
   $currentfile = file_get_contents('db.json');
   $decodedarray = json_decode($currentfile, true);
 

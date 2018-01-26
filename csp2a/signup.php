@@ -21,13 +21,8 @@
       <input type="text" name="name" placeholder="enter your name" id="name" required="required">
       <label for="email">Email: </label>
       <input type="email" name="email" placeholder="enter your email" id="email" required="required">
-      <!-- <label for="account-role">user</label>
-      <input type="radio" name="account-role" value="user" checked>
-      <label for="account-role">admin</label>
-      <input type="radio" name="account-role" value="admin"> -->
       <input type="submit" value="Sign Up">
     </form>
-    <!-- <?php var_dump($_SESSION)?> -->
   </main>
   <?php require 'assets/php/footer.php'?>
   <script language="javascript">
