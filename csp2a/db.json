@@ -54,5 +54,12 @@
         "email": "",
         "password": "1234",
         "account-role": "user"
+    },
+    {
+        "username": "aoeuaoe",
+        "name": "",
+        "email": "",
+        "password": "",
+        "account-role": "user"
     }
 ]
