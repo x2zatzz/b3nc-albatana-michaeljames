@@ -28,6 +28,7 @@
       </select>
       <input type="submit" value="Add Item">
     </form>
+    <button onclick="window.location.href='catalog.php'">Return to catalog page</button>
   </main>
   <?php require 'assets/php/footer.php'?>
   <script language="javascript" defer>

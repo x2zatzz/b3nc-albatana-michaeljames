@@ -3,6 +3,7 @@
   fn_pagecheck();
   fn_session_init();
   $_SESSION['webtitle'] = 'Whiskey Web App ';
+  $_SESSION['getid'] = $_GET['id'];
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
   $fileopen = file_get_contents('items.json');
   $decodedarray = json_decode($fileopen, true);
 
-  echo "
+echo "
   <table>
     <tr>
       <td>Product Name</td>
@@ -49,14 +50,51 @@ echo "
 echo "
       </td>
     </tr>
+    <tr>
+      <td>Category</td>
+      <td>";
+      echo $decodedarray[$id-1]['category'];
+echo "
+      </td>
+    </tr>
   </table>
+  <button id=\"modalbutton\">Edit Item</button>
   <button onclick=\"window.location.href='catalog.php'\">Back to Catalog Page</button>
   ";
   ?>
   <?php
 
-  // var_dump($_SESSION);
   ?>
+  <div id="modal">
+    <div id="modal-content">
+      <div class="modal-top"> </div>
+      <div class="modal-close">&times;</div>
+      <div class="modal-text">
+        <?php
+        echo "
+        <form action=\"itemedit.php\" method=\"post\" id=\"edititemform\">
+          <label for=\"item-name\">Product name: </label>
+          <input type=\"text\" name=\"item-name\" required>
+          <label for=\"item-price\">Product price: </label>
+          <input type=\"number\" name=\"item-price\" required>
+          <label for=\"item-image\">Image path: </label>
+          <input type=\"url\" name=\"item-image\" required>
+          <label for=\"item-desc\">Product description: </label>
+          <input type=\"text\" name=\"item-desc\" required>
+          <label for=\"item-cat\">Product category: </label>
+          <select name=\"item-cat\" id=\"\" required>
+            <option value=\"beer\">Beer</option>
+            <option value=\"whiskey\">Whiskey</option>
+            <option value=\"water\">Water</option>
+          </select>
+          <input type=\"submit\" value=\"update item information\">
+        </form>
+        <button onclick=\"window.location.href='itemdelete.php'\">Delete item</button>
+        "
+        ?>
+      </div>
+    </div>
+  </div>
   </main>
   <?php require 'assets/php/footer.php'?>
 </body>

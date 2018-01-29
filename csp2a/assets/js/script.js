@@ -34,7 +34,7 @@ if(currentpage.search("signin.php") !== -1){
 }
 
 
-else if(currentpage.search("users.php") !== -1){
+else if(currentpage.search("users.php") !== -1 || currentpage.search("catalog.php" !== -1)){
   fn_modals();
 } else{
 
@@ -45,17 +45,17 @@ function fn_modals(){
   var modalclose = document.getElementsByClassName("modal-close")[0];
   modalbutton.onclick = function(){
     modal.style.display = "block";
-  }
+  };
   modalclose.onclick = function(){
     modal.style.display = "none";
     window.location.reload(true);
-  }
+  };
   window.onclick = function(event){
     if(event.target == modal){
       modal.style.display = "none";
       window.location.reload(true);
     }
-  }
+  };
 }
 
 
