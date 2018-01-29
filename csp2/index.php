@@ -1,0 +1,21 @@
+<?php
+  require_once 'assets/layouts.php';
+  require_once 'assets/php/functions.php';
+  fn_session_init();
+  $_SESSION['webheader'] = '';
+  fn_layout_head();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<?php  ?>
+<body>
+<?php fn_layout_top()?>
+<?php fn_layout_snackbar()?>
+<main>
+<?php
+?>
+</main>
+<?php fn_layout_footer()?>
+</body>
+</html>
+<?php fn_layout_signature()?>
