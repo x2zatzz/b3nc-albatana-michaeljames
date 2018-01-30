@@ -1,0 +1,21 @@
+1. crud function (create, retrieve, update, delete)
+	crud for admin
+	crud for user
+	crud for items
+	crud for sellers
+   cart function
+   filter option for items
+   authentication
+   authorization (admin priv)
+    -role
+   >optional
+   paypal api*
+   facebook api*
+   
+
+   >personal options:
+   send email
+   reCAPTCHA   
+2. 
+3.
+live dev-portfolio

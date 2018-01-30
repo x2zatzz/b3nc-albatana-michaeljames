@@ -1,103 +1,89 @@
-@mixin grid_area($r1, $r2, $c1, $c2){
-  grid-area: $r1 #{'/'} $c1 #{'/'} $r2 #{'/'} $c2;
-}
-
-@mixin flex_row_defaults{
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-@keyframes animate_snackbar{
-  0% {color: hsla(0, 0%, 0%, 0); height: 0em;}
-  // 10% {height: 0.25em}
-  // 20% {height: 0.5em}
-  // 50% {background: red}
-
-  5% {height: 1em; padding: 2px 0; font-size: 0.7em}
-  15% {color: hsla(0, 0%, 0%, 1)}
-  25% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.7em}
-  100% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.7em}
-}
-
-
 *{
-  box-sizing: content-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background: black;
   color: white;
+  border: 0.1px solid white;
   font-family: Helvetica, Arial, sans-serif;
-  user-select: none;
 }
+
+// common CSS dimensions:
 body{
   display: grid;
-  width: 90vw;
-  min-height: 100vh;
-  height: auto;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  grid-template-areas: "logo title nav nav avatar" "main main main main main" "main main main main main" "footer footer footer footer footer";
-  grid-template-rows: 3em 1em 1fr 0.5em;
-  grid-template-columns: 3em 150px 1fr 150px 3em;
-  #logo{
-    grid-area: logo;
-    background: gold;
-    &:hover{
-      background: red;
-    }
-  }
-  #title{
-    @include flex_row_defaults();
-    grid-area: title;
-    background: orange;
-  }
-  nav{
-    grid-area: nav;
-    background: red;
-    height: 100%;
-    ul{
+  header{
+    grid-area: header;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    h2{
       height: 100%;
-      @include flex_row_defaults();
-      justify-content: flex-end;
-      background: orange;
-      li{
-        list-style: none;
-        padding: 2px 5px;
-        height: auto;
-        &:hover{
-          background: red;
+      font-size: 1.5em;
+      padding: 0 3px;
+    }
+    nav{
+      ul{
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        li{
+          list-style: none;
+          margin: 0 5px;
+          padding: 0 3px;
         }
       }
     }
   }
-  #avatar{
-    grid-area: avatar;
-    background: darkgrey;
-    // transition:
-  }
-  #snackbar{
-    @include grid_area(2, 3, 1, 6);
-    display: block;
-    height: 2px;
-    background: green;
-    color: hsla(0, 0%, 0%, 0);
-    z-index: 1;
-    animation: animate_snackbar 7s ease-in 0s 1 normal;
-    font-size: 0;
-    text-indent: 5px;
-    &:hover{
-      animation: animate_snackbar 7s ease-in 0s 1 normal;
-    }
-  }
   main{
-    grid-area: main;
-    background: purple;
 
+    grid-area: main;
+    width: 80%;
+    margin: 0 auto;
+    background: gray;
   }
   footer{
     grid-area: footer;
-    background: blue;
-    font-size: 0.5em;
-  }
+    display: grid;
+    grid-template-areas: "console footer";
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    .console{
+      grid-area: console;
+      width: 100%;
+    }
+    .footer{
+      grid-area: footer;
+      font-size: 1em;
 
+    }
+
+  }
+}
+
+// CSS animations:
+
+
+// login webpage:
+body{
+  main{
+    #login,
+    #signup{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+      label,
+      input{
+        padding: 2px;
+        width: 200px;
+      }
+    }
+  }
 }

@@ -1,21 +1,22 @@
-<?php
-  require_once 'assets/layouts.php';
-  require_once 'assets/php/functions.php';
-  fn_session_init();
-  $_SESSION['webheader'] = '';
-  fn_layout_head();
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<?php  ?>
+
+  <head>
+  <?php require 'assets/php/head.php'?>
+  <title><?php retrieveTitle()?> | Welcome to Beeer Web App</title>
+  </head>
 <body>
-<?php fn_layout_top()?>
-<?php fn_layout_snackbar()?>
-<main>
-<?php
-?>
-</main>
-<?php fn_layout_footer()?>
+  <header>
+    <?php require 'assets/php/header.php'?>
+  </header>
+  <main>
+    <h1>Index</h1>
+  </main>
+
+  <footer>
+    <?php require 'assets/php/footer.php'?>
+  </footer>
+<?php require 'assets/php/scripts.php'?>
 </body>
+
 </html>
-<?php fn_layout_signature()?>
