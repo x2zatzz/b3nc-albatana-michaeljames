@@ -22,6 +22,14 @@
 
   $flag_arraymatch = 0;
   $array_length = count($decodedarray);
+  $zeros = "";
+  $char = count($array_length);
+  $accountidkey = $array_length;
+  for($i=6; $i!==1; $i--){
+    $zeros .= "0";
+  }
+  $v_accountid = "id" . $zeros . $accountidkey;
+  print_r($v_accountid);
 
   for($i=1; $i<=$array_length; $i++){
     if($decodedarray[$i-1]['username'] == $v_username){
@@ -32,22 +40,22 @@
     }
   }
 
-  switch ($flag_arraymatch){
-    case 1:
-     $_SESSION['snackbar'] = "$v_username is not available.";
-      break;
-    case 0:
-      foreach($uploadarray as $field => $value){
-        $decodedarray[$array_length][$field] = $value;
-      }
-    $encodedarray = json_encode($decodedarray, JSON_PRETTY_PRINT);
+  // switch ($flag_arraymatch){
+  //   case 1:
+  //    $_SESSION['snackbar'] = "$v_username is not available.";
+  //     break;
+  //   case 0:
+  //     foreach($uploadarray as $field => $value){
+  //       $decodedarray[$array_length][$field] = $value;
+  //     }
+  //   $encodedarray = json_encode($decodedarray, JSON_PRETTY_PRINT);
 
-    copy('db.json', 'db_back.json');
-    $fileopen = fopen('db.json', 'w');
-    fwrite($fileopen, $encodedarray);
-    fclose($fileopen);
-    $_SESSION['snackbar'] = 'database update successful';
-    break;
-  }
-  header('location: ' . $_SESSION['prevpage']);
+  //   copy('db.json', 'db_back.json');
+  //   $fileopen = fopen('db.json', 'w');
+  //   fwrite($fileopen, $encodedarray);
+  //   fclose($fileopen);
+  //   $_SESSION['snackbar'] = 'database update successful';
+  //   break;
+  // }
+  // header('location: ' . $_SESSION['prevpage']);
   ?>

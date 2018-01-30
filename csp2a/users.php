@@ -22,9 +22,16 @@
   echo "
     <table>
       <tr>
+        <td>Account ID</td>
+        <td>";
+        echo $decodedarray[$id-1]['accountid'];
+  echo "
+        </td>
+      </tr>
+      <tr>
         <td>Username</td>
         <td>";
-        echo $decodedarray[$id-1]['username'];
+        echo $decodedarray[$id-1]['name'];
   echo "
         </td>
       </tr>

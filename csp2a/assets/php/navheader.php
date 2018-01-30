@@ -17,7 +17,7 @@ echo "
     <li id=\"catalog\">Catalog</li>";
 if(isset($_SESSION['username'])){
   echo "
-    <li id=\"profile\">Profile</li>";
+    <li id=\"profile\">" . $_SESSION['username'] . "</li>";
 if($_SESSION['role'] == "admin"){
   echo "<li id=\"settings\">Settings</li>";
 } else{}

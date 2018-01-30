@@ -2,7 +2,7 @@ fn_linkgen();
 function fn_linkgen(){
   var tag_li = document.getElementsByTagName("li");
   for(i=1; i<=tag_li.length; i++){
-    v_htmltext = tag_li[i-1].textContent;
+    v_htmltext = tag_li[i-1].getAttribute("id");
     v_htmltext = v_htmltext.replace(' ','') + ".php";
     v_htmltext = v_htmltext.toLowerCase();
     v_htmltext = "window.location.href=\"" + v_htmltext + "\"";
@@ -104,3 +104,13 @@ function fn_empty_snackbar(){
   document.getElementById("snackbarsmall").textContent = "";
 }
 
+function fn_onload(){
+  var currentpath = window.location.href;
+
+  if(currentpath.search("item-filter") === -1){
+    window.location.href = "catalog.php?item-filter=all";
+  } else{
+    console.log("hello");
+  }
+
+}
