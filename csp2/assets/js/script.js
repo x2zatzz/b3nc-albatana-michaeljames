@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // LINK GENERATION
 var e1 = document.getElementsByTagName("li");
 for (i = 1; i !== e1.length; i++){
@@ -13,3 +14,14 @@ function fnLinks(){
   for(i = 1; i !== e1.length; i++) {
   }
 }
+=======
+
+// var nodeSnackbar = document.getElementById('snackbar');
+// var callback = function(mutationsList){
+//   for(var mutation of mutationsList){
+//     if(mutation.type == 'attributes'){
+//       nodeSnackbar.style.background = 'gray';
+//     }
+//   }
+// }
+>>>>>>> parent of 72d89c3... updated main project folder

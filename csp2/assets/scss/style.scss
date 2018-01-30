@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+@mixin grid_area($r1, $r2, $c1, $c2){
+  grid-area: $r1 #{'/'} $c1 #{'/'} $r2 #{'/'} $c2;
+}
+
+@keyframes animate_snackbar{
+  0% {color: hsla(0, 0%, 0%, 0); height: 0em;}
+  // 10% {height: 0.25em}
+  // 20% {height: 0.5em}
+  // 50% {background: red}
+
+  5% {height: 1em;}
+  25% {color: hsla(0, 0%, 0%, 1); height: 1em;}
+  100% {color: hsla(0, 0%, 0%, 1); height: 1em;}
+}
+
+
+>>>>>>> parent of 72d89c3... updated main project folder
 *{
   margin: 0;
   padding: 0;
@@ -17,6 +36,7 @@ body{
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
+<<<<<<< HEAD
   header{
     grid-area: header;
     display: flex;
@@ -41,6 +61,40 @@ body{
       }
     }
   }
+=======
+  grid-template-areas: "logo nav nav avatar" "main main main main" "main main main main" "footer footer footer footer";
+  grid-template-rows: 3em 1em 1fr 1em;
+  grid-template-columns: 3em 150px 1fr 3em;
+  #logo{
+    grid-area: logo;
+    background: gold;
+  }
+  nav{
+    grid-area: nav;
+    background: red;
+    ul{
+      display: flex;
+      flex-flow: row nowrap;
+      li{
+        list-style: none;
+      }
+    }
+  }
+  #avatar{
+    grid-area: avatar;
+    background: gray;
+    transition: 
+  }
+  #snackbar{
+    @include grid_area(2, 3, 1, 5);
+    display: block;
+    height: 0;
+    background: green;
+    color: hsla(0, 0%, 0%, 0);
+    z-index: 1;
+    animation: animate_snackbar 7s ease-in 0s 1 normal;
+  }
+>>>>>>> parent of 72d89c3... updated main project folder
   main{
 
     grid-area: main;
@@ -50,6 +104,7 @@ body{
   }
   footer{
     grid-area: footer;
+<<<<<<< HEAD
     display: grid;
     grid-template-areas: "console footer";
     grid-template-columns: 1fr auto;
@@ -64,6 +119,9 @@ body{
 
     }
 
+=======
+    background: blue;
+>>>>>>> parent of 72d89c3... updated main project folder
   }
 }
 
