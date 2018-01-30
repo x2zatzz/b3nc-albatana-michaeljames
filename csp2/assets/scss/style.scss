@@ -2,15 +2,22 @@
   grid-area: $r1 #{'/'} $c1 #{'/'} $r2 #{'/'} $c2;
 }
 
+@mixin flex_row_defaults{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 @keyframes animate_snackbar{
   0% {color: hsla(0, 0%, 0%, 0); height: 0em;}
   // 10% {height: 0.25em}
   // 20% {height: 0.5em}
   // 50% {background: red}
 
-  5% {height: 1em;}
-  25% {color: hsla(0, 0%, 0%, 1); height: 1em;}
-  100% {color: hsla(0, 0%, 0%, 1); height: 1em;}
+  5% {height: 1em; padding: 2px 0; font-size: 0.7em}
+  15% {color: hsla(0, 0%, 0%, 1)}
+  25% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.7em}
+  100% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.7em}
 }
 
 
@@ -21,6 +28,7 @@
   background: black;
   color: white;
   font-family: Helvetica, Arial, sans-serif;
+  user-select: none;
 }
 body{
   display: grid;
@@ -28,37 +36,58 @@ body{
   min-height: 100vh;
   height: auto;
   margin: 0 auto;
-  grid-template-areas: "logo nav nav avatar" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: 3em 1em 1fr 1em;
-  grid-template-columns: 3em 150px 1fr 3em;
+  grid-template-areas: "logo title nav nav avatar" "main main main main main" "main main main main main" "footer footer footer footer footer";
+  grid-template-rows: 3em 1em 1fr 0.5em;
+  grid-template-columns: 3em 150px 1fr 150px 3em;
   #logo{
     grid-area: logo;
     background: gold;
+    &:hover{
+      background: red;
+    }
+  }
+  #title{
+    @include flex_row_defaults();
+    grid-area: title;
+    background: orange;
   }
   nav{
     grid-area: nav;
     background: red;
+    height: 100%;
     ul{
-      display: flex;
-      flex-flow: row nowrap;
+      height: 100%;
+      @include flex_row_defaults();
+      justify-content: flex-end;
+      background: orange;
       li{
         list-style: none;
+        padding: 2px 5px;
+        height: auto;
+        &:hover{
+          background: red;
+        }
       }
     }
   }
   #avatar{
     grid-area: avatar;
-    background: gray;
-    transition: 
+    background: darkgrey;
+    // transition:
   }
   #snackbar{
-    @include grid_area(2, 3, 1, 5);
+    @include grid_area(2, 3, 1, 6);
     display: block;
-    height: 0;
+    height: 2px;
     background: green;
     color: hsla(0, 0%, 0%, 0);
     z-index: 1;
     animation: animate_snackbar 7s ease-in 0s 1 normal;
+    font-size: 0;
+    text-indent: 5px;
+    &:hover{
+      animation: animate_snackbar 7s ease-in 0s 1 normal;
+    }
   }
   main{
     grid-area: main;
@@ -68,6 +97,7 @@ body{
   footer{
     grid-area: footer;
     background: blue;
+    font-size: 0.5em;
   }
 
 }

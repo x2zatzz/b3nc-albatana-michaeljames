@@ -18,30 +18,33 @@ function fn_layout_head(){
 
 function fn_layout_top(){
   echo "
-  <div id=\"logo\">
+  <div class=\"interactive\"id=\"logo\">
   </div>
+  <div class=\"interactive\" id=\"title\">" .
+  $_SESSION['webtitle'] .
+  "</div>
   <nav>
     <ul>
-      <li>home</li>
-      <li>home</li>
-      <li>sign in</li>
-      <li>sign up</li>
+      <li class=\"interactive\" id=\"home\">home</li>
+      <li class=\"interactive\" id=\"catalog\">catalog</li>
+      <li class=\"interactive\" id=\"sign-in\">sign-in</li>
     </ul>
   </nav>
-  <div id=\"avatar\">
+  <div class=\"interactive\" id=\"avatar\">
   </div>";
-}
+  }
 
-function fn_layout_menumain(){
-  echo "
-  <menu>
-  </menu>";
-}
+  function fn_layout_menumain(){
+    echo "
+    <menu>
+    </menu>";
+  }
 
-function fn_layout_menuacct(){
-  echo "
-  <div id=\"menuacct\">
+  function fn_layout_menuacct(){
+    echo "
+    <div id=\"menuacct\">
     <ul>
+      <li>profile & config</li>
       <li>log out</li>
     </ul>
   </div>
