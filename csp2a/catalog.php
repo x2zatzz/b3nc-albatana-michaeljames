@@ -3,12 +3,13 @@
   fn_pagecheck();
   fn_session_init();
   $_SESSION['webtitle'] = 'Whiskey Web App ';
+
+  $_SESSION['cart_array'] = ["itemid" => "id00000", "itemqty" => 0 ];
   // $webpath = $_SERVER['PHP_SELF'];
   // if(!strpos($webpath, "item-filter=all")){
   //   $_SESSION['snackbar'] = "the code works!!";
   //   header("location: catalog.php?item-filter=all");
   // } else{
-
   // }
   ?>
 <!DOCTYPE html>
@@ -22,28 +23,23 @@
 
   <?php require 'itemfilter.php'?>
 
+
   <div id="thumbnail">
   <?php
   $fileopen = file_get_contents('items.json');
   $decodedarray = json_decode($fileopen, true);
-  // var_dump($decodedarray);
-
   $j = count($decodedarray);
-
-  function trial(){
-    array_search('');
-  }
-
-
   for($i=1; $i<=$j; $i++){
     if($decodedarray[$i-1]['category'] === $_GET['item-filter'] || $_GET['item-filter'] === "all"){
-      echo "<div class=\"containers\" id=\"container" . $i . "\">";
-      echo "<div class=\"name\">" . $decodedarray[$i-1]['name'] . "</div>";
-      echo "<img class=\"image\" src=\"" . $decodedarray[$i-1]['image'] . "\" onclick=\"window.location.href='item.php?id=$i'\">";
-      echo "<div class=\"price\">" . $decodedarray[$i-1]['price'] . "</div>";
-      echo "<div class=\"description\">" . $decodedarray[$i-1]['description'] . "</div>";
-      echo "<button class=\"addtocart\">Add to cart</button><div class=\"category\">" . $decodedarray[$i-1]['category'] . "</div>";
-      echo "</div>";
+      echo "<form class=\"containers\" id=\"container$i\" method=\"GET\" action=\"addtocart.php?\">";
+      echo "  <h3 class=\"itemname\">" . $decodedarray[$i-1]['name'] . "</h3>";
+      echo "  <img class=\"itemimage\" src=\"" . $decodedarray[$i-1]['image'] . "\" onclick=\"window.location.href='item.php?id=$i'\">";
+      echo "  <div class=\"itemprice\">" . $decodedarray[$i-1]['price'] . "</div>";
+      echo "  <div class=\"itemcategory\">" . $decodedarray[$i-1]['category'] . "</div>";
+      echo "  <div class=\"itemdescription\">" . $decodedarray[$i-1]['description'] . "</div>";
+      echo "  <input class=\"itemqty\" type=\"number\" name=\"itemqty\">";
+      echo "  <input class=\"addtocart\" type=\"submit\" value=\"Add to Cart\">";
+      echo "</form>";
     } else{
 
     }

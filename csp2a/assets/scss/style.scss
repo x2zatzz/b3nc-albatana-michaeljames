@@ -88,49 +88,43 @@ body{
   .containers{
     display: grid;
     height: auto;
-    width: 150px;
-    padding: 10px;
-    margin: 5px 0;
-    grid-template-areas: "name name" "image image" "price price" "description description" "addtocart category";
-    grid-template-rows: 1.5em 125px 1em  150px 1em;
-    grid-template-columns: 1fr auto;
-    .name{
+    width: 200px;
+    // padding: 10px;
+    margin: 5px;
+    grid-template-areas: "name name" "image image" "price category" "desc desc" "addtocart itemqty";
+    grid-template-rows: 1.5em 125px 1em 150px 1em;
+    grid-template-columns: 1fr 1fr;
+    .itemname{
       grid-area: name;
-      display: flex;
-      font-size: 0.7em;
-      font-weight: bold;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
+      // display: flex;
+      // font-size: 0.7em;
+      // font-weight: bold;
+      // flex-flow: row nowrap;
+      // justify-content: center;
+      // align-content: center;
+      // align-items: center;
+      // width: auto;
+      // width: 100%;
     }
-    .image{
+    .itemimage{
       grid-area: image;
-      width: 150px;
-      height: auto;
+      // width: 200px;
+      // height: 100px;
     }
-    .price{
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
+    .itemprice{
       grid-area: price;
-      text-align: center;
       font-size: 0.6em;
-
     }
-    .description{
-      grid-area: description;
-      display: flex;
-      padding: 2px;
-      font-size: 0.6em;
-      text-align: justify;
+    .itemdescription{
+      grid-area: desc;
+    }
+    .itemqty{
+      grid-area: itemqty;
     }
     .addtocart{
       grid-area: addtocart;
     }
-    .category{
+    .itemcategory{
       grid-area: category;
       font-size: 0.7em;
     }
