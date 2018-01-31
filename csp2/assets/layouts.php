@@ -7,28 +7,30 @@ function fn_layout_head(){
   echo "
   <head>
     <meta charset=\"utf-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
     <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">
     <title>" . $_SESSION['webtitle'] . " | " . $_SESSION['webheader'] . "</title>
     <link rel=\"icon\" href=\"https://raw.githubusercontent.com/mjtalbatana/profile-logo/master/mjta-v01.ico\" type=\"image/x-icon\">
     <link rel=\"stylesheet\" href=\"assets/scss/style.css\" type=\"text/css\">
     <script language=\"javascript\" src=\"assets/js/script.js\" defer></script>
+    <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>
   </head>";
 }
 
 function fn_layout_top(){
   echo "
-  <div id=\"logo\">
+  <div class=\"interactive\" id=\"logo\">
   </div>
+  <h1 class=\"interactive\" id=\"title\">
+  </h1>
   <nav>
     <ul>
-      <li>home</li>
-      <li>home</li>
-      <li>sign in</li>
-      <li>sign up</li>
+      <li class=\"interactive\" id=\"home\">home</li>
+      <li class=\"interactive\" id=\"signin\">sign in</li>
+      <li class=\"interactive\" id=\"signup\">sign up</li>
     </ul>
   </nav>
-  <div id=\"avatar\">
+  <div class=\"interactive\" id=\"avatar\">
   </div>";
 }
 
@@ -42,7 +44,9 @@ function fn_layout_menuacct(){
   echo "
   <div id=\"menuacct\">
     <ul>
-      <li>log out</li>
+      <li class=\"interactive\" id=\"profile\">profile</li>
+      <li class=\"interactive\" id=\"logout\">log out</li>
+      <li class=\"interactive\" id=\"settings\">settings</li>
     </ul>
   </div>
   ";
@@ -56,8 +60,7 @@ function fn_layout_snackbar(){
 
 function fn_layout_footer(){
   $v_year = date('Y', gettimeofday(true));
-  echo
-  "
+  echo "
   <footer>
   <small>&copy;$v_year Michael James Turiano Albatana</small>
   </footer>
@@ -68,7 +71,7 @@ function fn_layout_signature(){
   echo "
   <!-- Web Template version 1.7 20180117 ==============================+-->
   <!-- Developer: Michael James Turiano Albatana                       |-->
-  <!-- Developed using: HTML5, CSS3, SASS3/SCSS, JS, PHP7              |-->
+  <!-- Developed using: HTML, CSS, SASS3/SCSS, JS, PHP                 |-->
   <!-- IDE/Editor/Debugger: VSCode+Extension+Debugger, Chrome DevTools |-->
   <!-- Repositories/Hosts: Git, GitHub, GitLab, Heroku                 |-->
   <!-- Developer Analytics: Codealike, WakaTime                        |-->
