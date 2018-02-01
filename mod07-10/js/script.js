@@ -12,7 +12,7 @@ $("ul").on("click", "li", function(){
   $(this).toggleClass("completed");
 });
 
-$("ul").on("click", "span", function(){
+$("ul").on("click", ".delete", function(){
   $(this).parent().fadeOut(500, function(){
     $(this).remove();
   });

@@ -9,9 +9,13 @@
   <title>To-do List</title>
   <link rel="icon" href="https://raw.githubusercontent.com/mjtalbatana/profile-logo/master/mjta-v01.ico" type="image/x-icon">
   <link rel="stylesheet" href="scss/style.css" type="text/css">
-  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <!-- <script src="js/lib/jquery-3.2.1.min.js"></script> -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script language="javascript" src="..\..\dev-modules\greensock-js\greensock-js-1.20.3\src\minified\TweenMax.min.js" defer></script>
+
 </head><!-- END of <head> section ======================================================================================= -->
-  
+
   <body>
     <main>
       <h1>リストをする</h1>
@@ -20,10 +24,10 @@
         <button onclick="clearFunction()">clear</button>
       </div>
       <ul>
-        <li><span>x</span> to potion class</li>
-        <li><span>x</span> Buy new robes</li>
-        <li><span>x</span> visit Hagrid</li>
-        <li><span>x</span> visit Hagrid</li>
+        <li><div class="delete">&times;</div><div class="item">enter item here</div></li>
+        <li><div class="delete">&times;</div><div class="item">enter item here</div></li>
+        <li><div class="delete">&times;</div><div class="item">enter item here</div></li>
+        <li><div class="delete">&times;</div><div class="item">enter item here</div></li>
       </ul>
     </main>
     <script src="js/script.js"></script>

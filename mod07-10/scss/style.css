@@ -74,22 +74,21 @@ body main .panel button {
 }
 
 body main ul li {
-  border: 0.5px solid black;
-  padding: 10px 5px;
-  width: 100%;
-  height: 50px;
-  list-style: none;
-  animation-name: animate02;
-  animation-duration: 1s;
+  display: grid;
+  height: 2em;
+  grid-template-areas: "delete item";
+  grid-template-rows: 1fr;
+  grid-template-columns: 20px 1fr;
 }
 
-body main ul li span {
-  display: none;
+body main ul li .delete {
+  grid-area: "delete";
+  font-size: 2em;
+  height: 100%;
 }
 
-body main ul li:hover span {
-  display: inline-block;
-  animation-name: animate01;
-  animation-duration: 1s;
+body main ul li .item {
+  grid-area: "item";
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
