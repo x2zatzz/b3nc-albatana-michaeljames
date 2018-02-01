@@ -12,7 +12,6 @@ function fn_session_init(){
   if(session_status()==2){
   } elseif(session_status()==1){
     session_start();
-    // $_SESSION['cartqty'] = "0";
   } else{
   }
   if(isset($_SESSION['snackbar']) == false){
@@ -36,6 +35,11 @@ function fn_admin_validation(){
   } else{
 
   }
+}
+
+function fn_array_push_assoc($fz, $fy, $fx){
+  $fz[$fy] = $fx;
+  return $fz;
 }
 
 ?>

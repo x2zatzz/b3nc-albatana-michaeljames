@@ -93,8 +93,8 @@ body footer {
   height: auto;
   width: 200px;
   margin: 5px;
-  grid-template-areas: "name name" "image image" "price category" "desc desc" "addtocart itemqty";
-  grid-template-rows: 1.5em 125px 1em 150px 1em;
+  grid-template-areas: "name name" "image image" "price category" "desc desc" "forms forms";
+  grid-template-rows: 1.5em 150px 1.5em 150px 3em;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -104,32 +104,96 @@ body footer {
 
 #thumbnail .containers .itemimage {
   grid-area: image;
+  width: 200px;
 }
 
 #thumbnail .containers .itemprice {
   grid-area: price;
-  font-size: 0.6em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#thumbnail .containers .itemcategory {
+  grid-area: category;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #thumbnail .containers .itemdescription {
   grid-area: desc;
 }
 
-#thumbnail .containers .itemkey {
+#thumbnail .containers .itemform {
+  grid-area: forms;
+  display: grid;
+  width: 200px;
+  grid-template-areas: "labelA labelB submit" "inputA inputB submit";
+  grid-template-columns: 60px 60px 1fr;
+  grid-template-rows: 1fr 1.1fr;
+}
+
+#thumbnail .containers .itemform .itemkey {
   display: none;
 }
 
-#thumbnail .containers .itemqty {
-  grid-area: itemqty;
+#thumbnail .containers .itemform .itemqtycurrentlbl {
+  grid-area: labelA;
+  font-size: 0.9em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#thumbnail .containers .addtocart {
-  grid-area: addtocart;
+#thumbnail .containers .itemform .itemqtycurrent {
+  grid-area: inputA;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#thumbnail .containers .itemcategory {
-  grid-area: category;
-  font-size: 0.7em;
+#thumbnail .containers .itemform .itemqtylbl {
+  grid-area: labelB;
+  font-size: 0.9em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#thumbnail .containers .itemform .itemqty {
+  grid-area: inputB;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#thumbnail .containers .itemform .addtocart {
+  grid-area: submit;
 }
 
 #modal {

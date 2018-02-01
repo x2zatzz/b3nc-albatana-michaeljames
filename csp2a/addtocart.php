@@ -3,99 +3,123 @@
   fn_pagecheck();
   fn_session_init();
 
+  $arr1 = fnShort_file_get_json('items.json');
+  $arr = [];
+  $brr1 = [];   // the updated array according to the items.json
+  for($l=1; $l<=count($arr1); $l++){
+    array_push($brr1, 0);
+  }
+  if($_GET['itemqty'] == 0){
+    fn_ttl_cart();
+    echo "return to catalog.php";
+    header("location: catalog.php");
+  } elseif($_GET['itemkey'] > count($arr1)-1){
+    echo "invalid product id, please confirm product selection";
+    header("location: catalog.php");
+  }
 
-  $getarray = file_get_contents("cart.json");
-  $decodedarray = json_decode($getarray, true);
-
-  $copiedarray = $decodedarray;
-  // print_r($_GET['itemkey']);
-  // print_r($_GET['itemqty']);
-
-  // foreach($decodedarray as $key => $qty){
-  //   if($key === $_GET['itemkey']){
-
-  //   }
-  // }
-  // print_r("blockA");
-  // var_export($decodedarray);
-  // print_r("blockB");
-  // var_export($copiedarray);
-
-
-  // foreach($decodedarray as $key => $itemqty){
-  //   print_r($key.PHP_EOL);
-  //   print_r($_GET['itemkey']);
-  // // var_export($decodedarray);
-  // var_export($decodedarray[0]);
-  $n = "key" . $_GET['itemkey'];
-  // var_export($n);
-
-//   if(array_search($n, $decodedarray)){
-//   print_r('this code works');
-// }
-
-  // foreach($decodedarray as $key => $itemqty){
-
-  // }
-  // var_export($n);
-  // var_export($decodedarray);
-  $x=0;
-  foreach($decodedarray as $key => $qty){
-    if(in_array($n, $decodedarray[$key]) == true){
-      // print_r("data: ");
-      // var_export($copiedarray[$key]['itemqty']);
-      // var_export($decodedarray[$key]['itemqty']);
-      // var_export("data>> " . $key);
-      var_export($copiedarray[0]['itemqty']);
-      $copiedarray[$key]['itemqty'] += $_GET['itemqty'];
-      break;
+  $arr1 = fnShort_file_get_json('cart.json');
+  for($l=1; $l<=count($brr1); $l++){
+    if(array_key_exists(($l-1), $arr1)){
+      $brr1[$l-1] += $arr1[$l-1];
     } else{
-      $x++;
+      $brr1[$l-1] = 0;
+    }
+  }
+  $brr1[$_GET['itemkey']] += $_GET['itemqty'];
+
+  var_export($brr1);
+  $brr = json_encode($brr1, JSON_PRETTY_PRINT);
+
+  fn_updatejsonfile('cart.json', $brr);
+
+  function fnShort_file_get_json($fz){ //fz = json ref file
+    $arr = file_get_contents($fz);
+    $arr1 = json_decode($arr, true);
+    return $arr1;
+  }
+
+  function fnShort_json_decode_loop($fz, $fy){
+    //fz = json ref file; fy = function to run
+    $arr = [];
+    $arr = file_get_contents($fz);
+    $arr1 = json_decode($arr, true);
+    for($l=1; $l<=count($arr1); $l++){
+      $fy;
     }
   }
 
-  print_r('a: '.PHP_EOL);
-  var_export($decodedarray);
-  print_r('b: '.PHP_EOL);
-  var_export($copiedarray);
-
-  if($x === count($decodedarray)){
-    print_r('the code works here');
-    // array_push($decodedarray[]);
+  function fn_updatejsonfile($fz, $fy){ // fz= filename of the target json file; fy= target data to place inside the file
+    copy($fz, str_replace('.json', '_back.json', $fz));
+    $fileopen = fopen($fz, 'w');
+    fwrite($fileopen, $fy);
+    fclose($fileopen);
+    header("location: catalog.php");
   }
 
+  function fn_ttl_cart(){
+    $_SESSION['cartqty'] = 0;
+    $arr = file_get_contents('cart.json');
+    $arr1 = json_decode($arr, true);
+    for($l=1; $l<=count($arr1); $l++){
+      $_SESSION['cartqty'] += $arr1[$l-1]['itemqty'];
+    }
+    $arr = [];
+    $arr1 = [];
+  }
 
+    // fnShort_json_decode_loop('items.json', function(){
+    // });
 
-    // if($key == $_GET['itemkey']){
-    //   $copiedarray[$key]['itemqty'] += $_GET['itemqty'];
-    //   print_r('the code works here1');
-    // } else{
-    //   print_r('the code works here2');
-    //   array_push($copiedarray[$key], $itemqty);
-    // }
+  // =============================================================================
+  // $arr = [];
+  // $arr1 = [];
+  // $brr = [];
+  // $brr1 = [];
+  // $arr = file_get_contents('items.json');
+  // $arr1 = json_decode($arr, true);
+  // if($_GET['itemqty'] == 0){
+  //   fn_ttl_cart();
+  //   header("location: catalog.php");
+  // } elseif($_GET['itemkey'] > count($arr1)-1){
+  //   $_SESSION['snackbar'] = "the product is not is existing, please contact support";
+  //   header("location: catalog.php");
   // }
 
-  // print_r("blockC");
-  // var_export($copiedarray);
+  // for($l=1; $l<=count($arr1); $l++){
+  //   $brr1[$l-1]['itemkey'] = 'key' . ($l-1);
+  //   $brr1[$l-1]['itemqty'] = 0;
+  // }
+  // $arr = file_get_contents('cart.json');
+  // $arr1 = json_decode($arr, true);
+
+  // if(count($arr1) == count($brr1)){
+
+  // }
 
 
-  // array_walk($decodedarray[0], function($key){
-  //   print_r($key);
-  //   if($key == $_GET['itemkey']){
-  //     // print_r($item2);
-  //     // $item += $_GET['itemqty'];
-  //     // print_r('true'.PHP_EOL);
-  //   } else{
-  //     // print_r('false'.PHP_EOL);
-
-  //   }
-  // }, 'decodedarray');
+  // $brr1[$_GET['itemkey']]['itemqty'] += $_GET['itemqty'];
+  // fn_ttl_cart();
 
 
+  // var_export($brr1)
 
-  // $_SESSION['cartqty'] += $_GET['itemqty'];
 
-  $_SESSION['snackbar'] = "item added to cart, total items: " . $_SESSION['cartqty'];
+  // $num = 0;
+  // for($l=1; $l<=count($arr1); $l++){
+  //   $_SESSION['cartqty'] += $arr1[$l-1]['itemqty'];
+  //   if($arr1[$l-1]['itemkey'] === "key" . $_GET['itemkey']){
+  //     $brr1[$_GET['itemkey']]['itemqty'] += $_GET['itemqty'];
+  //     $num--;
+  //   } else{}
+  //     $num++;
+  //     if($num === count($arr1)){
+  //       $brr1[count($arr1)]['itemkey'] = 'key' . $_GET['itemkey'];
+  //       $brr1[count($arr1)]['itemqty'] = (int) $_GET['itemqty'];
+  //     } else{}
+  // }
 
-  // header("location: catalog.php");
+  // var_export($brr1);
+
+
 ?>

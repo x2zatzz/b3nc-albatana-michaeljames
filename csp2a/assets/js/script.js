@@ -34,10 +34,9 @@ if(currentpage.search("signin.php") !== -1){
 }
 
 
-else if(currentpage.search("users.php") !== -1 || currentpage.search("catalog.php" !== -1)){
+else if(currentpage.search("users.php") !== -1){
   fn_modals();
 } else{
-
 }
 function fn_modals(){
   var modal = document.getElementById("modal");
@@ -115,13 +114,17 @@ function fn_onload(){
 
 }
 
-function fn_addtocart(){
+function fn_onloadcart(){
   var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function(){
     // if(this.readyState == 4 && this.status == 200){
-
     // }
-    ajax.open("GET", "addtocart.php", true);
+    ajax.open("GET", "ajaxcart.php", true);
     ajax.send();
-  }
+  };
 }
+
+document.body.onload = function(){
+  fn_onload();
+  fn_onloadcart();
+};

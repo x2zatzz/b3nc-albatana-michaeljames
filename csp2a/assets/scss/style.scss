@@ -1,3 +1,13 @@
+@mixin flex_shorthand($fz:row nowrap, $fy:center, $fx:center, $fw:center, $fv:center, $fu:center){
+  display: flex;
+  flex-flow: $fz;
+  justify-content: $fy;
+  justify-items: $fx;
+  align-content: $fw;
+  align-items: $fv;
+  text-align: $fu;
+}
+
 *{
   background: black;
   color: white;
@@ -91,45 +101,59 @@ body{
     width: 200px;
     // padding: 10px;
     margin: 5px;
-    grid-template-areas: "name name" "image image" "price category" "desc desc" "addtocart itemqty";
-    grid-template-rows: 1.5em 125px 1em 150px 1em;
+    grid-template-areas: "name name" "image image" "price category" "desc desc" "forms forms";
+    grid-template-rows: 1.5em 150px 1.5em 150px 3em;
     grid-template-columns: 1fr 1fr;
     .itemname{
       grid-area: name;
-      // display: flex;
-      // font-size: 0.7em;
-      // font-weight: bold;
-      // flex-flow: row nowrap;
-      // justify-content: center;
-      // align-content: center;
-      // align-items: center;
-      // width: auto;
-      // width: 100%;
     }
     .itemimage{
       grid-area: image;
-      // width: 200px;
-      // height: 100px;
+      width: 200px;
+      // height: 150px;
     }
     .itemprice{
       grid-area: price;
-      font-size: 0.6em;
+      @include flex_shorthand();
+    }
+    .itemcategory{
+      grid-area: category;
+      @include flex_shorthand();
     }
     .itemdescription{
       grid-area: desc;
     }
-    .itemkey{
-      display: none;
-    }
-    .itemqty{
-      grid-area: itemqty;
-    }
-    .addtocart{
-      grid-area: addtocart;
-    }
-    .itemcategory{
-      grid-area: category;
-      font-size: 0.7em;
+    .itemform{
+      grid-area: forms;
+      display: grid;
+      width: 200px;
+      grid-template-areas: "labelA labelB submit" "inputA inputB submit";
+      grid-template-columns: 60px 60px 1fr;
+      grid-template-rows: 1fr 1.1fr;
+      .itemkey{
+        display: none;
+      }
+      .itemqtycurrentlbl{
+        grid-area: labelA;
+        font-size: 0.9em;
+        @include flex_shorthand();
+      }
+      .itemqtycurrent{
+        grid-area: inputA;
+        @include flex_shorthand();
+      }
+      .itemqtylbl{
+        grid-area: labelB;
+        font-size: 0.9em;
+        @include flex_shorthand();
+      }
+      .itemqty{
+        grid-area: inputB;
+        @include flex_shorthand();
+      }
+      .addtocart{
+        grid-area: submit;
+      }
     }
   }
 }
