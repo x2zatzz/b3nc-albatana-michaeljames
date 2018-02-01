@@ -10,11 +10,11 @@
 
 @keyframes animate_snackbar{
   0% {color: hsla(0, 0%, 0%, 0); height: 0em;}
-  5% {height: 1em; padding: 2px 0; font-size: 0.7em}
-  15% {color: hsla(0, 0%, 0%, 0)}
-  25% {color: hsla(0, 0%, 0%, 0); height: 1em; padding: 2px 0; font-size: 0.9em}
-  30% {color: hsla(0, 0%, 0%, 1)}
-  100% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.9em}
+  5% {height: 1em; padding: 2px 0; font-size: 0.7em;}
+  15% {color: hsla(0, 0%, 0%, 0);}
+  25% {color: hsla(0, 0%, 0%, 0); height: 1em; padding: 2px 0; font-size: 0.9em;}
+  30% {color: hsla(0, 0%, 0%, 1);}
+  100% {color: hsla(0, 0%, 0%, 1); height: 1em; padding: 2px 0; font-size: 0.9em;}
 }
 
 *{

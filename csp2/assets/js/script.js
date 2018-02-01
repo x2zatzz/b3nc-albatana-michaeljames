@@ -73,3 +73,15 @@ for(i=1; i<=a.length; i++){
 
 }
 
+function fn_trial(){
+  var ajax = new XMLHttpRequest();
+  ajax.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      document.getElementById("ajaxtrial").innerHTML = this.responseText;
+    }
+  };
+  // ajax.open("GET","ajax_info.txt", true);
+  ajax.open("POST", "runthis.php", true);
+  ajax.send();
+
+}

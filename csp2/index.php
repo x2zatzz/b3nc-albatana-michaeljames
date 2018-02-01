@@ -12,6 +12,10 @@
 <?php fn_layout_top()?>
 <?php fn_layout_snackbar()?>
 <main>
+<div id="ajaxtrial">
+  <h2>change this text please</h2>
+  <button type="button" onclick="fn_trial()">change content</button>
+</div>
 <?php
 ?>
 </main>
