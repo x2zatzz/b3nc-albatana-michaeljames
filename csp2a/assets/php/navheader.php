@@ -1,6 +1,7 @@
 <?php
-echo
-"
+  fn_session_init();
+
+echo "
 <nav>
   <h2>";
 echo $_SESSION['webtitle'];
@@ -14,7 +15,8 @@ echo "
 echo "
     <li id=\"about\">About</li>
     <li id=\"careers\">Careers</li>
-    <li id=\"catalog\">Catalog</li>";
+    <li id=\"catalog\">Catalog</li>
+    <li id=\"cart\">Cart (" . $_SESSION['cartqty'] . ")</li>";
 if(isset($_SESSION['username'])){
   echo "
     <li id=\"profile\">" . $_SESSION['username'] . "</li>";

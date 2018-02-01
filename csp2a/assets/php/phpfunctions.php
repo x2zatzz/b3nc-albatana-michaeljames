@@ -12,6 +12,7 @@ function fn_session_init(){
   if(session_status()==2){
   } elseif(session_status()==1){
     session_start();
+    // $_SESSION['cartqty'] = "0";
   } else{
   }
   if(isset($_SESSION['snackbar']) == false){

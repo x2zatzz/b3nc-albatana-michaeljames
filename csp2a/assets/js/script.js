@@ -114,3 +114,14 @@ function fn_onload(){
   }
 
 }
+
+function fn_addtocart(){
+  var ajax = new XMLHttpRequest();
+  ajax.onreadystatechange = function(){
+    // if(this.readyState == 4 && this.status == 200){
+
+    // }
+    ajax.open("GET", "addtocart.php", true);
+    ajax.send();
+  }
+}

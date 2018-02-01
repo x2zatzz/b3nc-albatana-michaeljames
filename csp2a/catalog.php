@@ -4,7 +4,6 @@
   fn_session_init();
   $_SESSION['webtitle'] = 'Whiskey Web App ';
 
-  $_SESSION['cart_array'] = ["itemid" => "id00000", "itemqty" => 0 ];
   // $webpath = $_SERVER['PHP_SELF'];
   // if(!strpos($webpath, "item-filter=all")){
   //   $_SESSION['snackbar'] = "the code works!!";
@@ -31,14 +30,15 @@
   $j = count($decodedarray);
   for($i=1; $i<=$j; $i++){
     if($decodedarray[$i-1]['category'] === $_GET['item-filter'] || $_GET['item-filter'] === "all"){
-      echo "<form class=\"containers\" id=\"container$i\" method=\"GET\" action=\"addtocart.php?\">";
+      echo "<form class=\"containers\" id=\"container$i\" method=\"GET\">";
       echo "  <h3 class=\"itemname\">" . $decodedarray[$i-1]['name'] . "</h3>";
       echo "  <img class=\"itemimage\" src=\"" . $decodedarray[$i-1]['image'] . "\" onclick=\"window.location.href='item.php?id=$i'\">";
       echo "  <div class=\"itemprice\">" . $decodedarray[$i-1]['price'] . "</div>";
       echo "  <div class=\"itemcategory\">" . $decodedarray[$i-1]['category'] . "</div>";
       echo "  <div class=\"itemdescription\">" . $decodedarray[$i-1]['description'] . "</div>";
-      echo "  <input class=\"itemqty\" type=\"number\" name=\"itemqty\">";
-      echo "  <input class=\"addtocart\" type=\"submit\" value=\"Add to Cart\">";
+      echo "  <input class=\"itemkey\" type=\"number\" name=\"itemkey\" value=\"" . ($i-1) . "\">";
+      echo "  <input class=\"itemqty\" type=\"number\" name=\"itemqty\" value=\"0\">";
+      echo "  <input class=\"addtocart\" type=\"submit\" value=\"Add to Cart\" onclick=\"fn_addtocart()\">";
       echo "</form>";
     } else{
 

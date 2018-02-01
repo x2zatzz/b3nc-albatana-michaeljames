@@ -115,6 +115,10 @@ body footer {
   grid-area: desc;
 }
 
+#thumbnail .containers .itemkey {
+  display: none;
+}
+
 #thumbnail .containers .itemqty {
   grid-area: itemqty;
 }

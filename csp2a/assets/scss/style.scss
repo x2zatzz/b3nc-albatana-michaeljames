@@ -118,6 +118,9 @@ body{
     .itemdescription{
       grid-area: desc;
     }
+    .itemkey{
+      display: none;
+    }
     .itemqty{
       grid-area: itemqty;
     }
