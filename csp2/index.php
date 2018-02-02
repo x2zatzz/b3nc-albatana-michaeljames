@@ -20,6 +20,7 @@
 ?>
 </main>
 <?php fn_layout_footer()?>
+<?php fn_layout_libraries()?>
 </body>
 </html>
 <?php fn_layout_signature()?>

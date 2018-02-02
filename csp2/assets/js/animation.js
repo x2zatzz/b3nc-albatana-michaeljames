@@ -1,39 +1,32 @@
-var arr = [];
-var node = "";
-var val = "";
 
 
-// INTERACTIVE ELEMENTS - animation
-arr = document.getElementsByClassName("interactive");
-for(l=1; l<=arr.length; l++){
-  arr[l-1].addEventListener("mouseover", function(){
-    val = this.style.background;
-    this.style.background = "red";
-    console.log(val);
-  });
-  arr[l-1].addEventListener("mouseout", function(){
-    this.style.background = val;
-  });
-  arr[l-1].addEventListener("mousedown", function(){
-    this.style.background = "gold";
+var snackbar = document.getElementById('snackbar');
+
+anim_snackbar();
+anim_pageload_sequence();
+function anim_snackbar(){
+  TweenMax.to(snackbar, 2,{
+    background: "red",
+    color: "hsla(0, 0%, 0%, 0)",
+    height: 0,
+    autoAlpha: 0,
+    delay: 2
   });
 }
 
-
-// console.log(document.styleSheets[0].href);
-// console.log(document.styleSheets.length);
-// console.log(document.styleSheets[0].cssRules);
+function anim_pageload_sequence(){
+}
 
 
-arr = document.styleSheets[0].cssRules;
-arr1 = Array.prototype.slice.call(arr);  // converts DOM nodes to JS-array
-// console.log(arr1);
-console.log(arr);
-console.log(arr[1].style.background);
-arr1.forEach(function(item, index){
-  // console.log(item);
-  // if(item.search("class=\"interactive\"") === true){
-  //   console.log('the code works');
-  // }
-
-});
+function anim_random_gen(){
+  var randnum = Math.random() * 360;
+  if (randnum >= 45 && randnum < 135) {
+    console.log('up');
+  } else if(randnum >= 135 && randnum < 225) {
+    console.log('left');
+  } else if(randnum >= 225 && randnum < 315) {
+    console.log('down');
+  } else{
+    console.log('right');
+  }
+}
