@@ -5,7 +5,6 @@ require_once 'assets/php/functions.php';
 function fn_layout_head(){
   $_SESSION['webtitle'] = str_replace('.php','',basename($_SERVER['PHP_SELF']));
   echo "
-  <head>
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
     <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">
@@ -14,10 +13,9 @@ function fn_layout_head(){
     <link rel=\"stylesheet\" href=\"assets/scss/style.css\" type=\"text/css\">
     <script language=\"javascript\" src=\"assets/js/script.js\" defer></script>
     <script language=\"javascript\" src=\"assets/js/interactive.js\" defer></script>
-    <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>
-    </head>";
+    <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>";
   }
-  
+
 function fn_layout_top(){
   echo "
   <div class=\"interactive\" id=\"logo\">
@@ -62,9 +60,7 @@ function fn_layout_snackbar(){
 function fn_layout_footer(){
   $v_year = date('Y', gettimeofday(true));
   echo "
-  <footer>
   <small>&copy;$v_year Michael James Turiano Albatana</small>
-  </footer>
   ";
 }
 
