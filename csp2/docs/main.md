@@ -110,6 +110,7 @@ Summary of Web Features:
 
 - roles: guest, user, admin, manager, dev
 - authentication at sign-in & sign-up
+- account authorizations per for every webpage
 -
 
 
@@ -177,6 +178,9 @@ This also helps standardize coding structure and patterns for easier debugging.
 | client-side scripts | sketches, flow-charts, function-listing                    | JS                               |
 | server-side scripts | sketches, flow-charts, function-listing, code organization | PHP                              |
 | database design     | sketches, ERD, queries                                     | MySQL, MariaDB                   |
+
+##### 2.2.4 Coding structure
+
 
 #### 2.3 Project Coding Task Organization
 
