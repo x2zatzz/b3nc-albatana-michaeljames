@@ -38,7 +38,8 @@
 
 Project Name: Chef Andion
 Project Type: Web e-commerce
-Project Theme: Home-cooked-food services & deliveries
+Project Concept: Home-cooked-food services & deliveries
+Project Visual Theme:
 
 #### 1.2 Project Development Team
 
@@ -111,8 +112,6 @@ Summary of Web Features:
 - roles: guest, user, admin, manager, dev
 - authentication at sign-in & sign-up
 - account authorizations per for every webpage
--
-
 
 ###### 2.2.1.1 Web Pages
 
