@@ -1,24 +1,20 @@
 <?php
   require_once 'assets/layouts.php';
   $_SESSION['webheader'] = 'this is a template';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <?php fn_layout_head()?>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-
-        </div>
-      </div>
-    </nav>
-    <main class="container">
-        This is just a template
+    <?php fn_layout_nav()?>
+    <main class="wrapper">
+      <h1>Index Page</h1>
     </main>
-    <footer>
+    <footer class="panel panel-footer">
       <?php fn_layout_footer()?>
     </footer>
     <?php fn_layout_libraries()?>
