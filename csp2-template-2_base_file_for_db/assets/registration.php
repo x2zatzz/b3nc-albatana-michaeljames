@@ -18,31 +18,29 @@ $sql =
 VALUES
 ('$email','$image','$username ','$password ','$first_name ','$last_name',' $address','$contact','$role_id');";
 
-echo $sql;
-
 $result = mysqli_query($conn, $sql);
 
-echo mysqli_error($conn);
 
-mysqli_close($conn);
+// if($result = mysqli_query($conn, "SELECT * FROM users")){
+// 	printf("Select returned %d rows.\n", mysqli_num_rows($result));
+// 	mysqli_free_result($result);
+// }
+
+// var_dump(mysqli_fetch_assoc($result));
+
+while($user = mysqli_fetch_assoc($result)){
+	extract($user);
+
+	echo '
+	<tr>
+		<td><a href="user.php?id='.$id.'">'.$username.'</a></td>
+		<td>'.$password.'</td>
+		<td>'.$email.'</td>
+		<td>'.$role_id.'</td>
+	</tr>
+	';
+}
 
 
-// echo $userName . ' ' . $passWord . ' ' . $email;
 
-// $file = file_get_contents('users.json');
-// $users = json_decode($file, true);
-
-// $newUser = array(
-// 	'username' => $userName,
-// 	'password' => $passWord,
-// 	'email' => $email,
-// 	'role' => 'user'
-// );
-
-// array_push($users, $newUser);
-
-// $jsonFile = fopen('users.json', 'w');
-// fwrite($jsonFile, json_encode($users, JSON_PRETTY_PRINT));
-// fclose($jsonFile);
-
-// header('location: ../login.php');
+?>
