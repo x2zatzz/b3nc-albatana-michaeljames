@@ -1,8 +1,19 @@
-#nav-main {
+body[id*='body'] {
+  background: #a62b2b;
+  width: 100vw;
+  height: auto;
+}
+
+body[id*='body'] main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body[id*='body'] #nav-main {
   border-radius: 0;
 }
 
-footer {
+body[id*='body'] footer[class*='main-footer'] {
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
