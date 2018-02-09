@@ -1,8 +1,18 @@
 
 
-#nav-main{
-  border-radius: 0;
-}
-footer{
-  text-align: center;
+
+body[id*='body']{
+  background: hsl(0, 59%, 41%);
+  width: 100vw;
+  height: auto;
+  main{
+    width: 80%;
+    margin: 0 auto;
+  }
+  #nav-main{
+    border-radius: 0;
+  }
+  footer[class*='main-footer']{
+    text-align: center;
+  }
 }
