@@ -1,0 +1,9 @@
+agenda for tonight:
+	- for 'items' page:
+		- create feature to 'edit' details of the item
+		- create feature to 'delete' the item
+		- no authorization yet (admin or user can do this)
+	- create 'profile' page for current user:
+		- user can edit personal details
+		- user cannot change role settings
+		- add new field for users.json to store user profile images

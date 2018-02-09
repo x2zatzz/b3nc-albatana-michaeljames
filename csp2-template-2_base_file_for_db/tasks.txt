@@ -1,0 +1,23 @@
+** tasks/features **
+
+- limit user of role type 'user' from accessing 'settings' module **done**
+
+- give user of type 'admin' the permission to access 'profile' and 'settings' modules **done**
+
+- if a user is logged in, hide 'login' and 'register' links **done**
+
+- limit access to certain modules of website/app if user is not logged in **done**
+
+- list all user accounts in 'settings' page if user is admin type **done**
+
+- display username of logged in user to main navigation **done**
+
+- link to view individual user account **done**
+
+- username validation for existing usernames **done**
+
+- admin permission to 'delete' a user account but not 'edit' the account
+
+- user permission to 'edit' and 'delete' the account
+
+- list all items in 'catalog' module

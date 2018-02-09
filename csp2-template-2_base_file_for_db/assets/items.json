@@ -1,0 +1,106 @@
+[
+    {
+        "id": 0,
+        "name": "Cerveza Negra",
+        "description": "Cerveza Negra, a full-bodied dark lager with rich caramel tones made from roasted pilsen malt from Europe and other top quality ingredients. The right balance of bitterness and sweetness, and a creamy, frothy head entice drinkers to soak in its unique flavors...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 200,
+        "category": "Category 5"
+    },
+    {
+        "id": 1,
+        "name": "San Mig Light",
+        "description": "San Mig Light is the country's leading low calorie beer with only 100 calories per 330ml serving. That's why you'll feel so light as you enjoy its full beer flavor that hits just right...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 300.25,
+        "category": "Category 2"
+    },
+    {
+        "id": 2,
+        "name": "Gold Eagle Beer",
+        "description": "The ultimate reward to a hard day's work is Gold Eagle Beer. It is moderately light bodied, yet flavorful, hopped just enough to give a little bite on the finish bringing out an over-all \"easy drinking\" character. Relax and enjoy the moment with this beer. Its alcohol content is 3.5% by weight and 4.55% by volume...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 400.1,
+        "category": "Category 3"
+    },
+    {
+        "id": 3,
+        "name": "Brew Kettle",
+        "description": "Brew Kettle Belgian Witbier Style Beer is an aromatic and refreshing brew with hints of white wheat and orange, giving it a crisp and smooth taste. Light-bodied and easy to drink, garnish your bottle of Brew Kettle with an orange slice and savor that full flavored experience. An inspired and enjoyable beer brewed to be different with you in mind...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 500,
+        "category": "Category 4"
+    },
+    {
+        "id": 4,
+        "name": "Fat Pauly's Ales & Lagers",
+        "description": "Fat Pauly's Hand-crafted Ales & Lagers is a proud local brand that makes fresh home-brewed beers using both the finest imported brew grade malt and some local indegenous ingredients such as Timoga Spring waters, and wild Putyukan Honey...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 600.21,
+        "category": "Category 5"
+    },
+    {
+        "id": 5,
+        "name": "Palaw'An",
+        "description": "An old but popular German-style beer with our equally famous Palawan honey from the Southern Palawan tribe, Palaw'an. Pale color, light body and smooth mouthfeel with a subtle floral character...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 700,
+        "category": "Category 6"
+    },
+    {
+        "id": 6,
+        "name": "Brew Kettle",
+        "description": "Brew Kettle Belgian Witbier Style Beer is an aromatic and refreshing brew with hints of white wheat and orange, giving it a crisp and smooth taste. Light-bodied and easy to drink, garnish your bottle of Brew Kettle with an orange slice and savor that full flavored experience. An inspired and enjoyable beer brewed to be different with you in mind...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 500,
+        "category": "Category 4"
+    },
+    {
+        "id": 7,
+        "name": "Fat Pauly's Ales & Lagers",
+        "description": "Fat Pauly's Hand-crafted Ales & Lagers is a proud local brand that makes fresh home-brewed beers using both the finest imported brew grade malt and some local indegenous ingredients such as Timoga Spring waters, and wild Putyukan Honey...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 600.21,
+        "category": "Category 5"
+    },
+    {
+        "id": 8,
+        "name": "Palaw'An",
+        "description": "An old but popular German-style beer with our equally famous Palawan honey from the Southern Palawan tribe, Palaw'an. Pale color, light body and smooth mouthfeel with a subtle floral character...",
+        "image": "https:\/\/lorempixel.com\/300\/300\/",
+        "price": 700,
+        "category": "Category 6"
+    },
+    {
+        "id": 10,
+        "name": "Beer 2",
+        "image": "assets\/images\/mock_beer_1.jpg",
+        "price": "200",
+        "description": "The beer number 2",
+        "category": "Category 3"
+    },
+    {
+        "id": 11,
+        "name": "new item",
+        "image": "assets\/images\/mock_beer_1.jpg",
+        "price": "50000",
+        "description": "dafsdfasdfasdfasdf",
+        "category": "Category 2"
+    },
+    {
+        "id": 12,
+        "name": "new item 12",
+        "image": "assets\/images\/mock_beer.jpg",
+        "price": "350",
+        "description": "new item 12",
+        "category": "Category 2"
+    },
+    {
+        "id": 13,
+        "name": "new item 13",
+        "image": "assets\/images\/mock_beer_1.jpg",
+        "price": "1000",
+        "description": "new item 13",
+        "category": "Category 3"
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@gmail.com",
+        "role": "admin",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "billy",
+        "password": "billy",
+        "email": "user@yahoo.com",
+        "role": "admin",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user1",
+        "password": "user1",
+        "email": "user1@bluebottle.com",
+        "role": "user",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user3",
+        "password": "user3",
+        "email": "user3@abc.com",
+        "role": "user",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user4",
+        "password": "user4",
+        "email": "user4@google.com",
+        "role": "user",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user5",
+        "password": "123",
+        "email": "user5@google.com",
+        "role": "user",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user6",
+        "password": "user6",
+        "email": "user6@hotmail.com",
+        "role": "user",
+        "image": "\/assets\/images\/user\/"
+    },
+    {
+        "username": "user7",
+        "password": "user7",
+        "email": "user7@gmail.com",
+        "role": "admin"
+    }
+]
