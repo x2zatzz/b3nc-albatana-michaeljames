@@ -30,7 +30,7 @@ $_SESSION['item_count'] = 0;
 	<main class="wrapper">
 
 		<h1>Index Page</h1>
-		
+
 	</main>
 
 	<!-- main footer -->
