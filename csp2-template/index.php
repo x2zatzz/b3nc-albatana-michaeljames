@@ -9,12 +9,12 @@
   <head>
     <?php fn_layout_head()?>
   </head>
-  <body>
+  <body id="body">
     <?php fn_layout_nav()?>
-    <main class="wrapper">
+    <main>
       <h1>Index Page</h1>
     </main>
-    <footer class="panel panel-footer">
+    <footer class="panel panel-footer main-footer fixed-bottom">
       <?php fn_layout_footer()?>
     </footer>
     <?php fn_layout_libraries()?>
