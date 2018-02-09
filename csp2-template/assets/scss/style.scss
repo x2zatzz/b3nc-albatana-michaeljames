@@ -1,13 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 
-
-body[id*='body']{
-  background: hsl(0, 59%, 41%);
+body{
+  background: gold;
   width: 100vw;
   height: auto;
   main{
     width: 80%;
+    height: fit-content;
     margin: 0 auto;
+    background: hsl(0, 0%, 30%);
   }
   #nav-main{
     border-radius: 0;

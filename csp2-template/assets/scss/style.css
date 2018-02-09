@@ -1,19 +1,27 @@
-body[id*='body'] {
-  background: #a62b2b;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: gold;
   width: 100vw;
   height: auto;
 }
 
-body[id*='body'] main {
+body main {
   width: 80%;
+  height: fit-content;
   margin: 0 auto;
+  background: #4d4d4d;
 }
 
-body[id*='body'] #nav-main {
+body #nav-main {
   border-radius: 0;
 }
 
-body[id*='body'] footer[class*='main-footer'] {
+body footer[class*='main-footer'] {
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
