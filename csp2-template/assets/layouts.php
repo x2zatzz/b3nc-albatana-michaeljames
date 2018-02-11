@@ -29,7 +29,7 @@ echo "
           <span class=\"icon-bar\"></span>
           <span class=\"icon-bar\"></span>
         </button>
-        <a class=\"navbar-brand\" onclick=\"window.location.href='index.php'\">Kraff Beeer</a>
+        <a class=\"navbar-brand\" onclick=\"window.location.href='index.php?webtitle=index'\">Kraff Beeer</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
@@ -87,53 +87,67 @@ function fn_layout_signature(){
 
 //====================================================================
 function fn_page_index(){
-  $_SESSION['webtitle'] = 'Index';
   echo "
     <h1>Welcome Guest!</h1>
   ";
 }
 
-
-function fn_page_signup(){
-  $_SESSION['webtitle'] = 'Register';
+function fn_page_signin(){
   echo "
-  <h2>User Registration</h2>
-  <form action=\"assets/register.php\" method=\"POST\">
-    <fieldset name=\"username\">
+  <h2>User Log In</h2>
+  <form action=\"assets/php/login.php\" method=\"POST\">
+    <fieldset>
       <label for=\"username\">Username: </label>
-      <input id=\"username\" class=\"validate\" type=\"text\" name=\"username\"
-        value=\"value\" placeholder=\"enter a unique username\"
+      <input id=\"username\" class=\"\" type=\"text\" name=\"username\"
+        value=\"\" placeholder=\"enter a unique username\"
         required autofocus autocomplete>
     </fieldset>
     <fieldset>
       <label for=\"password\">Password: </label>
-      <input id=\"password\" type=\"password\" name=\"password\"
+      <input id=\"password\" class=\"\" type=\"password\" name=\"password\"
         value=\"\" placeholder=\"enter your password\"
         required autocomplete>
     </fieldset>
     <fieldset>
+      <button id=\"submitbutton\" type=\"submit\">Log In</button>
+    </fieldset>
+  </form>
+  ";
+}
+
+function fn_page_signup(){
+  echo "
+  <h2>User Registration</h2>
+  <form action=\"assets/php/register.php\" method=\"POST\">
+    <fieldset name=\"username\">
+      <label for=\"username\">Username: </label>
+      <input id=\"username\" class=\"validate setvalue\" type=\"text\" name=\"username\"
+        value=\"\" placeholder=\"enter a unique username\" required autofocus autocomplete>
+    </fieldset>
+    <fieldset>
+      <label for=\"password\">Password: </label>
+      <input id=\"password\" class=\"validate setvalue\" type=\"password\" name=\"password\"
+        value=\"\" placeholder=\"enter your password\" required autocomplete>
+    </fieldset>
+    <fieldset>
       <label for=\"confirmpassword\">Confirm Password: </label>
-      <input id=\"confirmpassword\" class=\"validate\" type=\"password\" name=\"confirmpassword\"
-        value=\"\" placeholder=\"re-type your password\"
-        required autocomplete>
+      <input id=\"confirmpassword\" class=\"validate setvalue\" type=\"password\" name=\"confirmpassword\"
+        value=\"\" placeholder=\"re-type your password\" required autocomplete>
     </fieldset>
     <fieldset>
       <label for=\"email\">Email Address: </label>
-      <input id=\"email\" class=\"validate\" type=\"email\" name=\"email\"
-        value=\"value@value.value\" placeholder=\"enter a valid email@domain\"
-        required autocomplete>
+      <input id=\"email\" class=\"validate setvalue\" type=\"email\" name=\"email\"
+        value=\"\" placeholder=\"enter a valid email@domain\" required autocomplete>
     </fieldset>
     <fieldset>
       <label for=\"firstname\">First Name: </label>
-      <input id=\"firstname\" class=\"validate\" type=\"text\" name=\"firstname\"
-        value=\"value\" placeholder=\"enter your first name\"
-        required autocomplete>
+      <input id=\"firstname\" class=\"validate setvalue\" type=\"text\" name=\"firstname\"
+        value=\"\" placeholder=\"enter your first name\" required autocomplete>
     </fieldset>
     <fieldset>
       <label for=\"lastname\">Last Name: </label>
-      <input id=\"lastname\" class=\"validate\" type=\"text\" name=\"lastname\"
-        value=\"value\" placeholder=\"enter your last name\"
-        required autocomplete>
+      <input id=\"lastname\" class=\"validate setvalue\" type=\"text\" name=\"lastname\"
+        value=\"\" placeholder=\"enter your last name\" required autocomplete>
     </fieldset>
     <fieldset>
       <button id=\"submitbutton\" type=\"submit\">Register</button>
@@ -141,5 +155,4 @@ function fn_page_signup(){
   </form>
   ";
 }
-
 ?>
