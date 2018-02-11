@@ -1,6 +1,6 @@
 <?php
   require_once 'assets/php/init.php';
-  if(isset($_GET['webtitle'])){$_SESSION['webtitle'] = $_GET['webtitle'];}
+  if(isset($_GET['webtitle'])){$_SESSION['webtitle'] = $_GET['webtitle'];}else{$_SESSION['webtitle'] = 'index';}
   $_SESSION['webheader'] = 'this is a template';
   require_once 'assets/layouts.php';
 ?>
@@ -19,6 +19,9 @@
           switch ($_GET['webtitle']){
             case 'signup':
               fn_page_signup();
+              break;
+            case 'signin':
+              fn_page_signin();
               break;
             default:
               fn_page_index();
