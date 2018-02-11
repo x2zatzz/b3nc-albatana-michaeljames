@@ -1,7 +1,8 @@
 <?php
-  require_once 'assets/layouts.php';
+  require_once 'assets/php/init.php';
+  if(isset($_GET['webtitle'])){$_SESSION['webtitle'] = $_GET['webtitle'];}
   $_SESSION['webheader'] = 'this is a template';
-
+  require_once 'assets/layouts.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +10,24 @@
   <head>
     <?php fn_layout_head()?>
   </head>
-  <body id="body">
+  <body class="container-fluid" onload="fn_onload()">
     <?php fn_layout_nav()?>
-    <main>
-      <h1>Index Page</h1>
-      <?php require_once('assets/php/dbconnect.php')?>
+    <?php fn_layout_snackbar()?>
+    <main class="container-fluid">
+      <?php
+        if(isset($_GET['webtitle'])){
+          switch ($_GET['webtitle']){
+            case 'signup':
+              fn_page_signup();
+              break;
+            default:
+              fn_page_index();
+              break;
+          }
+        }
+      ?>
     </main>
-    <footer class="panel panel-footer main-footer fixed-bottom">
+    <footer class="main-footer container-fluid panel">
       <?php fn_layout_footer()?>
     </footer>
     <?php fn_layout_libraries()?>
