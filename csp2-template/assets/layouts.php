@@ -98,7 +98,7 @@ function fn_page_signin(){
   <form action=\"assets/php/login.php\" method=\"POST\">
     <fieldset>
       <label for=\"username\">Username: </label>
-      <input id=\"username\" class=\"\" type=\"text\" name=\"username\"
+      <input id=\"username\" class=\"validate setvalue\" type=\"text\" name=\"username\"
         value=\"\" placeholder=\"enter a unique username\"
         required autofocus autocomplete>
     </fieldset>
@@ -118,7 +118,7 @@ function fn_page_signin(){
 function fn_page_signup(){
   echo "
   <h2>User Registration</h2>
-  <form action=\"assets/php/register.php\" method=\"POST\">
+  <form action=\"assets/php/scripts-acct.php?type=signup\" method=\"POST\">
     <fieldset name=\"username\">
       <label for=\"username\">Username: </label>
       <input id=\"username\" class=\"validate setvalue\" type=\"text\" name=\"username\"
