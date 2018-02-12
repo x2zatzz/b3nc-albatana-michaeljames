@@ -33,144 +33,175 @@ function fn_snackbar(trigger,color){
       snackbar.style.backgroundColor = color;
       setTimeout(function(){
         snackbar.setAttribute('hidden', '');
-        snackbar.style.backgroundColor = 'gold';
-      }, 3000);
+        snackbar.style.backgroundColor = 'gold';}, 3000);
       break;
     default:
       break;
   }
 }
 
+username_back = username_back;
 function fn_validation(id,webtitle){
   document.getElementById(id).removeAttribute('onfocusout');
   var snackbar = document.getElementById('snackbar');
-  var username = document.getElementById('username');
-  var password = document.getElementById('password');
-  var confirmpassword = document.getElementById('confirmpassword');
-  var email = document.getElementById('email');
-  var firstname = document.getElementById('firstname');
-  var lastname = document.getElementById('lastname');
+  var username = '';
   switch(true){
-    case(id == 'username'):
-      var username_val = username.value;
-      if(username_val.length == 0){
-        snackbar.textContent = 'Usernames cannot contain blank fields';
-        username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        fn_snackbar('update', 'red');
-        validation_signup_status[0] = 0;
-      } else if(username_val.length <= 8){
-        snackbar.textContent = 'Usernames must contain at least eight alphanumeric characters.';
-        username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        fn_snackbar('update', 'red');
-        validation_signup_status[0] = 0;
-      } else if(username_val.search(/[^a-z\d]/gi) > 0){
-        snackbar.textContent = 'Usernames must be single-worded, non-spaced, alphanumeric characters.';
-        username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        fn_snackbar('update', 'red');
-        validation_signup_status[0] = 0;
+    case(webtitle == 'signin'):
+      username = document.getElementById('username');
+      var password = document.getElementById('password');
+      var href = window.location.href;
+      if(username.value != '' || username.value != ' '){
+        username_back = username.value;
+      }
+      username_back = username.value;
+      console.log(username_back);
+      // window.location.href = href + '&type=' + 'json' + '&username=' + username.value ;
+      var ajax = new XMLHttpRequest();
+      ajax.onreadystatechange = function(){
+        if(ajax.readyState == 4 && ajax.status == 200){
+          ajax.responseText;
+        }
+      };
+      ajax.open('GET', '../php/ajax.php', true);
+      ajax.send();
+      if(username.value == ""){
+        username.value = username_back;
       } else{
-        username.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[0] = 1;
+
       }
       break;
-    case(id == 'password'):
-      var password_val = password.value;
-      if(password_val.length == 0){
-        snackbar.textContent = 'Passwords cannot contain blank fields.';
-        password.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        fn_snackbar('update', 'red');
-        validation_signup_status[1] = 0;
-      } else if(password_val.length < 8){
-        snackbar.textContent = 'Password must contain at least eight characters. ';
-        password.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        fn_snackbar('update', 'red');
-        validation_signup_status[1] = 0;
-      } else{
-        password.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[1] = 1;
+    case(webtitle == 'signup'):
+      username = document.getElementById('username');
+      var password = document.getElementById('password');
+      var confirmpassword = document.getElementById('confirmpassword');
+      var email = document.getElementById('email');
+      var firstname = document.getElementById('firstname');
+      var lastname = document.getElementById('lastname');
+      switch(true){
+        case(id == 'username'):
+          var username_val = username.value;
+          if(username_val.length == 0){
+            snackbar.textContent = 'Usernames cannot contain blank fields';
+            username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            fn_snackbar('update', 'red');
+            validation_signup_status[0] = 0;
+          } else if(username_val.length <= 8){
+            snackbar.textContent = 'Usernames must contain at least eight alphanumeric characters.';
+            username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            fn_snackbar('update', 'red');
+            validation_signup_status[0] = 0;
+          } else if(username_val.search(/[^a-z\d]/gi) > 0){
+            snackbar.textContent = 'Usernames must be single-worded, non-spaced, alphanumeric characters.';
+            username.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            fn_snackbar('update', 'red');
+            validation_signup_status[0] = 0;
+          } else{
+            username.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[0] = 1;
+          }
+          break;
+        case(id == 'password'):
+          var password_val = password.value;
+          if(password_val.length == 0){
+            snackbar.textContent = 'Passwords cannot contain blank fields.';
+            password.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            fn_snackbar('update', 'red');
+            validation_signup_status[1] = 0;
+          } else if(password_val.length < 8){
+            snackbar.textContent = 'Password must contain at least eight characters. ';
+            password.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            fn_snackbar('update', 'red');
+            validation_signup_status[1] = 0;
+          } else{
+            password.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[1] = 1;
+          }
+          break;
+        case(id == 'confirmpassword'):
+          var password_val = password.value;
+          var confirmpassword_val = confirmpassword.value;
+          if(password_val != confirmpassword_val){
+            snackbar.textContent = 'Password does not match.';
+            fn_snackbar('update','red');
+            confirmpassword.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[2] = 0;
+          } else if(password_val == confirmpassword_val){
+            snackbar.textContent = 'Password matched.';
+            fn_snackbar('update','green');
+            confirmpassword.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[2] = 1;
+          }
+          break;
+        case(id == 'email'):
+          var email_val = email.value;
+        if(email_val.match(/\@/gi) > 1 || email_val.search(/\@/gi) == -1){
+            snackbar.textContent = 'Emails must can contain one "@-symbol".';
+            fn_snackbar('update', 'red');
+            email.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[3] = 0;
+          } else if(email_val.search(/[^a-z\s\@\.]/gi) > 0){
+            snackbar.textContent = 'Emails cannot contain special characters other than "@-symbol" and periods.';
+            fn_snackbar('update', 'red');
+            email.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[3] = 0;
+          } else{
+            email.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[3] = 1;
+          }
+          break;
+        case(id == 'firstname'):
+          var firstname_val = firstname.value;
+          if(firstname_val.search(/[^a-z\s]/gi) > 0){
+            snackbar.textContent = 'Names cannot contain special characters or numbers';
+            fn_snackbar('update', 'red');
+            firstname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[4] = 0;
+          } else if(firstname_val.length <= 2){
+            snackbar.textContent = 'Names must be more than two characters.';
+            fn_snackbar('update', 'read');
+            firstname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[4] = 0;
+          } else if(firstname_val.search(/[^a-z\s]/gi) == -1){
+            firstname.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[4] = 1;
+          }
+          break;
+        case(id == 'lastname'):
+          var lastname_val = lastname.value;
+          if(lastname_val.search(/[^a-z\s]/gi) > 0){
+            snackbar.textContent = 'Names cannot contain special characters or numbers';
+            fn_snackbar('update', 'red');
+            lastname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+            validation_signup_status[5] = 0;
+          } else if(lastname_val.length <= 2){
+            snackbar.textContent = 'Names must be more than two characters.';
+            fn_snackbar('update', 'read');
+            validation_signup_status[5] = 0;
+            lastname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
+          } else if(lastname_val.search(/[^a-z\s]/gi) == -1){
+            lastname.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
+            validation_signup_status[5] = 1;
+          }
+          break;
+        default:
+          break;
       }
-      break;
-    case(id == 'confirmpassword'):
-      var password_val = password.value;
-      var confirmpassword_val = confirmpassword.value;
-      if(password_val != confirmpassword_val){
-        snackbar.textContent = 'Password does not match.';
-        fn_snackbar('update','red');
-        confirmpassword.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[2] = 0;
-      } else if(password_val == confirmpassword_val){
-        snackbar.textContent = 'Password matched.';
-        fn_snackbar('update','green');
-        confirmpassword.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[2] = 1;
-      }
-      break;
-    case(id == 'email'):
-      var email_val = email.value;
-    if(email_val.match(/\@/gi) > 1 || email_val.search(/\@/gi) == -1){
-        snackbar.textContent = 'Emails must can contain one "@-symbol".';
-        fn_snackbar('update', 'red');
-        email.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[3] = 0;
-      } else if(email_val.search(/[^a-z\s\@\.]/gi) > 0){
-        snackbar.textContent = 'Emails cannot contain special characters other than "@-symbol" and periods.';
-        fn_snackbar('update', 'red');
-        email.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[3] = 0;
-      } else{
-        email.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[3] = 1;
-      }
-      break;
-    case(id == 'firstname'):
-      var firstname_val = firstname.value;
-      if(firstname_val.search(/[^a-z\s]/gi) > 0){
-        snackbar.textContent = 'Names cannot contain special characters or numbers';
-        fn_snackbar('update', 'red');
-        firstname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[4] = 0;
-      } else if(firstname_val.length <= 2){
-        snackbar.textContent = 'Names must be more than two characters.';
-        fn_snackbar('update', 'read');
-        firstname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[4] = 0;
-      } else if(firstname_val.search(/[^a-z\s]/gi) == -1){
-        firstname.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[4] = 1;
-      }
-      break;
-    case(id == 'lastname'):
-      var lastname_val = lastname.value;
-      if(lastname_val.search(/[^a-z\s]/gi) > 0){
-        snackbar.textContent = 'Names cannot contain special characters or numbers';
-        fn_snackbar('update', 'red');
-        lastname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-        validation_signup_status[5] = 0;
-      } else if(lastname_val.length <= 2){
-        snackbar.textContent = 'Names must be more than two characters.';
-        fn_snackbar('update', 'read');
-        validation_signup_status[5] = 0;
-        lastname.style.backgroundColor = 'hsla(0, 100%, 50%, 0.5)';
-      } else if(lastname_val.search(/[^a-z\s]/gi) == -1){
-        lastname.style.backgroundColor = 'hsla(0, 0%, 20%, 0.5)';
-        validation_signup_status[5] = 1;
+      status = 0;
+      for(l=1;l<=validation_signup_status.length;l++){
+        status = parseInt(status) + parseInt(validation_signup_status[l-1]);
+        if(status == 6){
+          document.getElementById('submitbutton').style.backgroundColor = 'hsla(120, 100%, 25%, 0.5)';
+        } else{
+          document.getElementById('submitbutton').style.backgroundColor = 'inherit';
+        }
       }
       break;
     default:
       break;
   }
-  // encountered bug: validation not working properly, the submit button confirms passed validation even though the there are failed validation -> already fixed the issue
-  status = 0;
-  for(l=1;l<=validation_signup_status.length;l++){
-    status = parseInt(status) + parseInt(validation_signup_status[l-1]);
-    if(status == 6){
-      document.getElementById('submitbutton').style.backgroundColor = 'hsla(120, 100%, 25%, 0.5)';
-    } else{
-      document.getElementById('submitbutton').style.backgroundColor = 'inherit';
-    }
-  }
+
+
   fn_eventtriggers(id);
-  // setInterval(function(){fn_eventtriggers(id)},1000);
 }
 
 function fn_eventtriggers(id){
@@ -199,7 +230,8 @@ function fn_setformvalues(){
         arr[l-1].setAttribute('value', brr[l-1]);
       }
       break;
-    case(val==''):
+    case(val=='signin'):
+      document.getElementsByClassName('setvalue')[0].value = username_back;
       break;
     default:
       break;
@@ -233,3 +265,6 @@ function fn_setvalidation_status(){
       break;
   }
 }
+
+
+var
