@@ -1,0 +1,263 @@
+[
+    {
+        "id": 0,
+        "username": "dev",
+        "password": "dev",
+        "email": "dev@dev.com",
+        "firstname": "dev",
+        "lastname": "dev",
+        "role": "dev"
+    },
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@admin.com",
+        "firstname": "admin",
+        "lastname": "admin",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "username": "manager",
+        "password": "manager",
+        "email": "manager@manager.com",
+        "firstname": "manager",
+        "lastname": "manager",
+        "role": "manager"
+    },
+    {
+        "id": 3,
+        "username": "user",
+        "password": "user",
+        "email": "user@user.com",
+        "firstname": "user",
+        "lastname": "user",
+        "role": "user"
+    },
+    {
+        "id": 4,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 5,
+        "username": "",
+        "password": "",
+        "email": "",
+        "firstname": "",
+        "lastname": "",
+        "role": "user"
+    },
+    {
+        "id": 6,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 7,
+        "username": "oeauusername1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 8,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 9,
+        "username": "",
+        "password": "",
+        "email": "",
+        "firstname": "",
+        "lastname": "",
+        "role": "user"
+    },
+    {
+        "id": 10,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 11,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 12,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 13,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 14,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 15,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 16,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 17,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 18,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 19,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 20,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 21,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 22,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 23,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 24,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 25,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 26,
+        "username": "username1",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 27,
+        "username": "username2",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    },
+    {
+        "id": 28,
+        "username": "username3",
+        "password": "12345678",
+        "email": "username@domain.com",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "role": "user"
+    }
+]
